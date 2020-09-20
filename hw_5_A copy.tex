@@ -23,23 +23,19 @@ Homework assigned on a given day is always due on the following Tuesday at noon.
 \item Prove that they are a basis for a three dimensional cartesian space, and check if they are an \emph{orthogonal} basis. 
 \\
 
-So to show that the set of vectors forms a basis for $R^3$ we only need to show that all possible vectors in $R^3$ can be made from some linear combination of these vectors. This is equivalent to putting these three vectors into a matrix, and showing it row reduces to the identity matrix (since the basis vectors of $R^3$ are (1,00), (0,1,0), and (0,0,1)). To show that it is an orthogonal basis, we need to check that a, b, and c are perpendicular to each other, thus dot product of one with the other two will give 0.
+So to show that the set of vectors forms a basis for $R^3$ we only need to show that all possible vectors in $R^3$ can be made from some linear combination of these vectors. This is equivalent to putting these three vectors into a matrix, and showing it row reduces to the identity matrix (since the basis vectors of $R^3$ are (1,00), (0,1,0), and (0,0,1)).
 \\
 So what we need to do first is make a, b, c the columns of a $3\times3$ matrix row reduce that matrix, so that we see it becomes the identity, and thus is a basis for $R^3$
-\\
 
 \noindent
 $
 \begin{array}{lll}
-  a.\dfrac{\hat{x}-\hat{y}}{\sqrt{2}}=\dfrac{\hat{x}}{\sqrt{2}}-\dfrac{\hat{y}}{\sqrt{2}} \\
-  b.\dfrac{\hat{x}+\hat{y}+2\hat{z}}{\sqrt{6}}=\dfrac{\hat{x}}{\sqrt{6}}+\dfrac{\hat{y}}{\sqrt{6}}+\dfrac{2\hat{z}}{\sqrt{6}} \\
-  c.\dfrac{\hat{x}+\hat{y}-\hat{z}}{\sqrt{3}}=\dfrac{\hat{x}}{\sqrt{3}}+\dfrac{\hat{y}}{\sqrt{3}}-\dfrac{\hat{z}}{\sqrt{3}}
+  \overrightarrow{a}: \dfrac{\hat{x}-\hat{y}}{\sqrt{2}}=\dfrac{\hat{x}}{\sqrt{2}}-\dfrac{\hat{y}}{\sqrt{2}} \\
+  \overrightarrow{b}: \dfrac{\hat{x}+\hat{y}+2\hat{z}}{\sqrt{6}}=\dfrac{\hat{x}}{\sqrt{6}}+\dfrac{\hat{y}}{\sqrt{6}}+\dfrac{2\hat{z}}{\sqrt{6}} \\
+  \overrightarrow{c}: \dfrac{\hat{x}+\hat{y}-\hat{z}}{\sqrt{3}}=\dfrac{\hat{x}}{\sqrt{3}}+\dfrac{\hat{y}}{\sqrt{3}}-\dfrac{\hat{z}}{\sqrt{3}}
   \end{array}  
 $
-\\
-\\
-\\
-\\
+\bigbreak
 
 \noindent
 $\displaystyle
@@ -104,9 +100,60 @@ $\displaystyle
   I_3\times_3
 $
 
+\bigbreak
 
+To show that it is an orthogonal basis, we need to check that a, b, and c are perpendicular to each other, thus cross product of one with the other two will give 0.
+
+\bigbreak
+
+$
+\overrightarrow{a}\times(\overrightarrow{b}\times\overrightarrow{c})=0
+$
+
+$
+\overrightarrow{b}\times\overrightarrow{c}
+=
+\left|
+\begin{matrix}
+  \hat{x} & \hat{y} & \hat{z} \\
+  \dfrac{1}{\sqrt{6}} & \dfrac{1}{\sqrt{6}} & \dfrac{2}{\sqrt{6}} \\ 
+  \dfrac{1}{\sqrt{3}} & \dfrac{1}{\sqrt{3}} & \dfrac{-1}{\sqrt{3}} \\ 
+\end{matrix}
+\right|
+=
+\left|
+\begin{matrix}
+  \hat{x} & \hat{y} & \hat{z} \\
+  1 & 1 & 2 \\ 
+  1 & 1 & -1 \\ 
+\end{matrix}
+\right|
+=
+\hat{x}(-1-2)-\hat{y}(-1-2)+\hat{z}(1-1)
+=
+-3\hat{x}+3\hat{y}
+$
+
+Now $\overrightarrow{b}\times\overrightarrow{c}=\overrightarrow{V}$ vector has to be parallel with $\overrightarrow{a}$ hence, the cross product of these two vectors will give 0.
+
+$
+\overrightarrow{a}\times\overrightarrow{V}
+=
+\left|
+\begin{matrix}
+  \hat{x} & \hat{y} & \hat{z} \\
+  \dfrac{1}{\sqrt{2}} & \dfrac{-1}{\sqrt{2}} & 0  \\ 
+  -3 & 3 & 0 \\ 
+\end{matrix}
+\right|
+=
+\hat{x}(0-0)-\hat{y}(0-0)+\hat{z}(0-0)
+=
+0
+$
 
 \item Express the vectors $\mathbf{\hat{x}}, \mathbf{\hat{y}}, \mathbf{\hat{z}}$ in the basis of the vectors $\mathbf{a}, \mathbf{b}, \mathbf{c}$. 
+
 
 \item Consider now the set of vectors $\mathbf{A}=\mathbf{\hat{x}}-\mathbf{\hat{y}}$; $\mathbf{B}=\mathbf{\hat{x}}+\mathbf{\hat{z}}$; $\mathbf{C}=\mathbf{\hat{y}}-2\mathbf{\hat{z}}$, and express them in the basis of the vectors $\mathbf{a}, \mathbf{b}, \mathbf{c}$. 
 
