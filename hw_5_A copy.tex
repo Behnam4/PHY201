@@ -11,13 +11,6 @@
 
 %useful notation: \mathbf{A}=\mathbf{\hat{x}}+2\mathbf{\hat{y}-}2\mathbf{\hat{z}, \quad \quad B}=3\mathbf{\hat{x}}+\mathbf{\hat{y}+}2\mathbf{\hat{z}, \quad \quad C}=4\mathbf{\hat{x}}-\mathbf{\hat{y}+\hat{z}.}
 
-%matrix template: A = 
-%\begin{pmatrix}
-%1 & 2 & 3 \\
-%4 & 5 & 6 \\
-%7 & 8 & 9
-%\end{pmatrix}
-
 {\bf Homework 5 - Part A}\\
 Homework assigned on a given day is always due on the following Tuesday at noon. Electronic submission via Canvas is required. Single file, .pdf or .jpeg only.  A scannerized copy of a handwritten file is acceptable. Typeset solutions are welcome as well. The student is responsible for the readability of the file. 
 
@@ -28,20 +21,88 @@ Homework assigned on a given day is always due on the following Tuesday at noon.
 % . 
 \begin{enumerate}
 \item Prove that they are a basis for a three dimensional cartesian space, and check if they are an \emph{orthogonal} basis. 
+\\
 
+So to show that the set of vectors forms a basis for $R^3$ we only need to show that all possible vectors in $R^3$ can be made from some linear combination of these vectors. This is equivalent to putting these three vectors into a matrix, and showing it row reduces to the identity matrix (since the basis vectors of $R^3$ are (1,00), (0,1,0), and (0,0,1)). To show that it is an orthogonal basis, we need to check that a, b, and c are perpendicular to each other, thus dot product of one with the other two will give 0.
+\\
+So what we need to do first is make a, b, c the columns of a $3\times3$ matrix row reduce that matrix, so that we see it becomes the identity, and thus is a basis for $R^3$
+\\
 
-\[
+\noindent
+$
 \begin{array}{lll}
-a.\frac{\hat{x}-\hat{y}}{\sqrt{2}} \\
-b.\frac{\hat{x}+\hat{y}+2\hat{z}}{\sqrt{6}} \\
-c.\frac{\hat{x}+\hat{y}-\hat{z}}{\sqrt{3}}
-\end{array}
-\]
+  a.\dfrac{\hat{x}-\hat{y}}{\sqrt{2}}=\dfrac{\hat{x}}{\sqrt{2}}-\dfrac{\hat{y}}{\sqrt{2}} \\
+  b.\dfrac{\hat{x}+\hat{y}+2\hat{z}}{\sqrt{6}}=\dfrac{\hat{x}}{\sqrt{6}}+\dfrac{\hat{y}}{\sqrt{6}}+\dfrac{2\hat{z}}{\sqrt{6}} \\
+  c.\dfrac{\hat{x}+\hat{y}-\hat{z}}{\sqrt{3}}=\dfrac{\hat{x}}{\sqrt{3}}+\dfrac{\hat{y}}{\sqrt{3}}-\dfrac{\hat{z}}{\sqrt{3}}
+  \end{array}  
+$
+\\
+\\
+\\
+\\
 
+\noindent
+$\displaystyle
+  \begin{pmatrix}
+    \dfrac{1}{\sqrt{2}} & \dfrac{-1}{\sqrt{2}} & 0 \\
+    \dfrac{1}{\sqrt{6}} & \dfrac{1}{\sqrt{6}} & \dfrac{2}{\sqrt{6}} \\ 
+    \dfrac{1}{\sqrt{3}} & \dfrac{1}{\sqrt{3}} & \dfrac{-1}{\sqrt{3}} \\ 
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    1 & -1 & 0\\
+    1 & 1 & 2\\ 
+    1 & 1 & -1\\ 
+  \end{pmatrix}
+  = 
+  \begin{pmatrix}
+    1 & -1 & 0\\
+    0 & 2 & 2\\ 
+    1 & 1 & -1\\ 
+  \end{pmatrix}
+  = 
+  \begin{pmatrix}
+    1 & -1 & 0\\
+    0 & 2 & 2\\ 
+    0 & 2 & -1\\ 
+  \end{pmatrix}
+  = 
+  \begin{pmatrix}
+    1 & -1 & 0\\
+    0 & 1 & 1\\ 
+    0 & 2 & -1\\ 
+  \end{pmatrix}
+$
 
-
-
-
+\noindent
+$\displaystyle
+  =
+  \begin{pmatrix}
+    1 & -1 & 0\\
+    0 & 1 & 1\\ 
+    0 & 0 & -3\\ 
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    1 & -1 & 0\\
+    0 & 1 & 1\\ 
+    0 & 0 & 1\\ 
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    1 & -1 & 0\\
+    0 & 1 & 0\\ 
+    0 & 0 & 1\\ 
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    1 & 0 & 0\\
+    0 & 1 & 0\\ 
+    0 & 0 & 1\\ 
+  \end{pmatrix}
+  =
+  I_3\times_3
+$
 
 
 
