@@ -242,6 +242,100 @@ $
 \item Same as the previous exercise, with $\mathbf{a}=\frac{1}{\sqrt{6}} ( \mathbf{\hat{x}} + \mathbf{\hat{y}} + 2 \mathbf{\hat{z}} ) $, $\mathbf{b}=\frac{1}{\sqrt{30}} (\mathbf{\hat{x}} - 5\mathbf{\hat{y}} + 2\mathbf{\hat{z}})$ and $\mathbf{c}= \frac{1}{\sqrt{5}} ( 2 \mathbf{\hat{x} }- \mathbf{\hat{z} })$, and 
 $A=\mathbf{\hat{x}}+\mathbf{\hat{y}}+2\mathbf{\hat{z}}; B=\mathbf{\hat{x}}-\mathbf{\hat{y}}+2\mathbf{\hat{z}}; C=\mathbf{\hat{y}}-\mathbf{\hat{z}}$. 
 
+\noindent
+$
+\begin{array}{lll}
+  \overrightarrow{a}: \dfrac{1}{\sqrt{6}}(\hat{x}+\hat{y}+2\hat{z})=\dfrac{\hat{x}}{\sqrt{6}}+\dfrac{\hat{y}}{\sqrt{6}}+\dfrac{2\hat{z}}{\sqrt{6}} \\
+  \overrightarrow{b}: \dfrac{1}{\sqrt{30}}(\hat{x}-5\hat{y}+2\hat{z})=\dfrac{\hat{x}}{\sqrt{30}}-\dfrac{5\hat{y}}{\sqrt{30}}+\dfrac{2\hat{z}}{\sqrt{30}} \\
+  \overrightarrow{c}: \dfrac{1}{\sqrt{5}}(2\hat{x}-\hat{z})=\dfrac{2\hat{x}}{\sqrt{5}}-\dfrac{\hat{z}}{\sqrt{5}}
+  \end{array}  
+$
+\bigbreak
+
+\noindent
+$\displaystyle
+  \begin{pmatrix}
+    \dfrac{1}{\sqrt{6}} & \dfrac{1}{\sqrt{6}} & \dfrac{2}{\sqrt{6}}  \\
+    \dfrac{1}{\sqrt{30}} & \dfrac{-5}{\sqrt{30}} & \dfrac{2}{\sqrt{30}} \\ 
+    \dfrac{2}{\sqrt{5}} & 0 & \dfrac{-1}{\sqrt{5}} \\ 
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    1 & 1 & 2\\
+    1 & -5 & 2 \\ 
+    2 & 0 & -1 \\ 
+  \end{pmatrix}
+  = 
+  \begin{pmatrix}
+    1 & 1 & 2\\
+    2 & 0 & -1\\ 
+    1 & -5 & 2\\ 
+  \end{pmatrix}
+  = 
+  \begin{pmatrix}
+    1 & 0 & 0\\
+    0 & 1 & 0\\ 
+    0 & 0 & 1\\ 
+  \end{pmatrix}
+  =
+  I_3\times_3
+$
+
+\bigbreak
+
+
+$
+\overrightarrow{a}\times(\overrightarrow{b}\times\overrightarrow{c})=0
+$
+
+$
+\overrightarrow{b}\times\overrightarrow{c}
+=
+\left|
+\begin{matrix}
+  \hat{x} & \hat{y} & \hat{z} \\
+  \dfrac{1}{\sqrt{30}} & \dfrac{-5}{\sqrt{30}} & \dfrac{2}{\sqrt{30}} \\ 
+  \dfrac{2}{\sqrt{5}} & 0 & \dfrac{-1}{\sqrt{5}} \\ 
+\end{matrix}
+\right|
+=
+\left|
+\begin{matrix}
+  \hat{x} & \hat{y} & \hat{z} \\
+  1 & -5 & 2 \\ 
+  2 & 0 & -1 \\ 
+\end{matrix}
+\right|
+=
+\hat{x}(5-0)-\hat{y}(-1-4)+\hat{z}(0-(-10))
+$
+
+$
+=
+5\hat{x}+5\hat{y}+10\hat{z}
+=\overrightarrow{W}
+$
+
+
+$
+\overrightarrow{a}\times\overrightarrow{W}
+=
+\left|
+\begin{matrix}
+  \hat{x} & \hat{y} & \hat{z} \\
+  \dfrac{1}{\sqrt{6}} & \dfrac{1}{\sqrt{6}} & \dfrac{2}{\sqrt{6}}  \\ 
+  5 & 5 & 10 \\ 
+\end{matrix}
+\right|
+=
+\hat{x}(10-10)-\hat{y}(10-10)+\hat{z}(5-5)
+=
+0
+$
+
+
+
+
 
 \item Mini-quiz: which of these sets of vectors is not a basis for a three dimensional cartesian space? 
 \begin{itemize}
