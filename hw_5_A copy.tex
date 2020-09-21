@@ -333,17 +333,119 @@ $
 0
 $
 
+Showing the vectors $\mathbf{\hat{x}}, \mathbf{\hat{y}}, \mathbf{\hat{z}}$ in the basis of the vectors $\mathbf{a}, \mathbf{b}, \mathbf{c}$. An augmented matrix and row-reduction:
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+\begin{equation}
+  \begin{bmatrix}[ccc|c]
+    \dfrac{1}{\sqrt{6}} & \dfrac{1}{\sqrt{6}} & \dfrac{2}{\sqrt{6}} & \overrightarrow{a} \\
+    \dfrac{1}{\sqrt{30}} & \dfrac{-5}{\sqrt{30}} & \dfrac{2}{\sqrt{30}} & \overrightarrow{b} \\
+    \dfrac{2}{\sqrt{5}} & 0 & \dfrac{-1}{\sqrt{5}}  & \overrightarrow{c} \\
+  \end{bmatrix}
+  =
+  \begin{bmatrix}[ccc|c]
+    1 & 0 & 0 & \dfrac{\overrightarrow{a}}{6}+\dfrac{\overrightarrow{b}}{30}+\dfrac{2\overrightarrow{c}}{5} \\
+    0 & 1 & 0 & \dfrac{\overrightarrow{a}}{6}-\dfrac{\overrightarrow{b}}{6} \\
+    0 & 0 & 1 & \dfrac{\overrightarrow{a}}{3}+\dfrac{\overrightarrow{b}}{15}-\dfrac{\overrightarrow{c}}{5} \\
+  \end{bmatrix}
+\end{equation}
 
 
+$\Rightarrow$ 
+$
+\begin{array}{lll}
+  \hat{x}= \dfrac{\overrightarrow{a}}{6}+\dfrac{\overrightarrow{b}}{30}+\dfrac{2\overrightarrow{c}}{5} \\
+  \hat{y}= \dfrac{\overrightarrow{a}}{6}-\dfrac{\overrightarrow{b}}{6} \\
+  \hat{z}= \dfrac{\overrightarrow{a}}{3}+\dfrac{\overrightarrow{b}}{15}-\dfrac{\overrightarrow{c}}{5}
+\end{array}  
+$
+
+
+$\Rightarrow$ 
+$
+\begin{array}{lll}
+  A = \hat{x}+\hat{y}+2\hat{z} \\
+  B = \hat{x}-\hat{y}+2\hat{z}\\
+  C = \hat{y}-\hat{z}
+\end{array}  
+$
+
+\bigbreak
+
+$\Rightarrow$ 
+$
+\begin{array}{lll}
+  A = \dfrac{2\overrightarrow{a}}{3}-\dfrac{\overrightarrow{b}}{15}+\dfrac{\overrightarrow{c}}{5} \\
+  B = \dfrac{2\overrightarrow{a}}{3}+\dfrac{\overrightarrow{b}}{3} \\
+  C = \dfrac{-\overrightarrow{a}}{6}-\dfrac{7\overrightarrow{b}}{30}+\dfrac{\overrightarrow{c}}{5}
+\end{array}  
+$
 
 
 \item Mini-quiz: which of these sets of vectors is not a basis for a three dimensional cartesian space? 
 \begin{itemize}
 \item $\{ \mathbf{\hat{x}}, \mathbf{\hat{x}}+3\mathbf{\hat{y}}, 3\mathbf{\hat{x}}-\mathbf{\hat{y}} \}$
 
+\noindent
+$\displaystyle
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    1 & 3 & 0 \\ 
+    3 & -1 & 0 \\ 
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\ 
+    0 & 0 & 0 \\ 
+  \end{pmatrix}
+$
+
+Therefore, the set of vectors does not form a basis for $R^3$.
+
+
 \item $\{ \mathbf{\hat{z}}, \mathbf{\hat{x}}+3\mathbf{\hat{y}}, 3\mathbf{\hat{x}}-\mathbf{\hat{y}}\}$
 
+\noindent
+$\displaystyle
+  \begin{pmatrix}
+    0 & 0 & 1 \\
+    1 & 3 & 0 \\ 
+    3 & -1 & 0 \\ 
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\ 
+    0 & 0 & 1 \\ 
+  \end{pmatrix}
+$
+
+Therefore, the set of vectors forms a basis for $R^3$.
+
 \item $\{ e^\pi \mathbf{\hat{z}}, \mathbf{\hat{x}}+3\mathbf{\hat{y}}, 3\mathbf{\hat{x}}-\mathbf{\hat{y}}\}$
+
+\noindent
+$\displaystyle
+  \begin{pmatrix}
+    0 & 0 & e^\pi \\
+    1 & 3 & 0 \\ 
+    3 & -1 & 0 \\ 
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\ 
+    0 & 0 & 1 \\ 
+  \end{pmatrix}
+$
+
+Therefore, the set of vectors forms a basis for $R^3$.
 \end{itemize}
 
 
