@@ -56,6 +56,35 @@
       2 & 4 & 2
       \end{pmatrix} $$
 
+      $det(A)=2(-1)^{3+1}
+      \begin{vmatrix}
+        3 & 2 \\
+        2 & 1
+      \end{vmatrix}
+      +
+      4(-1)^{3+2}
+      \begin{vmatrix}
+        1 & 2 \\
+        -1 & 1
+      \end{vmatrix}
+      +
+      2(-1)^{3+3}
+      \begin{vmatrix}
+        1 & 3 \\
+        -1 & 2
+      \end{vmatrix}
+      $
+
+      $
+      = 2(3-4)-4(1+2)+2(2+3)
+      = 2(-1)-4(3)+2(5)
+      $
+
+      $
+      \Longrightarrow
+      det(A)=-4
+      $
+
 
     \item  Calculate the determinants of the following matrices. $$M = 
       \begin{pmatrix}
@@ -71,6 +100,159 @@
         c & b & a & 1
       \end{pmatrix}
       $$
+
+      $
+      det(M)=
+      a(-1)^{1+1}
+      \begin{vmatrix}
+        a & b & 0 \\
+        0 & a & b \\
+        0 & 0 & a 
+      \end{vmatrix}
+      +
+      c(-1)^{4+1}
+      \begin{vmatrix}
+        b & 0 & 0 \\
+        a & b & 0 \\
+        0 & a & b
+      \end{vmatrix}
+      $
+
+      $=a\left[a(-1)^{1+1}
+      \begin{vmatrix}
+        a & b \\
+        0 & a
+      \end{vmatrix}\right]
+      -c\left[b(-1)^{1+1}
+      \begin{vmatrix}
+        b & 0 \\
+        a & b
+      \end{vmatrix}\right]
+      =a\left[a(a^2)\right]-c\left[b(b^2)\right]
+      $
+
+      $
+      \Longrightarrow
+      det(M)=a^4-b^3c
+      $
+
+      \bigbreak
+
+      $
+      det(N)=b(-1)^{3+1}
+      \begin{vmatrix}
+        1 & 1 & 1 \\
+        1 & 1 & 1 \\
+        b & a & 1
+      \end{vmatrix}
+      +a(-1)^{3+2}
+      \begin{vmatrix}
+        1 & 1 & 1 \\
+        a & 1 & 1 \\
+        c & a & 1
+      \end{vmatrix}
+      +(-1)^{3+3}
+      \begin{vmatrix}
+        1 & 1 & 1 \\
+        a & 1 & 1 \\
+        c & b & 1
+      \end{vmatrix}
+      +(-1)^{3+4}
+      \begin{vmatrix}
+        1 & 1 & 1 \\
+        a & 1 & 1 \\
+        c & b & a
+      \end{vmatrix}
+      $
+
+      $=b\left[(-1)^{1+1}
+      \begin{vmatrix}
+        1 & 1 \\
+        a & 1
+      \end{vmatrix}
+      +(-1)^{1+2}
+      \begin{vmatrix}
+        1 & 1 \\
+        b & 1
+      \end{vmatrix}
+      +(-1)^{1+3}
+      \begin{vmatrix}
+        1 & 1 \\
+        b & a 
+      \end{vmatrix}
+      \right]
+      $
+
+      $-a\left[(-1)^{1+1}
+      \begin{vmatrix}
+        1 & 1 \\
+        a & 1
+      \end{vmatrix}
+      +(-1)^{1+2}
+      \begin{vmatrix}
+        a & 1 \\
+        c & 1
+      \end{vmatrix}
+      +(-1)^{1+3}
+      \begin{vmatrix}
+        a & 1 \\
+        c & a
+      \end{vmatrix}
+      \right]
+      $
+
+      $
+      +\left[(-1)^{1+1}
+      \begin{vmatrix}
+        1 & 1 \\
+        b & 1
+      \end{vmatrix}
+      +(-1)^{1+2}
+      \begin{vmatrix}
+        a & 1 \\
+        c & 1
+      \end{vmatrix}
+      +(-1)^{1+3}
+      \begin{vmatrix}
+        a & 1 \\
+        c & b
+      \end{vmatrix}
+      \right]
+      $
+
+      $-\left[(-1)^{1+1}
+      \begin{vmatrix}
+        1 & 1 \\
+        b & a
+      \end{vmatrix}
+      +(-1)^{1+2}
+      \begin{vmatrix}
+        a & 1 \\
+        c & a 
+      \end{vmatrix}
+      +(-1)^{1+3}
+      \begin{vmatrix}
+        a & 1 \\
+        c & b
+      \end{vmatrix}
+      \right]
+      $
+
+      \bigbreak
+
+      $=b\left[(1-a)-(1-b)+(a-b)\right]-a\left[(1-a)-(a-c)+(a^2-c)\right]$
+
+      $+\left[(1-b)-(a-c)+(ab-c)\right]-\left[(a-b)-(a^2-c)+(ab-c)\right]$
+
+      \bigbreak
+
+      $=-a^3+2a^2-a+ab-b-a+1+a^2-ab-a+b$
+
+      $
+      \Longrightarrow
+      det(N)=-a^3+3a^2-3a+1
+      $
+
 
     \item Prove some properties of determinants, and specifically properties (iii), (iv) and (v) listed in the textbook on page 262 (sec. 8.9). \\
     \emph{(Note: the textbook refers to a formula in chapter 16 for the proofs, however this is not necessary. You can do the proofs using a general formula for the Laplace expansion, e.g. eq. (8.47) of the book. Keep your proof as general as possible. Ideally, you should do the proof for a matrix of any generic dimension. However, proofs for a 3 by 3 generic matrix will be accepted.) }
