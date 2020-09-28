@@ -305,6 +305,42 @@
     \item Prove some properties of determinants, and specifically properties (iii), (iv) and (v) listed in the textbook on page 262 (sec. 8.9). \\
     \emph{(Note: the textbook refers to a formula in chapter 16 for the proofs, however this is not necessary. You can do the proofs using a general formula for the Laplace expansion, e.g. eq. (8.47) of the book. Keep your proof as general as possible. Ideally, you should do the proof for a matrix of any generic dimension. However, proofs for a 3 by 3 generic matrix will be accepted.) }
 
+    $(i) \begin{vmatrix}
+      A^T
+    \end{vmatrix}=
+    \begin{vmatrix}
+      A
+    \end{vmatrix}
+    $
+
+    $
+    (ii) \begin{vmatrix}
+      A^{\dagger}
+    \end{vmatrix}=\begin{vmatrix}
+      (A^*)^T
+    \end{vmatrix}=\begin{vmatrix}
+      A^*
+    \end{vmatrix}=\begin{vmatrix}
+      A
+    \end{vmatrix}^*
+    $
+
+    $(iii)$ Interchanging two rows or two columns. If two rows (columns) of $A$ are interchanged, its determinant changes sign but is unaltered in magnitude.
+
+    $(iv)$ Removing factors. If all the elements of a single row (column) of $A$ have a common factor, $\lambda$, then this factor may be removed;  the value of the determinant is given by the product of the remaining determinant and $\lambda$.Clearly this implies that if all the elements of any row (column) are zero then $\begin{vmatrix}
+      A
+    \end{vmatrix}=0$. It also follows that if every element of the $N \times N$ matrix $A$ is multiplied by a constant factor $\lambda$ then
+
+    $\begin{vmatrix}
+      \lambda A
+    \end{vmatrix}= \lambda^N \begin{vmatrix}
+      A
+    \end{vmatrix}
+    $
+
+    $(v)$ Identical rows or columns. If any two rows (columns) of $A$ are identical or are multiples of one another, then it can be shown that $\begin{vmatrix}
+      A
+    \end{vmatrix}=0$.
 
     \item Establish which of the matrices below are Hermitian. $$A = 
       \begin{pmatrix}
