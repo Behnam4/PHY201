@@ -370,6 +370,37 @@
 
     $(iii)$ Interchanging two rows or two columns. If two rows (columns) of $A$ are interchanged, its determinant changes sign but is unaltered in magnitude.
 
+    \textcolor{hwColor}{
+      Assume
+      $
+      A_1=\begin{pmatrix}
+        a & b \\
+        c & d \\
+      \end{pmatrix}
+      $
+      , and
+      $
+      A_2=\begin{pmatrix}
+        c & d \\
+        a & b \\
+      \end{pmatrix}
+      $
+    }
+
+    \textcolor{hwColor}{
+      $
+      det(A_1)=ad-cb
+      $
+      , and
+      $
+      det(A_2)=cb-ad
+      $
+    }
+
+    \textcolor{hwColor}{
+      By swapping rows, their determinants change sign.  $det(A_1)=-det(A_2)$
+    }
+
     \bigbreak
 
     $(iv)$ Removing factors. If all the elements of a single row (column) of $A$ have a common factor, $\lambda$, then this factor may be removed;  the value of the determinant is given by the product of the remaining determinant and $\lambda$.Clearly this implies that if all the elements of any row (column) are zero then $\begin{vmatrix}
@@ -383,11 +414,61 @@
     \end{vmatrix}
     $
 
+    \textcolor{hwColor}{
+      $
+      A=\begin{pmatrix}
+        \lambda a & \lambda b \\
+        c & d \\
+      \end{pmatrix}
+      $
+      then 
+      $
+      det(A)= (\lambda ad)-(\lambda bc)=\lambda (ad-bc)=\lambda \begin{vmatrix}
+        A
+      \end{vmatrix}
+      $
+    }
+
     \bigbreak
 
     $(v)$ Identical rows or columns. If any two rows (columns) of $A$ are identical or are multiples of one another, then it can be shown that $\begin{vmatrix}
       A
     \end{vmatrix}=0$.
+
+    \textcolor{hwColor}{
+      $
+      A=\begin{pmatrix}
+        a & b & c \\
+        a & b & c \\
+        d & e & f \\
+      \end{pmatrix}
+      $
+    }
+
+    \textcolor{hwColor}{
+      $
+      det(A)=a(-1)^{1+1}\begin{pmatrix}
+        b & c \\
+        e & f \\
+      \end{pmatrix}
+      +b(-1)^{1+2}\begin{pmatrix}
+        a & c \\
+        d & f \\
+      \end{pmatrix}
+      +c(-1)^{1+3}\begin{pmatrix}
+        a & b \\
+        d & e \\
+      \end{pmatrix}
+      $
+    }
+
+    \textcolor{hwColor}{
+      $
+      det(A)=a(bf-ec)-b(af-cd)+c(ae-bd)=0
+      $
+    }
+
+    \bigbreak
 
     \item Establish which of the matrices below are Hermitian. $$A = 
       \begin{pmatrix}
@@ -640,6 +721,7 @@
         $
       }
 
+    \bigbreak
     
     \item  Consider the matrix written below, where $k$ is a real number (i.e., a parameter). (i) Find the rank of the matrix for varying values of $k$. (ii) establish for what values of $k$ the inverse exists. 
       $$
