@@ -313,6 +313,47 @@
     \end{vmatrix}
     $
 
+    \textcolor{hwColor}{
+      Assume
+      $
+      A=\begin{pmatrix}
+        a & b \\
+        c & d \\
+      \end{pmatrix}
+      $
+      , then
+      $
+      A^T\begin{pmatrix}
+        a & c \\
+        b & d \\
+      \end{pmatrix}
+      $
+    }
+
+    \textcolor{hwColor}{
+      $
+        |A|=(ad-cb)
+      $
+      , and
+      $
+      |A^T|=(ad-cb)
+      $
+    }
+
+    \textcolor{hwColor}{
+      therefore, 
+      $
+      \begin{vmatrix}
+        A^T
+      \end{vmatrix}=
+      \begin{vmatrix}
+        A
+      \end{vmatrix}
+      $
+    }
+
+    \bigbreak
+
     $
     (ii) \begin{vmatrix}
       A^{\dagger}
@@ -325,7 +366,11 @@
     \end{vmatrix}^*
     $
 
+    \bigbreak
+
     $(iii)$ Interchanging two rows or two columns. If two rows (columns) of $A$ are interchanged, its determinant changes sign but is unaltered in magnitude.
+
+    \bigbreak
 
     $(iv)$ Removing factors. If all the elements of a single row (column) of $A$ have a common factor, $\lambda$, then this factor may be removed;  the value of the determinant is given by the product of the remaining determinant and $\lambda$.Clearly this implies that if all the elements of any row (column) are zero then $\begin{vmatrix}
       A
@@ -337,6 +382,8 @@
       A
     \end{vmatrix}
     $
+
+    \bigbreak
 
     $(v)$ Identical rows or columns. If any two rows (columns) of $A$ are identical or are multiples of one another, then it can be shown that $\begin{vmatrix}
       A
@@ -880,8 +927,44 @@
       \bigbreak
 
       \textcolor{hwColor}{
-        (ii) 
+        (ii) The inverse of matrix $Q$ exists iff the determinant of $Q\neq0$.
       }
+
+      \textcolor{hwColor}{
+        $
+        det(Q)=(1-4k)(-1)^{3+2}\begin{vmatrix}
+          2 & 5 \\
+          -4k & k-2 \\
+        \end{vmatrix}
+        =
+        88k^2-38k+4
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+        88k^2-38k+4=0
+        \longrightarrow
+        \begin{cases}
+          k=\dfrac{1}{4} \\
+          \\
+          k= \dfrac{2}{11} 
+        \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{
+        For $k=\dfrac{1}{4}, det(Q)=0 \Longrightarrow Q^{-1}$ does not exist.  
+      }
+
+      \textcolor{hwColor}{
+        For $k=\dfrac{2}{11}, det(Q)=0 \Longrightarrow Q^{-1}$ does not exist.  
+      }
+
+      \textcolor{hwColor}{
+        Therefore, the $Q^{-1}$ exists when $k\neq\dfrac{1}{4}$ and $k\neq\dfrac{2}{11}$  .  
+      }
+
 
 
   \end{enumerate}
