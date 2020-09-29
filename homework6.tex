@@ -604,6 +604,286 @@
       \end{pmatrix}
       $$
 
+      \textcolor{hwColor}{
+        (i) When a matrix is reduced to the identity matrix, then the size of the reduced matrix is the rank of that matrix.
+      }
+
+      \textcolor{hwColor}{
+        $
+        Q = 
+          \begin{pmatrix}
+          2 & 0 & 5 \\
+          -4k & 4k-1 & k-2 \\
+          0 & 1-4k & 0
+          \end{pmatrix}
+          \hspace{2cm} \dfrac{1}{2}R_1 \longrightarrow R_1 \hspace{2cm}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+          Q=\begin{pmatrix}
+            1 & 0 & \dfrac{5}{2} \\
+            -4k & 4k-1 & k-2 \\
+            0 & 1-4k & 0 \\
+          \end{pmatrix}
+          \hspace{2cm} R_2+4kR_1 \longrightarrow R_2 \hspace{1cm}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+          Q=\begin{pmatrix}
+          1 & 0 & \dfrac{5}{2} \\
+          0 & 4k-1 & 11k-2 \\
+          0 & 1-4k & 0 \\
+        \end{pmatrix}
+        \hspace{2cm} -\dfrac{5}{2}C_1+C_3 \longrightarrow C_3
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+          Q=\begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 4k-1 & 11k-2 \\
+          0 & 1-4k & 0 \\
+        \end{pmatrix}
+        \hspace{2cm} R_2+R_3 \longrightarrow R_3
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+          Q=\begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 4k-1 & 11k-2 \\
+          0 & 0 & 11k-2 \\
+        \end{pmatrix}
+        \hspace{2cm} R_2+(-R_3) \longrightarrow R_2
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+          Q=\begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 4k-1 & 0 \\
+          0 & 0 & 11k-2 \\
+        \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{
+        Assume
+        $
+          Q=\begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 4k-1 & 0 \\
+          0 & 0 & 11k-2 \\
+        \end{pmatrix}=\begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 1 & 0 \\
+          0 & 0 & 1 \\
+        \end{pmatrix}
+        $
+        , then 
+        $
+         \longrightarrow
+         \begin{cases}
+           4k-1=1 \\
+           11k-2=1  
+         \end{cases}
+         \longrightarrow
+         \begin{cases}
+           k=\dfrac{1}{2} \\
+           \\
+           k= \dfrac{3}{11} 
+         \end{cases}
+        $
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        Case 1: 
+        $
+           k=\dfrac{1}{2}
+           \\
+           Q=\begin{pmatrix}
+             1 & 0 & 0 \\
+             0 & 1 & 0 \\
+             0 & 0 & \dfrac{7}{2}
+           \end{pmatrix}
+           \hspace{1cm} \dfrac{2}{7}R_3 \longrightarrow R_3
+           \hspace{1cm} Q=\begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+           \end{pmatrix}
+        $
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        Case 2: 
+        $
+           k=\dfrac{3}{11}
+           \\
+           Q=\begin{pmatrix}
+             1 & 0 & 0 \\
+             0 & \dfrac{1}{11} & 0 \\
+             0 & 0 & 1
+           \end{pmatrix}
+           \hspace{1cm} 11R_2 \longrightarrow R_2
+           \hspace{1cm} Q=\begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+           \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{
+          Hence, when 
+        $
+         \longrightarrow
+         \begin{cases}
+          k=\dfrac{1}{2} \\
+          \\
+          k= \dfrac{3}{11} 
+         \end{cases}
+        $
+        the rank of matrix $Q$ is 3.
+      }
+      
+      \textcolor{hwColor}{
+        \rule{16cm}{0.4pt}
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        Assume
+        $
+          Q=\begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 4k-1 & 0 \\
+          0 & 0 & 11k-2 \\
+        \end{pmatrix}=\begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 1 & 0 \\
+          0 & 0 & 0 \\
+        \end{pmatrix}
+        $
+        , then 
+        $
+         \longrightarrow
+         \begin{cases}
+           4k-1=1 \\
+           11k-2=0  
+         \end{cases}
+         \longrightarrow
+         \begin{cases}
+           k=\dfrac{1}{2} \\
+           \\
+           k= \dfrac{2}{11} 
+         \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{
+        Case 1: 
+        $
+           k=\dfrac{1}{2}
+           \\
+           Q=\begin{pmatrix}
+             1 & 0 & 0 \\
+             0 & 1 & 0 \\
+             0 & 0 & \dfrac{7}{2}
+           \end{pmatrix}
+           \hspace{0.5cm} \dfrac{2}{7}R_3 \longrightarrow R_3
+           \hspace{0.5cm} Q=\begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+           \end{pmatrix}
+        $
+        the rank of the matrix is 3 when $k=\dfrac{1}{2}$.
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        Case 2: 
+        $
+           k=\dfrac{2}{11}
+           \\
+           Q=\begin{pmatrix}
+             1 & 0 & 0 \\
+             0 & -\dfrac{3}{11} & 0 \\
+             0 & 0 & 0
+           \end{pmatrix}
+           \hspace{0.1cm} -\dfrac{11}{3}R_2 \longrightarrow R_2
+           \hspace{0.5cm} Q=\begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 0
+           \end{pmatrix}
+        $
+        the rank of the matrix is 2 when $k=\dfrac{2}{11}$.
+      }
+
+      \textcolor{hwColor}{
+        \rule{16cm}{0.4pt}
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        Assume
+        $
+          Q=\begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 4k-1 & 0 \\
+          0 & 0 & 11k-2 \\
+        \end{pmatrix}=\begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 0 & 0 \\
+          0 & 0 & 0 \\
+        \end{pmatrix}
+        $
+        , then 
+        $
+         \longrightarrow
+         \begin{cases}
+           4k-1=0 \\
+           11k-2=0  
+         \end{cases}
+         \longrightarrow
+         \begin{cases}
+           k=\dfrac{1}{4} \\
+           \\
+           k= \dfrac{2}{11} 
+         \end{cases}
+        $
+        Since there is not a $k$ value such that matrix $Q$ can be written as an $1 \times 1$ identity matrix, therefore, matrix Q can only have rank 2 and 3 for variying value of $k$. 
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        \rule{16cm}{0.4pt}
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        (ii) 
+      }
+
+
   \end{enumerate}
 
 \end{document}
