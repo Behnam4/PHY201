@@ -1,0 +1,132 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+    \center % Center everything on the page
+    
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm] % Name of your university/college
+
+    \textsc{\LARGE Mathematical Methods For Physics I }\\[1.5cm] % Major heading such as course name
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework 7}\\[0.4cm] 
+    \HRule \\[1.5cm]
+    
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Cecilia Lunardini}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill % Fill the rest of the page with whitespace
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item Calculate the eigenvalues and eigenvectors of the Pauli matrices.
+
+      \textcolor{hwColor}{ 
+        $\sigma_1=\sigma_x\equiv
+        \begin{pmatrix}
+          0 & 1 \\
+          1 & 0 
+        \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{ 
+        $\sigma_2=\sigma_y\equiv
+        \begin{pmatrix}
+          0 & -i \\
+          i & 0 
+        \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{ 
+        $\sigma_3=\sigma_z\equiv
+        \begin{pmatrix}
+          1 & 0 \\
+          0 & -1 
+        \end{pmatrix}
+        $
+      }
+
+
+    \item Show that if a matrix is diagonal, (i.e., its only non-zero elements lie on the main (upper-left to lower-right) diagonal), these elements are the matrix's eigenvalues. What are the corresponding eigenvectors?
+
+    \item The matrix 
+      $$M = 
+      \begin{pmatrix}
+      1 & -1 & -1 \\
+      -1 & 1 & -1 \\
+      -1 & -1 & 1
+      \end{pmatrix}
+      $$
+      has a 2-fold degenerate eigenvalue. Find the eigenvalues and construct a full set of 3 different
+      (linearly independent) eigenvectors. Normalize the eigenvectors.
+
+    \item The matrix in the previous exercise is Hermitian. If the degenerate eigenvectors you found are not orthogonal, find (using any method of your choice) two that are, and normalize them so that your set of eigenvectors is orthonormal.
+      Compute the right hand side of eq. (8.80) of the textbook as a check of your result (what are you supposed to find? Comment as adequate).
+
+    \item Find the eigenvalues and a set of eigenvectors of the matrix
+      $$ 
+      \begin{pmatrix}
+      1 & -1 & -1 \\
+      -1 & 1 & -1 \\
+      -1 & -1 & 1
+      \end{pmatrix}
+      $$
+
+    
+    \item By finding the eigenvectors of the Hermitian matrix
+      $$H= 
+      \begin{pmatrix}
+      10 & 3i \\
+      -3i & 2 
+      \end{pmatrix}
+      $$
+
+      construct a unitary matrix $U$ such that $U^\dagger HU=\Lambda$, where $\Lambda$ is a real  diagonal matrix. 
+
+
+    % \textcolor{hwColor}{ 
+    %   $ 
+    %   A^T\begin{pmatrix} 
+    %     a & c \\ 
+    %     b & d \\ 
+    %   \end{pmatrix} 
+    %   $ 
+    % } 
+  \end{enumerate}
+
+\end{document}
