@@ -272,7 +272,6 @@
         \end{pmatrix}$
        }
 
-       
       \textcolor{hwColor}{
         \rule{16cm}{0.4pt}
       }
@@ -373,9 +372,183 @@
       }
 
 
-
     \item Show that if a matrix is diagonal, (i.e., its only non-zero elements lie on the main (upper-left to lower-right) diagonal), these elements are the matrix's eigenvalues. What are the corresponding eigenvectors?
 
+      \textcolor{hwColor}{
+        A diagonal matrix is a matrix in which the entries outside the main diagonal are all zero.
+        $
+        A=\begin{pmatrix}
+          a & 0 & 0 \\
+          0 & b & 0 \\
+          0 & 0 & c \\
+        \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+        A-\lambda I=\begin{pmatrix}
+          a & 0 & 0 \\
+          0 & b & 0 \\
+          0 & 0 & c \\
+        \end{pmatrix}-\begin{pmatrix}
+          \lambda & 0 & 0 \\
+          0 & \lambda & 0 \\
+          0 & 0 & \lambda \\
+        \end{pmatrix}=\begin{pmatrix}
+          a-\lambda & 0 & 0 \\
+          0 & b-\lambda & 0 \\
+          0 & 0 & c-\lambda \\
+        \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+        det(A-\lambda I)=\begin{vmatrix}
+          a-\lambda & 0 & 0 \\
+          0 & b-\lambda & 0 \\
+          0 & 0 & c-\lambda \\
+        \end{vmatrix}=(a-\lambda)\begin{vmatrix}
+          b-\lambda & 0 \\
+          0 & c-\lambda \\
+        \end{vmatrix}=(a-\lambda)(b-\lambda)(c-\lambda)
+        $
+      }
+
+      \textcolor{hwColor}{
+        If $det(A-\lambda I)=0$
+        , then $=(a-\lambda)(b-\lambda)(c-\lambda)=0$
+        $
+        \begin{cases}
+          \lambda_1=a \\
+          \lambda_2=b \\
+          \lambda_3=c \\
+        \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+        \lambda_1=a \rightarrow 
+        \begin{pmatrix}
+          a & 0 & 0 \\
+          0 & b & 0 \\
+          0 & 0 & c \\
+        \end{pmatrix}.\begin{pmatrix}
+          x \\
+          y \\
+          z \\
+        \end{pmatrix}=a\begin{pmatrix}
+          x \\
+          y \\
+          z \\
+        \end{pmatrix} 
+        \Longrightarrow 
+        \begin{cases}
+          ax=ax \\
+          by=ay \\
+          cz=az \\
+        \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+        \Longrightarrow 
+        x=1, y=0$, and $z=0$, hence $v_1=\begin{pmatrix}
+          1 \\
+          0 \\
+          0 \\
+        \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{
+        \rule{16cm}{0.4pt}
+      }
+
+      \textcolor{hwColor}{
+        $
+        \lambda_2=b \rightarrow 
+        \begin{pmatrix}
+          a & 0 & 0 \\
+          0 & b & 0 \\
+          0 & 0 & c \\
+        \end{pmatrix}.\begin{pmatrix}
+          x \\
+          y \\
+          z \\
+        \end{pmatrix}=b\begin{pmatrix}
+          x \\
+          y \\
+          z \\
+        \end{pmatrix} 
+        \Longrightarrow 
+        \begin{cases}
+          ax=bx \\
+          by=by \\
+          cz=bz \\
+        \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+        \Longrightarrow 
+        x=0, y=1$, and $z=0$, hence $v_2=\begin{pmatrix}
+          0 \\
+          1 \\
+          0 \\
+        \end{pmatrix}
+        $
+      }
+
+      
+      \textcolor{hwColor}{
+        \rule{16cm}{0.4pt}
+      }
+
+      \textcolor{hwColor}{
+        $
+        \lambda_3=c \rightarrow 
+        \begin{pmatrix}
+          a & 0 & 0 \\
+          0 & b & 0 \\
+          0 & 0 & c \\
+        \end{pmatrix}.\begin{pmatrix}
+          x \\
+          y \\
+          z \\
+        \end{pmatrix}=c\begin{pmatrix}
+          x \\
+          y \\
+          z \\
+        \end{pmatrix} 
+        \Longrightarrow 
+        \begin{cases}
+          ax=cx \\
+          by=cy \\
+          cz=cz \\
+        \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+        \Longrightarrow 
+        x=0, y=0$, and $z=1$, hence $v_3=\begin{pmatrix}
+          0 \\
+          0 \\
+          1 \\
+        \end{pmatrix}
+        $
+      }
+
+
+      % Hence the eigenvalues of D are the elements on the diagonal,
+      % and the eigenvectors form the canonical basis of the space K
+  
     \item The matrix 
       $$M = 
       \begin{pmatrix}
@@ -410,15 +583,6 @@
 
       construct a unitary matrix $U$ such that $U^\dagger HU=\Lambda$, where $\Lambda$ is a real  diagonal matrix. 
 
-
-    % \textcolor{hwColor}{ 
-    %   $ 
-    %   A^T\begin{pmatrix} 
-    %     a & c \\ 
-    %     b & d \\ 
-    %   \end{pmatrix} 
-    %   $ 
-    % } 
   \end{enumerate}
 
 \end{document}
