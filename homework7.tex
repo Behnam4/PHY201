@@ -545,9 +545,6 @@
         $
       }
 
-
-      % Hence the eigenvalues of D are the elements on the diagonal,
-      % and the eigenvectors form the canonical basis of the space K
   
     \item The matrix 
       $$M = 
@@ -559,6 +556,154 @@
       $$
       has a 2-fold degenerate eigenvalue. Find the eigenvalues and construct a full set of 3 different
       (linearly independent) eigenvectors. Normalize the eigenvectors.
+
+      \textcolor{hwColor}{
+        $
+          M-\lambda I= \begin{pmatrix}
+            1 & -1 & -1 \\
+            -1 & 1 & -1 \\
+            -1 & -1 & 1
+          \end{pmatrix}-\begin{pmatrix}
+            \lambda & 0 & 0 \\
+            0 & \lambda & 0 \\
+            0 & 0 & \lambda
+          \end{pmatrix}=\begin{pmatrix}
+            1-\lambda & -1 & -1 \\
+            -1 & 1-\lambda & -1 \\
+            -1 & -1 & 1-\lambda
+          \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $det(M-\lambda I)=(1-\lambda)\left[(1-\lambda)(1-\lambda)-1\right]+\left[(\lambda-1)-1\right]-\left[1-(\lambda-1)\right]=-\lambda^3+3\lambda^2-4$
+      }
+
+      \textcolor{hwColor}{
+        If $det(M-\lambda I)=0$, then $-\lambda^3+3\lambda^2-4=0 \rightarrow \lambda^3-3\lambda^2+4=0$
+      }
+
+      \textcolor{hwColor}{
+        $
+        \rightarrow \lambda^3-3\lambda^2+4=(\lambda^2-\lambda-2)(2-\lambda)=(\lambda+1)(\lambda-2)(2-\lambda)=0
+        \Longrightarrow 
+        \begin{cases}
+          \lambda_1=-1 \\
+          \lambda_2=2 \\
+          \lambda_3=2 \\
+        \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+        \lambda_1=-1 \rightarrow
+        \begin{pmatrix}
+          1 & -1 & -1 \\
+          -1 & 1 & -1 \\
+          -1 & -1 & 1
+        \end{pmatrix}.\begin{pmatrix}
+          x \\
+          y \\
+          z \\
+        \end{pmatrix}=\begin{pmatrix}
+          -x \\
+          -y \\
+          -z \\
+        \end{pmatrix}
+        \Longrightarrow
+        \begin{cases}
+          x-y-z=-x \\
+          -x+y-z=-y \\
+          -x-y+z=-z
+        \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{
+        After a little algebra, we find that the only way to satisfy all three equations simultaneously is if $x=y=z$. It does not matter what value they are, only that they all have the same value. For simplicity, we pick $x=y=z=1$.
+        Hence, first eigenvector is 
+        $
+        V_1=\begin{pmatrix}
+          1 \\
+          1 \\
+          1
+        \end{pmatrix}
+        $
+        which, after normalization, becomes, $V_1=\dfrac{1}{\sqrt{3}} \begin{pmatrix}
+          1 \\
+          1 \\
+          1 \\
+        \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{
+        \rule{16cm}{0.4pt}
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $
+        \lambda_2=\lambda_3=-1 \rightarrow
+        \begin{pmatrix}
+          1 & -1 & -1 \\
+          -1 & 1 & -1 \\
+          -1 & -1 & 1
+        \end{pmatrix}.\begin{pmatrix}
+          x \\
+          y \\
+          z \\
+        \end{pmatrix}=\begin{pmatrix}
+          2x \\
+          2y \\
+          2z \\
+        \end{pmatrix}
+        \Longrightarrow
+        \begin{cases}
+          x-y-z=2x \\
+          -x+y-z=2y \\
+          -x-y+z=2z
+        \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{
+        After a little algebra, it turns out they all end up being the same $-x-y-z=0$. We can rearrange it to $x=-(y+z)$. Now whatever we end up with for $V_2$ and $V_3$,
+        we will have to ensure that one is not a scalar multiple of the other. Since it appears that we have no constraints on the values of $y$ and $z$ at this point, for simplicity let's set $y=0$.
+        Doing so gives us $x=-z$. Since there is no constraints on the value of $z$, we shall pick $x=1$. Therefore,       
+        $
+        V_2=\begin{pmatrix}
+          1 \\
+          0 \\
+          -1
+        \end{pmatrix}
+        $
+        which, after normalization, becomes, $V_2=\dfrac{1}{\sqrt{2}} \begin{pmatrix}
+          1 \\
+          0 \\
+          -1
+        \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{
+        Now let's consider when we set $z=0$. Then $x=-y$, and if we choose $x=1$, we end up with the following vector.       
+        $
+        V_3=\begin{pmatrix}
+          1 \\
+          -1 \\
+          0
+        \end{pmatrix}
+        $
+        which, after normalization, becomes, $V_3=\dfrac{1}{\sqrt{2}} \begin{pmatrix}
+          1 \\
+          -1 \\
+          0
+        \end{pmatrix}
+        $
+      }
 
     \item The matrix in the previous exercise is Hermitian. If the degenerate eigenvectors you found are not orthogonal, find (using any method of your choice) two that are, and normalize them so that your set of eigenvectors is orthonormal.
       Compute the right hand side of eq. (8.80) of the textbook as a check of your result (what are you supposed to find? Comment as adequate).
