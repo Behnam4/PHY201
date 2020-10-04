@@ -272,6 +272,107 @@
         \end{pmatrix}$
        }
 
+       
+      \textcolor{hwColor}{
+        \rule{16cm}{0.4pt}
+      }
+
+      \textcolor{hwColor}{ 
+        $\sigma3-\lambda I=
+          \begin{pmatrix}
+            1 & 0 \\
+            0 & -1 
+          \end{pmatrix}-
+          \lambda \begin{pmatrix}
+            1 & 0 \\
+            0 & 1
+          \end{pmatrix}=
+          \begin{pmatrix}
+            1 & 0 \\
+            0 & -1 
+          \end{pmatrix}-
+          \begin{pmatrix}
+            \lambda & 0 \\
+            0 & \lambda
+          \end{pmatrix}=
+          \begin{pmatrix}
+            1-\lambda & 0 \\
+            0 & -1-\lambda 
+          \end{pmatrix}
+        $
+      }
+
+      \textcolor{hwColor}{ 
+        $det(\sigma_3-\lambda I)=
+          \begin{vmatrix}
+            1-\lambda & 0 \\
+            0 & -1-\lambda 
+          \end{vmatrix}= (1-\lambda)(-1-\lambda)
+        $
+        if $det(\sigma_3-\lambda I)=0$ 
+        $
+          \Longrightarrow
+          \begin{cases}
+            \lambda_1=1 \\
+            \lambda_2=-1
+          \end{cases}
+        $
+      }
+
+      \textcolor{hwColor}{ $\sigma_3 \overrightarrow{x}=\lambda \overrightarrow{x}$ }
+
+      \textcolor{hwColor}{ 
+        $
+        \lambda_1=1  \rightarrow 
+        \begin{pmatrix}
+          1 & 0 \\
+          0 & -1 
+        \end{pmatrix}.\begin{pmatrix}
+          x \\
+          y
+        \end{pmatrix}=\begin{pmatrix}
+          x \\
+          y
+        \end{pmatrix}
+        \Longrightarrow 
+        \begin{cases}
+          x=x \\
+          -y=y
+        \end{cases}
+        $
+        $x=1$ and $y=0$, therefore $v_1=\begin{pmatrix}
+          1 \\
+          0
+        \end{pmatrix}$
+      }
+
+      
+      \textcolor{hwColor}{ 
+        $
+        \lambda_1=-1  \rightarrow 
+        \begin{pmatrix}
+         0 & -i \\
+         i & 0  
+        \end{pmatrix}.\begin{pmatrix}
+          x \\
+          y
+        \end{pmatrix}=\begin{pmatrix}
+          -x \\
+          -y
+        \end{pmatrix}
+        \Longrightarrow 
+        \begin{cases}
+          x=-x \\
+          y=-y
+        \end{cases}
+        $
+        $x=0$ and $y=1$, therefore $v_2=\begin{pmatrix}
+          0 \\
+          1
+        \end{pmatrix}$
+      }
+
+
 
     \item Show that if a matrix is diagonal, (i.e., its only non-zero elements lie on the main (upper-left to lower-right) diagonal), these elements are the matrix's eigenvalues. What are the corresponding eigenvectors?
 
