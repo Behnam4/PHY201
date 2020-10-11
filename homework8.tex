@@ -1,0 +1,125 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+    \center % Center everything on the page
+    
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm] % Name of your university/college
+
+    \textsc{\LARGE Mathematical Methods For Physics I }\\[1.5cm] % Major heading such as course name
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework 8}\\[0.4cm] 
+    \HRule \\[1.5cm]
+    
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Cecilia Lunardini}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill % Fill the rest of the page with whitespace
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item  Use the Gram-Schmidt process to produce an orthonormal basis from the set of vectors $\mathbf{v_1}=\mathbf{\hat{x}}-\mathbf{\hat{y}}$, $\mathbf{v_2}=\mathbf{\hat{x}}+\mathbf{\hat{z}}$, $\mathbf{v_3}=\mathbf{\hat{y}} - 2 \mathbf{\hat{z}}$. Use the vectors in the order given, i.e., take the first vector of the new basis to be parallel to $\mathbf{v_1}$, etc.
+    
+    \textcolor{hwColor}{
+      $
+        \begin{cases}
+          v_1=\hat{x}-\hat{y}=(1,-1,0) \\
+          v_2=\hat{x}+\hat{z}=(1,0,1) \\
+          v_3=\hat{y}-2\hat{z}=(0,1,-2) \\
+        \end{cases}
+      $
+    }
+    
+    \textcolor{hwColor}{
+      To get the first vector, $\hat{x}$, we just need to pick one of our vectors and normalize it. While any of the vectors in the given set will work for our purposes, for consistency and to keep things simple we will pick $\overrightarrow{v_1}$.
+    }
+
+    \textcolor{hwColor}{
+      $\overrightarrow{u_1}=\overrightarrow{v_1}$ Our first orthonormal vector is simply \\
+      $
+        \hat{u_1}=\dfrac{\overrightarrow{u_1}}{|\overrightarrow{u_1}|}=\dfrac{(1,-1,0)}{\sqrt{(1)^2+(-1)^2+(0)^2}} \Longrightarrow \hat{u_1}=\dfrac{1}{\sqrt{2}}(1,-1,0)
+      $
+    }
+
+    \textcolor{hwColor}{ 
+      \rule{15cm}{0.4pt} 
+    }
+
+    \textcolor{hwColor}{ 
+      $
+        \overrightarrow{u_2}=\overrightarrow{v_2}-(\hat{u_1}.\overrightarrow{v_2}).\hat{u_1}=(1,0,1)-\left[\dfrac{1}{\sqrt{2}}(1,-1,0).(1,0,1)\right].\dfrac{1}{\sqrt{2}}(1,-1,0)=(1,0,1)-\dfrac{1}{2}(1,-1,0) \\
+        \overrightarrow{u_2}=(\dfrac{1}{2},\dfrac{1}{2},1) \Longrightarrow \hat{u_2}=\sqrt{\dfrac{2}{3}}(\dfrac{1}{2},\dfrac{1}{2},1)
+      $
+    } 
+
+    \textcolor{hwColor}{ 
+      \rule{15cm}{0.4pt} 
+    }
+
+    \textcolor{hwColor}{ 
+      $
+        \overrightarrow{u_3}=\overrightarrow{v_3}-(\hat{u_1}.\overrightarrow{v_3}).\hat{u_1}-(\hat{u_2}.\overrightarrow{v_3}).\hat{u_2} \\
+        =(0,1,-2)-\left[\dfrac{1}{\sqrt{2}}(1,-1,0).(0,1,-2)\right].\dfrac{1}{\sqrt{2}}(1,-1,0)-\left[\sqrt{\dfrac{2}{3}}(\dfrac{1}{2},\dfrac{1}{2},1).(0,1,-2)\right].\sqrt{\dfrac{2}{3}}(\dfrac{1}{2},\dfrac{1}{2},1)
+        =(0,1,-2)-\left[-\dfrac{1}{\sqrt{2}}\dfrac{1}{\sqrt{2}}.(1,-1,0)\right]-\left[\dfrac{2}{3}\dfrac{-3}{2}.(\dfrac{1}{2}, \dfrac{1}{2},1)\right] \\
+        =(0,1,-2)+(\dfrac{1}{2},-\dfrac{1}{2},0)+(\dfrac{1}{2},\dfrac{1}{2},1) \\
+        \overrightarrow{u_3}=(1,1,-1) \Longrightarrow \hat{u_3}=\dfrac{1}{\sqrt{3}}(1,1,-1)
+      $
+    }
+
+    \textcolor{hwColor}{
+      To check if we have done the process correctly, we can take the dot product of each vector with the others - we should always get zero if the vectors are truly orthogonal. \\
+      $
+        \hat{u_1}.\hat{u_2}=0 \\
+        \hat{u_1}.\hat{u_3}=0 \\
+        \hat{u_2}.\hat{u_3}=0 \\
+      $
+    }
+
+    \item  Same as the previous exercise, for the vectors:
+      $\mathbf{v_1}=\mathbf{\hat{x}}+\mathbf{\hat{y}}+2\mathbf{\hat{z}}$; $\mathbf{v_2}=\mathbf{\hat{x}}-\mathbf{\hat{y}}+2\mathbf{\hat{z}}$; $\mathbf{v_3}=\mathbf{\hat{y}}-\mathbf{\hat{z}}$.  
+      
+    \item Prove the orthogonality relations stated in section 12.1.
+
+
+    \item Consider the function $f(x)=x$,  with $-\pi < x < \pi$. \\
+      Consider it to be periodic with period equaling the range of $x$ given above. Find the Fourier series for $f(x)$. (Hint: consider the example on page 422, and fig. 12.5 of the textbook for clarifications on what the problem is asking.)
+      
+      
+    \item Same as the previous exercise, for $f(x)=e^{-x}$,  with $-1 < x < 1$. 
+  \end{enumerate}
+
+\end{document}
