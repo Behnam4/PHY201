@@ -8,6 +8,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{float}
+\usepackage{bigints}
 \usepackage[colorinlistoftodos]{todonotes}
 
 \definecolor{hwColor}{HTML}{AD53BA}
@@ -169,7 +170,79 @@
 
     \item Consider the function $f(x)=x$,  with $-\pi < x < \pi$. \\
       Consider it to be periodic with period equaling the range of $x$ given above. Find the Fourier series for $f(x)$. (Hint: consider the example on page 422, and fig. 12.5 of the textbook for clarifications on what the problem is asking.)
-      
+
+      \textcolor{hwColor}{
+        $f(x)=\dfrac{a_0}{2}+\sum\limits_{r=1}^{\infty}\left[a_r cos(\dfrac{2\pi rx}{L})+b_r sin(\dfrac{2\pi rx}{L})\right]$
+      }
+
+      \textcolor{hwColor}{
+        $
+          a_0=\dfrac{2}{L}\bigints_{x_0}^{x_0+L} f(x)dx
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+          a_r=\dfrac{2}{L}\bigints_{x_0}^{x_0+L} f(x)cos(\dfrac{2\pi rx}{L})dx
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+          b_r=\dfrac{2}{L}\bigints_{x_0}^{x_0+L} f(x)sin(\dfrac{2\pi rx}{L})dx
+        $
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
+
+      \textcolor{hwColor}{
+        $L=2\pi$
+      }
+
+      \textcolor{hwColor}{
+        $
+          a_0=\dfrac{2}{2\pi}\bigints_{-\pi}^{\pi}xdx=\dfrac{1}{\pi}\dfrac{x^2}{2}\Big|_{-\pi}^{\pi} \Longrightarrow a_0=0
+        $
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
+
+      \textcolor{hwColor}{
+        $
+          a_r=\dfrac{2}{2\pi}\bigints_{-\pi}^{\pi} xcos(\dfrac{2\pi rx}{2\pi})dx=\dfrac{1}{\pi}\bigints_{-\pi}^{\pi} xcos(rx)dx=\dfrac{1}{r}\left[xsin(xr)+\dfrac{1}{r}cos(xr)\right]\Big|_{-\pi}^{\pi}=0 \\
+          \\
+          \Longrightarrow a_r=0
+        $
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
+
+      \textcolor{hwColor}{
+        $
+          b_r=\dfrac{2}{2\pi}\bigints_{-\pi}^{\pi} xsin(\dfrac{2\pi rx}{2\pi})dx=\dfrac{1}{\pi}\bigints_{-\pi}^{\pi} xsin(rx)dx=\dfrac{1}{\pi}\left[-\dfrac{x}{r}cos(xr)+\dfrac{1}{r^2}sin(xr)\right]\Big|_{-\pi}^{\pi} \\
+          \\
+          =\dfrac{1}{\pi}\left[-\dfrac{x}{r}cos(xr)+\dfrac{1}{r^2}sin(xr)\right]\Big|_{-\pi}^{\pi}=\dfrac{1}{\pi}(-\dfrac{2\pi}{r}(-1)^r)
+          \Longrightarrow b_r=-\dfrac{2}{r}(-1)^r
+        $
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
+
+      \textcolor{hwColor}{
+        $
+          f(x)=0+\sum\limits_{r=1}^{\infty}\left[0+-\dfrac{2}{r}(-1)^r sin(\dfrac{2\pi rx}{2\pi})\right] \\
+          \\
+          \Longrightarrow f(x)=\sum\limits_{r=1}^{\infty}\left[-\dfrac{2(-1)^r sin(rx)}{r}\right]
+        $
+      }
       
     \item Same as the previous exercise, for $f(x)=e^{-x}$,  with $-1 < x < 1$. 
   \end{enumerate}
