@@ -240,11 +240,84 @@
         $
           f(x)=0+\sum\limits_{r=1}^{\infty}\left[0+-\dfrac{2}{r}(-1)^r sin(\dfrac{2\pi rx}{2\pi})\right] \\
           \\
-          \Longrightarrow f(x)=\sum\limits_{r=1}^{\infty}\left[-\dfrac{2(-1)^r sin(rx)}{r}\right]
+          \Longrightarrow x=\sum\limits_{r=1}^{\infty}\left[-\dfrac{2(-1)^r sin(rx)}{r}\right]
         $
       }
       
     \item Same as the previous exercise, for $f(x)=e^{-x}$,  with $-1 < x < 1$. 
+
+    
+    \textcolor{hwColor}{
+      $f(x)=a_0+\sum\limits_{n=1}^{\infty}\left[a_n cos(\dfrac{n\pi x}{L})+b_n sin(\dfrac{n\pi x}{L})\right]$
+    }
+
+    \textcolor{hwColor}{
+      $
+        a_0=\dfrac{1}{2L}\bigints_{-L}^{L} f(x)dx
+      $
+    }
+
+    \textcolor{hwColor}{
+      $
+        a_n=\dfrac{1}{L}\bigints_{-L}^{L} f(x)cos(\dfrac{n\pi x}{L})dx
+      $
+    }
+
+    \textcolor{hwColor}{
+      $
+        b_n=\dfrac{1}{L}\bigints_{-L}^{L} f(x)sin(\dfrac{n\pi x}{L})dx
+      $
+    }
+
+    \textcolor{hwColor}{ 
+      \rule{15cm}{0.4pt} 
+    }
+
+    \textcolor{hwColor}{
+      $
+        a_0=\dfrac{1}{2}\bigints_{-1}^{1} -e^{-x}dx=\dfrac{e^2-1}{2e}
+      $
+    }
+
+    \textcolor{hwColor}{ 
+      \rule{15cm}{0.4pt} 
+    }
+
+    \textcolor{hwColor}{
+      $
+        a_n=\dfrac{1}{1}\bigints_{-1}^{1} e^{-x}cos(\dfrac{n\pi x}{1})dx=\bigints_{-1}^{1} e^{-x}cos(n\pi x)dx=e^{-x}\dfrac{1}{n\pi}sin(n\pi x)-\dfrac{1}{n\pi}\bigints -e^{-x}sin(n\pi x) dx \\
+        \\
+        =\left[e^{-x}\dfrac{1}{n\pi}sin(n\pi x)-\dfrac{1}{(n\pi)^2}\left[e^{-x}cos(n\pi x)+\dfrac{1}{n\pi}sin(n\pi x)\right]\right]\Big|_{-1}^{1} \\
+        \\
+        \Longrightarrow a_n=\dfrac{1}{(n\pi)^2}\left[(-1)^n-\dfrac{(-1)^n}{e}\right]
+      $
+    }
+
+    \textcolor{hwColor}{ 
+      \rule{15cm}{0.4pt} 
+    }
+
+    \textcolor{hwColor}{
+      $
+        b_n=\dfrac{1}{1}\bigints_{-1}^{1} e^{-x}sin(\dfrac{n\pi x}{1})dx=\bigints_{-1}^{1} e^{-x}sin(n\pi x)dx=\left[-\dfrac{e^x cos(n\pi x)}{n\pi}-\dfrac{1}{n\pi}\bigints e^{-x} cos(n\pi x)dx\right]\Big|_{-1}^{1} \\
+        \\
+        \Longrightarrow b_n=\dfrac{e^2n\pi (-1)^n-n\pi (-1)^n}{e\left[(n\pi)^2+1\right]}
+      $
+    }
+
+    \textcolor{hwColor}{ 
+      \rule{15cm}{0.4pt} 
+    }
+
+    \textcolor{hwColor}{
+      $
+        f(x)=\dfrac{e^2-1}{2e}+\sum\limits_{n=1}^{\infty}\left[\dfrac{1}{(n\pi)^2}\left[(-1)^n-\dfrac{(-1)^n}{e}\right] cos(n\pi x)+\dfrac{e^2n\pi (-1)^n-n\pi (-1)^n}{e\left[(n\pi)^2+1\right]} sin(n\pi x)\right] \\
+        \\ 
+        \\
+        \Longrightarrow e^{-x}=\dfrac{e^2-1}{2e}+\sum\limits_{n=1}^{\infty}\left[\dfrac{1}{(n\pi)^2}\left[(-1)^n-\dfrac{(-1)^n}{e}\right] cos(n\pi x)+\dfrac{e^2n\pi (-1)^n-n\pi (-1)^n}{e\left[(n\pi)^2+1\right]} sin(n\pi x)\right] \\
+      $
+    }
+
   \end{enumerate}
 
 \end{document}
