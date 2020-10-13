@@ -23,9 +23,9 @@
     
 
 
-    \textsc{\LARGE Arizona State University}\\[1.5cm] % Name of your university/college
+    \textsc{\LARGE Arizona State University}\\[1.5cm]
 
-    \textsc{\LARGE Mathematical Methods For Physics I }\\[1.5cm] % Major heading such as course name
+    \textsc{\LARGE Mathematical Methods For Physics I }\\[1.5cm]
 
 
     \begin{figure}
@@ -166,6 +166,30 @@
     
       
     \item Prove the orthogonality relations stated in section 12.1.
+        
+      \textcolor{hwColor}{
+        $
+          \bigints_{x_0}^{x_0+L} sin(\dfrac{2\pi rx}{L}) cos(\dfrac{2\pi px}{L}) dx=0
+        $
+      }  
+
+      \textcolor{hwColor}{
+        Consider
+        $
+          S(n)=\bigints_{x_0}^{x_0+L} sin(\dfrac{2\pi nx}{L})dx \\
+        $
+      }   
+
+      
+      \textcolor{hwColor}{
+        $
+          Z=\bigints_{x_0}^{x_0+L} sin(\dfrac{2\pi rx}{L}) cos(\dfrac{2\pi px}{L}) dx=\dfrac{1}{2}\bigints_{x_0}^{x_0+L} \left[sin(\dfrac{2\pi (r+p)x}{L}) sin(\dfrac{2\pi (r-p)x}{L})\right]dx \\
+          =\dfrac{1}{2}\left[S(r+p)+S(r-p)\right]=0
+        $ \\
+        That is the case for all the values of $r$ and $p$. \\
+        \\
+        (Side Note): I am not sure if this is enough to prove the orthogonality. Also, I googled this problem as I was sturggling to solve it. Basicallt my issue with this question was the I could not understand the question. The word "orthogonality" was NOT clear to me in temrs of fourier series.
+      }   
 
 
     \item Consider the function $f(x)=x$,  with $-\pi < x < \pi$. \\
