@@ -8,6 +8,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{float}
+\usepackage{bigints}
 \usepackage[colorinlistoftodos]{todonotes}
 
 \definecolor{hwColor}{HTML}{AD53BA}
@@ -59,8 +60,57 @@
       1, ~~~~1< t< 2 
       \end{cases}
     \end{equation}
-    Consider it to be periodic with period equaling the range of $t$ given above (i.e., $0<t<2$). Find the (real) Fourier series for $f(t)$. 
-    
+    Consider it to be periodic with period equaling the range of $t$ given above (i.e., $0<t<2$). Find the (real) Fourier series for $f(t)$.
+
+    \textcolor{hwColor}{
+      $f(x)=a_0+\sum\limits_{n=1}^{\infty}\left[a_n cos(\dfrac{n\pi}{L}x)+b_n sin(\dfrac{n\pi}{L}x)\right]$
+    }
+
+    \textcolor{hwColor}{
+      $a_0=\dfrac{1}{2L}\bigints_{-L}^{L}f(x)dx$ \\
+      $a_n=\dfrac{1}{L}\bigints_{-L}^{L}f(x) cos(\dfrac{n\pi}{L}x)dx$ \\
+      $b_n=\dfrac{1}{L}\bigints_{-L}^{L}f(x) sin(\dfrac{n\pi}{L}x)dx$ \\
+    }
+
+    \textcolor{hwColor}{ 
+      \rule{15cm}{0.4pt} 
+    }
+
+    \textcolor{hwColor}{ 
+      P=2L $\Longrightarrow L=1$ \\
+      \\
+      $a_0=\dfrac{1}{2(1)}\bigints_{-1}^{1}f(x)dx=\dfrac{1}{2}\left[\bigints_{-1}^{0}f(x)dx+\bigints_{0}^{1}f(x)dx\right]$ \\
+      $=\dfrac{1}{2}\left[\bigints_{-1}^{0}1.dx+\bigints_{0}^{1}0dx\right]=\dfrac{1}{2}\left[0-(-1)+0\right]$ \\
+      $\Longrightarrow a_0=\dfrac{1}{2}$
+    }
+
+    \bigbreak
+
+    \textcolor{hwColor}{ 
+      $a_n=\bigints_{-1}^{1}f(x) cos(n\pi x)dx=\bigints_{-1}^{0}1.cos(n\pi x)dx+\bigints_{0}^{1}0.cos(n\pi x)dx=(\dfrac{sin(n\pi x)}{n\pi})\Big|_{-1}^{0}$ \\
+      $=0-\dfrac{sin(-n\pi)}{n\pi}=\dfrac{sin(n\pi)}{n\pi}=\dfrac{0}{n\pi}$ \\
+      \\
+      $\Longrightarrow a_n=0$
+    }
+
+    \bigbreak
+
+    \textcolor{hwColor}{ 
+      $b_n=\bigints_{-1}^{1}f(x) sin(n\pi x)dx=\bigints_{-1}^{0}1.sin(n\pi x)dx+\bigints_{0}^{1}0.sin(n\pi x)dx=(\dfrac{-cos(n\pi x)}{n\pi})\Big|_{-1}^{0}$ \\
+      $-\dfrac{cos(0)}{n\pi}+\dfrac{cos(-n\pi)}{n\pi}=-\dfrac{cos(0)}{n\pi}+\dfrac{cos(n\pi)}{n\pi}=-\dfrac{cos(0)}{n\pi}+\dfrac{(-1)^n}{n\pi}$\\
+      \\
+      $\Longrightarrow b_n=\begin{cases}
+        0,~~~ 2n \\
+        -\dfrac{2}{n\pi}, ~~~ 2n-1 
+      \end{cases}$
+    }
+
+    \textcolor{hwColor}{ 
+      $
+        \Longrightarrow f(x)=\dfrac{1}{2}+\sum\limits_{n=1}^{\infty}b_n sin(n\pi x)
+      $
+    }
+
     \item Same as the previous exercise, for 
     \begin{equation}
       f(t)=\begin{cases}
