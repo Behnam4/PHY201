@@ -62,54 +62,54 @@
     \end{equation}
     Consider it to be periodic with period equaling the range of $t$ given above (i.e., $0<t<2$). Find the (real) Fourier series for $f(t)$.
 
-    \textcolor{hwColor}{
-      $f(x)=a_0+\sum\limits_{n=1}^{\infty}\left[a_n cos(\dfrac{n\pi}{L}x)+b_n sin(\dfrac{n\pi}{L}x)\right]$
-    }
+      \textcolor{hwColor}{
+        $f(x)=a_0+\sum\limits_{n=1}^{\infty}\left[a_n cos(\dfrac{n\pi}{L}x)+b_n sin(\dfrac{n\pi}{L}x)\right]$
+      }
 
-    \textcolor{hwColor}{
-      $a_0=\dfrac{1}{2L}\bigints_{-L}^{L}f(x)dx$ \\
-      $a_n=\dfrac{1}{L}\bigints_{-L}^{L}f(x) cos(\dfrac{n\pi}{L}x)dx$ \\
-      $b_n=\dfrac{1}{L}\bigints_{-L}^{L}f(x) sin(\dfrac{n\pi}{L}x)dx$ \\
-    }
+      \textcolor{hwColor}{
+        $a_0=\dfrac{1}{2L}\bigints_{-L}^{L}f(x)dx$ \\
+        $a_n=\dfrac{1}{L}\bigints_{-L}^{L}f(x) cos(\dfrac{n\pi}{L}x)dx$ \\
+        $b_n=\dfrac{1}{L}\bigints_{-L}^{L}f(x) sin(\dfrac{n\pi}{L}x)dx$ \\
+      }
 
-    \textcolor{hwColor}{ 
-      \rule{15cm}{0.4pt} 
-    }
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
 
-    \textcolor{hwColor}{ 
-      P=2L $\Longrightarrow L=1$ \\
-      \\
-      $a_0=\dfrac{1}{2(1)}\bigints_{-1}^{1}f(x)dx=\dfrac{1}{2}\left[\bigints_{-1}^{0}f(x)dx+\bigints_{0}^{1}f(x)dx\right]$ \\
-      $=\dfrac{1}{2}\left[\bigints_{-1}^{0}1.dx+\bigints_{0}^{1}0dx\right]=\dfrac{1}{2}\left[0-(-1)+0\right]$ \\
-      $\Longrightarrow a_0=\dfrac{1}{2}$
-    }
+      \textcolor{hwColor}{ 
+        P=2L $\Longrightarrow L=1$ \\
+        \\
+        $a_0=\dfrac{1}{2(1)}\bigints_{-1}^{1}f(x)dx=\dfrac{1}{2}\left[\bigints_{-1}^{0}f(x)dx+\bigints_{0}^{1}f(x)dx\right]$ \\
+        $=\dfrac{1}{2}\left[\bigints_{-1}^{0}1.dx+\bigints_{0}^{1}0dx\right]=\dfrac{1}{2}\left[0-(-1)+0\right]$ \\
+        $\Longrightarrow a_0=\dfrac{1}{2}$
+      }
 
-    \bigbreak
+      \bigbreak
 
-    \textcolor{hwColor}{ 
-      $a_n=\bigints_{-1}^{1}f(x) cos(n\pi x)dx=\bigints_{-1}^{0}1.cos(n\pi x)dx+\bigints_{0}^{1}0.cos(n\pi x)dx=(\dfrac{sin(n\pi x)}{n\pi})\Big|_{-1}^{0}$ \\
-      $=0-\dfrac{sin(-n\pi)}{n\pi}=\dfrac{sin(n\pi)}{n\pi}=\dfrac{0}{n\pi}$ \\
-      \\
-      $\Longrightarrow a_n=0$
-    }
+      \textcolor{hwColor}{ 
+        $a_n=\bigints_{-1}^{1}f(x) cos(n\pi x)dx=\bigints_{-1}^{0}1.cos(n\pi x)dx+\bigints_{0}^{1}0.cos(n\pi x)dx=(\dfrac{sin(n\pi x)}{n\pi})\Big|_{-1}^{0}$ \\
+        $=0-\dfrac{sin(-n\pi)}{n\pi}=\dfrac{sin(n\pi)}{n\pi}=\dfrac{0}{n\pi}$ \\
+        \\
+        $\Longrightarrow a_n=0$
+      }
 
-    \bigbreak
+      \bigbreak
 
-    \textcolor{hwColor}{ 
-      $b_n=\bigints_{-1}^{1}f(x) sin(n\pi x)dx=\bigints_{-1}^{0}1.sin(n\pi x)dx+\bigints_{0}^{1}0.sin(n\pi x)dx=(\dfrac{-cos(n\pi x)}{n\pi})\Big|_{-1}^{0}$ \\
-      $-\dfrac{cos(0)}{n\pi}+\dfrac{cos(-n\pi)}{n\pi}=-\dfrac{cos(0)}{n\pi}+\dfrac{cos(n\pi)}{n\pi}=-\dfrac{cos(0)}{n\pi}+\dfrac{(-1)^n}{n\pi}$\\
-      \\
-      $\Longrightarrow b_n=\begin{cases}
-        0,~~~ 2n \\
-        -\dfrac{2}{n\pi}, ~~~ 2n-1 
-      \end{cases}$
-    }
+      \textcolor{hwColor}{ 
+        $b_n=\bigints_{-1}^{1}f(x) sin(n\pi x)dx=\bigints_{-1}^{0}1.sin(n\pi x)dx+\bigints_{0}^{1}0.sin(n\pi x)dx=(\dfrac{-cos(n\pi x)}{n\pi})\Big|_{-1}^{0}$ \\
+        $-\dfrac{cos(0)}{n\pi}+\dfrac{cos(-n\pi)}{n\pi}=-\dfrac{cos(0)}{n\pi}+\dfrac{cos(n\pi)}{n\pi}=-\dfrac{cos(0)}{n\pi}+\dfrac{(-1)^n}{n\pi}$\\
+        \\
+        $\Longrightarrow b_n=\begin{cases}
+          0,~~~ 2n \\
+          -\dfrac{2}{n\pi}, ~~~ 2n-1 
+        \end{cases}$
+      }
 
-    \textcolor{hwColor}{ 
-      $
-        \Longrightarrow f(x)=\dfrac{1}{2}+\sum\limits_{n=1}^{\infty}b_n sin(n\pi x)
-      $
-    }
+      \textcolor{hwColor}{ 
+        $
+          \Longrightarrow f(x)=\dfrac{1}{2}+\sum\limits_{n=1}^{\infty}b_n sin(n\pi x)
+        $
+      }
 
     \item Same as the previous exercise, for 
     \begin{equation}
@@ -118,6 +118,74 @@
       t-2, ~~~~1< t< 2 
       \end{cases}
     \end{equation}
+
+      \textcolor{hwColor}{
+        $f(t)=\dfrac{a_0}{2}+\sum\limits_{r=1}^{\infty}\left[a_r cos(\dfrac{2\pi r}{L}t)+b_r sin(\dfrac{2\pi r}{L}t)\right]$
+      }
+
+      \textcolor{hwColor}{
+        $a_0=\dfrac{2}{L}\bigints_{x_0}^{x_0+L}f(t)dt$ \\
+        $a_r=\dfrac{2}{L}\bigints_{x_0}^{x_0+L}f(t) cos(\dfrac{2\pi r}{L}t)dt$ \\
+        $b_r=\dfrac{2}{L}\bigints_{x_0}^{x_0+L}f(t) sin(\dfrac{2\pi r}{L}t)dt$ \\
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
+
+      \textcolor{hwColor}{ 
+        L=2 \\
+        \\
+        $a_0=\dfrac{2}{2}\bigints_{0}^{2}f(t)dt=\bigints_{0}^{1}tdt+\bigints_{1}^{2}(t-2)dt=\dfrac{1}{2}+(-2-(-\dfrac{3}{2}))$ \\
+        \\ 
+        $\Longrightarrow a_0=0$
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $a_r=\dfrac{2}{2}\bigints_{0}^{2}f(t) cos(\pi rt)dt=\bigints_{0}^{1}t cos(\pi rt)dt+\bigints_{1}^{2}(t-2) cos(\pi rt)dt$ \\
+        $=\left[\dfrac{t sin(\pi rt)}{\pi r}-\bigints \dfrac{sin(\pi rt)}{\pi r}dt=\dfrac{t sin(\pi rt)}{\pi r}+\dfrac{cos(\pi rt)}{(\pi r)^2}\right]\Big|_{0}^{1}$ \\
+        $+\left[(t-2)\dfrac{sin(\pi rt)}{\pi r}-\bigints \dfrac{sin(\pi rt)}{\pi r}dt=(t-2)\dfrac{sin(\pi rt)}{\pi r}+\dfrac{cos(\pi rt)}{(\pi r)^2}\right]\Big|_{1}^{2}$ \\
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $=\left[\dfrac{sin(\pi r)}{\pi r}+\dfrac{cos(\pi r)}{(\pi r)^2}-(0+\dfrac{1}{(\pi r)^2})=\dfrac{(-1)^r}{(\pi r)^2}-\dfrac{1}{(\pi r)^2}\right]$ \\
+        $+\left[0+\dfrac{cos(2\pi r)}{(\pi r)^2}-(-\dfrac{sin(\pi r)}{\pi r}+\dfrac{cos(\pi r)}{(\pi r)^2})=\dfrac{1}{(\pi r)^2}+\dfrac{(-1)^r}{(\pi r)^2}\right]$
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $=\dfrac{(-1)^r-1}{(\pi r)^2}+\dfrac{(-1)^r+1}{(\pi r)^2}$ \\
+        \\
+        $\Longrightarrow a_r=\dfrac{2(-1)^r}{(\pi r)^2}$
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $b_r=\dfrac{2}{2}\bigints_{0}^{2}f(t) sin(\pi rt)dt=\bigints_{0}^{1}t sin(\pi rt)dt+\bigints_{1}^{2}(t-2) sin(\pi rt)dt$ \\
+        $=\left[-\dfrac{tcos(\pi rt)}{\pi r}+\bigints\dfrac{cos(\pi rt)}{\pi r}dt=-\dfrac{t cos(\pi rt)}{\pi r}+\dfrac{sin(\pi rt)}{(\pi r)^2}\right]\Big|_{0}^{1}$ \\
+        $+\left[-\dfrac{(t-2)cos(\pi rt)}{\pi r}+\bigints\dfrac{cos(\pi rt)}{\pi r}dt=-\dfrac{(t-2)cos(\pi rt)}{\pi r}+\dfrac{sin(\pi rt)}{(\pi r)^2}\right]\Big|_{1}^{2}$
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $=\left[-(\dfrac{cos(\pi r)}{\pi r}+\dfrac{sin(\pi r)}{(\pi r)^2})-(-\dfrac{t}{\pi r}+0)=-\dfrac{(-1)^r}{\pi r}+\dfrac{t}{\pi r}\right]$ \\
+        $+\left[(0+\dfrac{sin(2\pi r)}{(\pi r)^2})-(\dfrac{cos(\pi r)}{\pi r}+\dfrac{sin(\pi r)}{(\pi r)^2})=-\dfrac{(-1)^r}{\pi r}\right]$
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $=\dfrac{t-(-1)^r}{\pi r}+\dfrac{-(-1)^r}{\pi r}=\dfrac{t-(-1)^r-(-1)^r}{\pi r}$ \\
+        \\
+        $\Longrightarrow b_r=\dfrac{t-2(-1)^r}{\pi r}$
+      }
 
 
     \item Find the \emph{complex} Fourier series of the following periodic function (attention: recall that, outside the range given below, the function is repeated, see examples shown in class)
