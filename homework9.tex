@@ -236,13 +236,11 @@
         $\Longrightarrow c_r=\dfrac{2}{\pi \left[1+(2ir)^2\right]}$
       }
 
-
       \textcolor{hwColor}{
         Hence, the \emph{complex} Fourier series of the function is $f(t)=\sum\limits_{r=-\infty}^{\infty} \dfrac{2}{\pi \left[1+(2ir)^2\right]}~e^{2irt}$ \\
       }
 
       
-
     \item Find the \emph{complex} Fourier series of the following periodic function: 
     \begin{equation}
       f(t)=\begin{cases}
@@ -250,6 +248,63 @@
       \sin t, ~~~~\pi< t< 2 \pi
       \end{cases}
     \end{equation}
+
+      \textcolor{hwColor}{
+        $f(t)=\sum\limits_{r=-\infty}^{\infty} c_r~exp(\dfrac{2\pi irt}{L})$ \\
+        \\
+        $c_r=\dfrac{1}{L} \bigints_{x_0}^{x_0+L}f(t) ~ exp(-\dfrac{2\pi irt}{L}) dt$
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
+      
+      \textcolor{hwColor}{
+        $L=2\pi$ \\
+        $c_r=\dfrac{1}{2\pi} \bigints_{0}^{2\pi}sin(t) ~ e^{(-\dfrac{2\pi irt}{2\pi})} dt=\dfrac{1}{2\pi} \bigints_{0}^{2\pi}sin(t) ~ e^{(-irt)} dt$
+        $=\dfrac{1}{2\pi} \left[\bigints_{0}^{\pi}0 ~ e^{(-irt)} dt+\bigints_{\pi}^{2\pi}sin(t) ~ e^{(-irt)} dt\right]$ \\
+        $=\dfrac{1}{2\pi}\bigints_{\pi}^{2\pi}sin(t) ~ e^{(-irt)} dt$
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
+
+      \textcolor{hwColor}{
+        $\bigints sin(t) ~ e^{(-irt)} dt$ \\
+        \\
+        $=-e^{(-irt)} cos(t)-ir \bigints cost(t) e^{(-irt)} dt=-e^{(-irt)} cos(t)-ir\left[e^{(-irt)} sin(t)+ir \bigints e^{(-irt)} sin(t) dt\right]$ \\
+        \\
+        If $W=\bigints sin(t) ~ e^{(-irt)} dt$, then we have \\
+        \\
+        $W=-e^{(-irt)} cos(t)-ir\left[e^{(-irt)} sin(t)+ir W\right]$\\
+        \\
+        $W+(ir)^2W=-e^{(-irt)} cos(t)-ir ~ e^{(-irt)} sin(t)$\\
+        \\
+        $\Longrightarrow \bigints sin(t) ~ e^{(-irt)} dt=\dfrac{-e^{(-irt)} cos(t)-ire^{(-irt)} sin(t)}{1+(ir)^2}$
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
+
+      \textcolor{hwColor}{
+        $c_r=\dfrac{1}{2\pi}\bigints_{\pi}^{2\pi}sin(t) ~ e^{(-irt)} dt=\dfrac{1}{2\pi}\left[\dfrac{-e^{(-irt)} cos(t)-ire^{(-irt)} sin(t)}{1+(ir)^2}\right]\Big|_{\pi}^{2\pi}$ \\
+        \\
+        $=\dfrac{1}{2\pi}\left[(\dfrac{-e^{-ir2\pi}cos(2\pi)-ire^{-ir2\pi}sin(2\pi)}{1+(ir)^2})-(\dfrac{-e^{ir\pi}cos(\pi)-ire^{-ir\pi}sin(\pi)}{1+(ir)^2})\right]$ \\
+        \\
+        $=\dfrac{1}{2\pi}\left[(\dfrac{-e^{-2\pi ir}}{1+(ir)^2})-(\dfrac{e^{-\pi ir}}{1+(ir)^2})\right]$ \\
+        \\ 
+        $=\dfrac{1}{2\pi}\left[(\dfrac{-cos(-2\pi r)-i sin(-2\pi r)}{1+(ir)^2})-(\dfrac{-cos(-\pi r)-isin(-\pi r)}{1+(ir)^2})\right]$ \\
+        \\
+        $=\dfrac{1}{2\pi}\left[(\dfrac{-1}{1+(ir)^2})-(\dfrac{(-1)^r}{1+(ir)^2})\right]$ \\
+        \\
+        $\Longrightarrow c_r=\dfrac{-(-1)^r-1}{2\pi\left[1+(ir)^2\right]}$
+      }
+
+      \textcolor{hwColor}{
+        Therefore, $f(t)=\sum\limits_{r=-\infty}^{\infty} \dfrac{-(-1)^r-1}{2\pi\left[1+(ir)^2\right]}~e^{irt}$ \\
+      }
 
 
   \end{enumerate}
