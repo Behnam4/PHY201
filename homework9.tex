@@ -193,6 +193,56 @@
       f(t)=\sin t~, ~~~~0< t < \pi \\
       \end{equation}
 
+      \textcolor{hwColor}{
+        $f(t)=\sum\limits_{r=-\infty}^{\infty} c_r~exp(\dfrac{2\pi irt}{L})$ \\
+        \\
+        $c_r=\dfrac{1}{L} \bigints_{x_0}^{x_0+L}f(t) ~ exp(-\dfrac{2\pi irt}{L}) dt$
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{15cm}{0.4pt} 
+      }
+      
+      \textcolor{hwColor}{
+        $L=\pi$ \\
+        $c_r=\dfrac{1}{\pi} \bigints_{0}^{\pi}sin(t) ~ e^{(-\dfrac{2\pi irt}{\pi})} dt$
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $\bigints sin(t) ~ e^{(-\dfrac{2\pi irt}{\pi})} dt=\bigints sin(t) ~ e^{(-2irt)} dt$ \\
+        \\
+        $=-e^{(-2irt)} cos(t)-2ir \bigints cost(t) e^{(-2irt)} dt=-e^{(-2irt)} cos(t)-2ir\left[e^{(-2irt)} sin(t)+2ir \bigints e^{(-2irt)} sin(t) dt\right]$ \\
+        \\
+        If $W=\bigints sin(t) ~ e^{(-2irt)} dt$, then we have \\
+        \\
+        $W=-e^{(-2irt)} cos(t)-2ir\left[e^{(-2irt)} sin(t)+2ir W\right]$\\
+        \\
+        $W+(2ir)^2W=-e^{(-2irt)} cos(t)-2ir ~ e^{(-2irt)} sin(t)$\\
+        \\
+        $\Longrightarrow \bigints sin(t) ~ e^{(-2irt)} dt=\dfrac{-e^{(-2irt)} cos(t)-2ire^{(-2irt)} sin(t)}{1+(2ir)^2}$
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $c_r=\dfrac{1}{\pi} \bigints_{0}^{\pi}sin(t) ~ e^{(-2irt)} dt=\dfrac{1}{\pi} \left[\dfrac{-e^{(-2irt)} cos(t)-2ire^{(-2irt)} sin(t)}{1+(2ir)^2}\right]\Big|_{0}^{\pi}$ \\
+        \\
+        $=\dfrac{1}{\pi} \left[(\dfrac{-e^{(-2ir \pi)} cos(\pi)-2ire^{(-2ir \pi)} sin(\pi)}{1+(2ir)^2})-(\dfrac{-e^0 cos(0)-2ire^0 sin(0)}{1+(2ir)^2})\right]$ \\
+        \\
+        $=\dfrac{1}{\pi} \left[\dfrac{e^{i(-2r\pi)}+1}{1+(2ir)^2}\right]=\dfrac{1}{\pi}\left[\dfrac{cos(-2r\pi)+isin(-2r\pi)+1}{1+(2ir)^2}\right]=\dfrac{1}{\pi}\left[\dfrac{2}{1+(2ir)^2}\right]$ \\
+        \\
+        $\Longrightarrow c_r=\dfrac{2}{\pi \left[1+(2ir)^2\right]}$
+      }
+
+
+      \textcolor{hwColor}{
+        Hence, the \emph{complex} Fourier series of the function is $f(t)=\sum\limits_{r=-\infty}^{\infty} \dfrac{2}{\pi \left[1+(2ir)^2\right]}~e^{2irt}$ \\
+      }
+
+      
+
     \item Find the \emph{complex} Fourier series of the following periodic function: 
     \begin{equation}
       f(t)=\begin{cases}
