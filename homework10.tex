@@ -1,0 +1,114 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{mathtools}
+\usepackage[thinc]{esdiff}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+    \center % Center everything on the page
+    
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm]
+
+    \textsc{\LARGE Mathematical Methods For Physics I }\\[1.5cm]
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework 10}\\[0.4cm] 
+    \HRule \\[1.5cm]
+    
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Cecilia Lunardini}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill % Fill the rest of the page with whitespace
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item  Examine the equations below, where $y(x)$ is a real function of a real variable $x$, and $y^\prime=\diff{y}{x}$,  $y^{\prime\prime}=\diff[2]{y}{x}$, etc. For each case, establish if the equation is separable, and if it is, solve it (pay attention: because no initial conditions are given, each solution will contain an undetermined constant). 
+    \begin{equation*}
+      a. ~~ \dfrac{dy}{dx}+2xy^2=0
+    \end{equation*}
+    \begin{equation*}
+      b. ~~ \dfrac{y^{\prime}}{y+1}=3
+    \end{equation*}
+    \begin{equation*}
+      c. ~~ y^{\prime}+3y=e^{2x}
+    \end{equation*}
+    \begin{equation*}
+      d. ~~ y^{\prime}=\dfrac{y}{x}
+    \end{equation*}
+    \begin{equation*}
+      e. ~~ e^{x+y}y^{\prime}=x
+    \end{equation*}
+    \begin{equation*}
+      f. ~~ (x+y)y^{\prime}=x-y
+    \end{equation*}
+    \begin{equation*}
+      g. ~~ \dfrac{y^{\prime}-y}{x}=\dfrac{1}{1+x^2}
+    \end{equation*}
+
+    \item Prove that an equation of the form:
+    $$
+    \diff{y}{x} + y P(x) = 0
+    $$
+    is always separable and find the expression of its general solution.  
+
+    \item Derive eq. (14.12) of the textbook (start from eq. (14/10) ). 
+    
+
+    \item Show that the following equations have the form $dU(x,y)=0$ (i.e., the left side of the equation is an exact differential). For each equation, find the general solution and the specific solution that satisfies the initial condition given.
+    \begin{equation*}
+      a. ~~ (2y+3x)dy+(3x^2+3y)dx=0, ~~~ y(0)=1
+    \end{equation*}
+    \begin{equation*}
+      b. ~~ (3x^2y^2+e^y)dy+2(xy^3+1)dx=0, ~~~ y(0)=2
+    \end{equation*}
+    \begin{equation*}
+      c. ~~ (xe^y-1)dy+e^ydx=0 ~~~ y(0)=2
+    \end{equation*}
+    
+    \item Solve each of the following differential equations using the integrating factor method (regardless of whether they are solvable by other means) to render them exact:
+    \begin{equation*}
+      a. ~~ 2xdy+y(1+x)dx=0
+    \end{equation*}
+    \begin{equation*}
+      b. ~~ cos(x-y)y^{\prime}-cos(x-y)-sin(x-y)=0
+    \end{equation*}
+    \begin{equation*}
+      c. ~~  (y+e^x)y^{\prime}+2ye^x+\dfrac{y^2}{2}=0
+    \end{equation*}
+    \begin{equation*}
+      d. ~~ (y+x)y^{\prime}+\dfrac{y-1}{x}+2+e^{-y}=0
+    \end{equation*}
+  \end{enumerate}
+
+\end{document}
