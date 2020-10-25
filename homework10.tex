@@ -4,6 +4,7 @@
 \thispagestyle{empty}
 \usepackage{import}
 \usepackage{amsmath}
+\usepackage{bigints}
 \usepackage{graphicx}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -76,11 +77,104 @@
       g. ~~ \dfrac{y^{\prime}-y}{x}=\dfrac{1}{1+x^2}
     \end{equation*}
 
+      \textcolor{hwColor}{ 
+        $a. ~~ \diff{y}{x}+2xy^2=0 \rightarrow \diff{y}{x}=-2xy^2 \rightarrow \dfrac{dy}{y^2}=-2xdx$ \\
+        $\bigints \dfrac{dy}{y^2}=\bigints -2xdx$ \\
+        $-\dfrac{1}{y}=-x^2+C$ \\
+        $\Longrightarrow y(x)=\dfrac{1}{x^2-C}$
+      } 
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $b. ~~ \dfrac{y^{\prime}}{y+1}=3 \rightarrow \diff{y}{x}=3(y+1) \rightarrow \dfrac{dy}{y+1}=3dx$ \\
+        $\bigints \dfrac{dy}{y+1}=\bigints 3dx$ \\
+        $ln|y+1|=3x+C \rightarrow |y+1|=e^{3x+C} \rightarrow y+1=\pm e^{3x+C}$ \\
+        \\
+        $\Longrightarrow y(x)=\left[\pm e^{3x+C}\right]-1$
+      }
+      
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      } 
+
+      \textcolor{hwColor}{ 
+        $c. ~~ y^{\prime}+3y=e^{2x} \rightarrow \diff{y}{x}+3y=e^{2x}$ \\
+        Multiple both sides by $e^{\bigints 3dx}$ \\
+        \\
+        $e^{3x}\diff{y}{x}+e^{3x}3y=e^{3x} e^{2x} \rightarrow D_x\left[e^{3x}y\right]=e^{5x}$ \\
+        $\bigints D_x\left[e^{3x}y\right]dx=\bigints e^{5x}dx$ \\
+        $e^{3x}y=\dfrac{1}{5}e^{5x}+C \rightarrow y=\dfrac{\dfrac{1}{5}e^{5x}+C}{e^{3x}}$ \\
+        $\Longrightarrow y(x)=\dfrac{1}{5}e^{2x}+\dfrac{C}{e^{3x}}$
+      }
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $d. ~~ y^{\prime}=\dfrac{y}{x} \rightarrow \diff{y}{x}=\dfrac{y}{x} \rightarrow xdy=ydx$ \\
+        $\dfrac{dy}{y}=\dfrac{dx}{x} \rightarrow \bigints \dfrac{dy}{y}=\bigints \dfrac{dx}{x}$ \\
+        $ln|y|=ln|x|+C \rightarrow |y|=e^{ln|x|+C}=e^{ln|x|}.e^{C}=x.e^C$ \\
+        $\Longrightarrow y(x)=\pm x.e^{C}$
+      }
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $e. ~~ e^{x+y}y^{\prime}=x \rightarrow e^xe^y \dfrac{dy}{dx}=x \rightarrow e^ydy=xe^{-x}dx$ \\
+        $\bigints e^ydy=\bigints xe^{-x}dx=-e^{-x}x-\bigints -e^{-x}dx=-e^{-x}x+\bigints e^{-x}dx=-e^{-x}x-e^{-x}+C$ \\
+        $e^y=-e^{-x}x-e^{-x}+C \rightarrow lne^y=ln(-e^{-x}x-e^{-x}+C)$ \\
+        $\Longrightarrow y(x)=ln(-e^{-x}x-e^{-x}+C)$
+      }
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $f. ~~ (x+y)y^{\prime}=x-y \rightarrow (-x+y)+(x+y)\diff{y}{x}=0 \rightarrow (-x+y)dx+(x+y)dy=0$ \\
+        $
+          \begin{cases}
+            \dfrac{\partial F}{\partial x}=F_x=M=-x+y \\
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \rightarrow \dfrac{\partial M}{\partial y}=\dfrac{\partial N}{\partial x} \Longrightarrow 1=1 \\
+            \dfrac{\partial F}{\partial y}=F_y=N=x+y
+          \end{cases}
+        $ \\
+        \\
+        This means we have an exact differential equation for some higher parent function. \\
+        $M=\dfrac{\partial F}{\partial x}=-x+y \rightarrow \bigints \dfrac{\partial F}{\partial x} dx=\bigints (-x+y)dx \rightarrow F(x+y)=-\dfrac{x^2}{2}+xy+g(y)$ \\
+        $\dfrac{\partial F}{\partial y}=0+x+g^{\prime}(y)$ \\
+        $x+y=x+g^{\prime}(y) \rightarrow g^{\prime}(y)=y \Longrightarrow g(y)=\bigints ydy=\dfrac{y^2}{2}$ \\
+        $F(x,y)=-\dfrac{x^2}{2}+xy+\dfrac{y^2}{2}=C$
+      }
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $g. ~~ \dfrac{y^{\prime}-y}{x}=\dfrac{1}{1+x^2} \rightarrow \diff{y}{x}-y=\dfrac{x}{1+x^2}$ \\
+        Multiple both sides by $e^{\bigints -dx}$ \\
+        \\
+        $e^{-x} \diff{y}{x}-e^{-x}y=e^{-x}\dfrac{x}{1+x^2}$ \\
+        $D_x\left[e^{-x}y\right]=e^{-x}\dfrac{x}{1+x^2}$ \\
+        $\bigints D_x\left[e^{-x}y\right]dx=\bigints e^{-x}\dfrac{x}{1+x^2}dx$ \\
+        $e^{-x}y=\bigints e^{-x}\dfrac{x}{1+x^2}dx$ \\
+        $y(x)=e^x \bigints e^{-x}\dfrac{x}{1+x^2}dx$
+      }
+
     \item Prove that an equation of the form:
     $$
     \diff{y}{x} + y P(x) = 0
     $$
     is always separable and find the expression of its general solution.  
+
+
 
     \item Derive eq. (14.12) of the textbook (start from eq. (14/10) ). 
     
