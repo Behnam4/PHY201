@@ -172,9 +172,25 @@
     $$
     \diff{y}{x} + y P(x) = 0
     $$
-    is always separable and find the expression of its general solution.  
-
-
+    is always separable and find the expression of its general solution. \\
+      \textcolor{hwColor}{ 
+        $
+          \diff{y}{x}+yP(x)=0 \rightarrow \diff{y}{x}=-yP(x) \rightarrow \dfrac{dy}{ydx}=-P(x)
+        $
+        \\
+        $\dfrac{dy}{y}=-P(x)dx \rightarrow \bigints \dfrac{dy}{y}=\bigints -P(x)dx$
+        \\
+        $ln|y|=-\bigints P(x)dx$
+        \\
+        $y(x)=\pm e^{-\bigints P(x)dx}$ \\
+        Assume $\bigints P(x)dx=k+C$ where $C$ is a constant.  \\
+        \\
+        Then $y(x)=\pm e^{-(k+C)}=\pm e^{-k}.e^C$
+        \\
+        $e^C$ is going to be a constant. Hence, suppose $e^C=W$ \\
+        \\
+        $\Longrightarrow y(x)=\pm W.e^{-k}$    
+      }
 
     \item Derive eq. (14.12) of the textbook (start from eq. (14/10) ). 
     
