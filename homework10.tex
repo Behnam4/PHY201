@@ -192,7 +192,47 @@
         $\Longrightarrow y(x)=\pm W.e^{-k}$    
       }
 
-    \item Derive eq. (14.12) of the textbook (start from eq. (14/10) ). 
+    \item Derive eq. (14.12) of the textbook (start from eq. (14/10) ).
+      \textcolor{hwColor}{ 
+        $
+          F(x,y)=C \\
+          \dfrac{d}{dx}\left[F(x,y)=C\right] \rightarrow \diff{F}{x}=\dfrac{\partial F}{\partial x}+\dfrac{\partial F}{\partial y}.\dfrac{\partial y}{\partial x}=0 \\
+          \\
+          dF=\dfrac{\partial F}{\partial x}dx+\dfrac{\partial F}{\partial y}dy=0 \rightarrow M=\dfrac{\partial F}{\partial x} ~~~~ N=\dfrac{\partial F}{\partial y} \\
+          dF=M dx+N dy=0
+        $ \\
+        When $\dfrac{\partial M}{\partial y}=\dfrac{\partial N}{\partial x}$, we have an exact differential equation. \\
+        \\
+        If $M_y \ne N_x$ then we have an unexact differential equation. let's see if we can multiple both sides of $dF$ by a function to make it an exact differential equation. \\
+        $
+          u(x,y)\left[M dx+N dy=0\right] \rightarrow u(x,y)M dx+u(x,y)N dy=0
+        $ \\
+        We want $\dfrac{\partial}{\partial y}\left[u(x,y).M\right]=\dfrac{\partial }{\partial x}\left[u(x,y).N\right]$ to guarantee that is an exact differential equation. \\
+        \\
+        $
+          \dfrac{\partial u}{\partial y}.M+u.\dfrac{\partial M}{\partial y}=\dfrac{\partial u}{\partial x}.N+u.\dfrac{\partial N}{\partial x}\\
+          \\
+          u\left[\dfrac{\partial M}{\partial y}-\dfrac{\partial N}{\partial x}\right]=\dfrac{\partial u}{\partial x}N-\dfrac{\partial u}{\partial y}M \\
+          \\
+        $
+        Assume u only HAS "y", then: \\
+        \\
+        $
+          u\left[\dfrac{\partial M}{\partial y}-\dfrac{\partial N}{\partial x}\right]=-\dfrac{du}{dy}M \\
+          \\
+          \dfrac{du}{dy}M=u\left[\dfrac{\partial N}{\partial x}-\dfrac{\partial M}{\partial y}\right] \\
+          \\
+          \bigints \dfrac{du}{u}=\bigints \dfrac{\left[\dfrac{\partial N}{\partial x}-\dfrac{\partial M}{\partial y}\right]}{M}dy \\
+          \\
+          ln u =\bigints \dfrac{\left[\dfrac{\partial N}{\partial x}-\dfrac{\partial M}{\partial y}\right]}{M}dy \\
+          \\
+          u=e^{\bigints \dfrac{\left[\dfrac{\partial N}{\partial x}-\dfrac{\partial M}{\partial y}\right]}{M}dy} \\
+          \\
+          \Longrightarrow u=e^{\bigints \dfrac{N_x-M_y}{M}dy} \\
+        $
+        For $u$ with no $"x"$ and only $"y"$.
+      }
+      
     
 
     \item Show that the following equations have the form $dU(x,y)=0$ (i.e., the left side of the equation is an exact differential). For each equation, find the general solution and the specific solution that satisfies the initial condition given.
