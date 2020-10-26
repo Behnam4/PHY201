@@ -233,7 +233,6 @@
         For $u$ with no $"x"$ and only $"y"$.
       }
       
-    
 
     \item Show that the following equations have the form $dU(x,y)=0$ (i.e., the left side of the equation is an exact differential). For each equation, find the general solution and the specific solution that satisfies the initial condition given.
     \begin{equation*}
@@ -245,6 +244,65 @@
     \begin{equation*}
       c. ~~ (xe^y-1)dy+e^ydx=0 ~~~ y(0)=2
     \end{equation*}
+
+      \textcolor{hwColor}{ 
+        $a. ~~~ (3x^2+3y)dx+(2y+3x)dy=0 \rightarrow dF=Mdx+Ndy=0$ \\
+        $
+        \begin{cases}
+          \dfrac{\partial F}{\partial x}=F_x=M=3x^2+3y \rightarrow \dfrac{\partial M}{\partial y}=3 \\
+          \\
+          \dfrac{\partial F}{\partial y}=F_y=N=2y+3x \rightarrow \dfrac{\partial N}{\partial x}=3
+        \end{cases}
+        $ \\
+        $\dfrac{\partial M}{\partial y}=\dfrac{\partial N}{\partial x}=3 \Longrightarrow$ We have an exact differential equation. \\
+        $F(x,y)=\bigints Mdx+g(y)=\bigints (3x^2+3y)dx+g(y)=x^3+3xy+g(y)$ \\
+        $\dfrac{\partial F}{\partial y}=0+3x+g^{\prime}(y)=2y+3x \rightarrow g^{\prime}(y)=2y \rightarrow g(y)=\bigints 2ydy=y^2$ \\
+        $F(x,y)=x^3+3xy+y^2=C ~~~~ y(0)=1 \rightarrow 0^3+3(0)(1)+1^2=C \Longrightarrow C=1$ \\
+        \\
+        $F(x,y)=x^3+3xy+y^2-1=0$
+      }
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $b. ~~~ 2(xy^3+1)dx+(3x^2y^2+e^y)dy=0$ \\
+        $
+        \begin{cases}
+          \dfrac{\partial F}{\partial x}=F_x=M=2(xy^3+1) \rightarrow \dfrac{\partial M}{\partial y}=6xy^2 \\
+          \\
+          \dfrac{\partial F}{\partial y}=F_y=N=3x^2y^2+e^y \rightarrow \dfrac{\partial N}{\partial x}=6xy^2
+        \end{cases}
+        $ \\
+        $\dfrac{\partial M}{\partial y}=\dfrac{\partial N}{\partial x}=6xy^2 \Longrightarrow$ We have an exact differential equation. \\
+        $F(x,y)=\bigints Mdx+g(y)=\bigints 2(xy^3+1) dx+g(y)=x^2y^3+2x+g(y)$ \\
+        $\dfrac{\partial F}{\partial y}=3x^2y^2+g^{\prime}(y)=3x^2y^2+e^y \rightarrow g(y)=\bigints e^ydy=e^y$ \\
+        $F(x,y)=x^2y^3+2x+e^y=C ~~~~ y(0)=2 \rightarrow 0^2(2)^3+2(0)+e^2=C \Longrightarrow C=e^2$ \\
+        \\
+        $F(x,y)=x^2y^3+2x+e^y-e^2=0$
+      }
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $c. ~~~ e^ydx+(xe^y-1)dy=0 $ \\
+        $
+        \begin{cases}
+          \dfrac{\partial F}{\partial x}=F_x=M=e^y \rightarrow \dfrac{\partial M}{\partial y}=e^y \\
+          \\
+          \dfrac{\partial F}{\partial y}=F_y=N=xe^y-1 \rightarrow \dfrac{\partial N}{\partial x}=e^y
+        \end{cases}
+        $ \\
+        $\dfrac{\partial M}{\partial y}=\dfrac{\partial N}{\partial x}=e^y \Longrightarrow$ We have an exact differential equation. \\
+        $F(x,y)=\bigints Mdx+g(y)=\bigints e^y dx+g(y)=xe^y+g(y)$ \\
+        $\dfrac{\partial F}{\partial y}=xe^y-1=xe^y+g^{\prime}(y) \rightarrow g^{\prime}(y)=-1 \rightarrow g(y)=-\bigints dy=-y$ \\
+        $F(x,y)=xe^y-y=C ~~~~ y(0)=2 \rightarrow 0e^2-2=C \Longrightarrow C=-2$ \\
+        \\
+        $F(x,y)=xe^y-y+2=0$
+      }
     
     \item Solve each of the following differential equations using the integrating factor method (regardless of whether they are solvable by other means) to render them exact:
     \begin{equation*}
