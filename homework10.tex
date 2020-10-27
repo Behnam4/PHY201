@@ -303,6 +303,8 @@
         \\
         $F(x,y)=xe^y-y+2=0$
       }
+
+    \vfill
     
     \item Solve each of the following differential equations using the integrating factor method (regardless of whether they are solvable by other means) to render them exact:
     \begin{equation*}
@@ -317,6 +319,62 @@
     \begin{equation*}
       d. ~~ (y+x)y^{\prime}+\dfrac{y-1}{x}+2+e^{-y}=0
     \end{equation*}
+
+      \textcolor{hwColor}{ 
+        $a. ~~~ y(1+x)dx+2xdy=0$ \\
+        $M=y(1+x)$ and $N=2x$ \\
+        $
+          \begin{cases}
+            M_y=1+x \\
+            N_x=2
+          \end{cases} 
+        $ We do not have an exact differential equation. \\
+        $\bigints \dfrac{M_y-N_x}{N}dx=\bigints \dfrac{1+x-2}{2x}dx=\dfrac{x}{2}-\dfrac{ln|x|}{2}$ \\
+        \\
+        $u=e^{\bigints \dfrac{M_y-N_x}{N}dx}=e^{\dfrac{x}{2}-\dfrac{ln|x|}{2}}=\dfrac{1}{\sqrt{x}}e^{\dfrac{x}{2}}$ Integration factor \\
+        $u\left[y(1+x)dx+2xdy=0\right] \Rightarrow \dfrac{e^{\dfrac{x}{2}}}{\sqrt{x}}y(1+x)dx+\dfrac{e^{\dfrac{x}{2}}}{\sqrt{x}}2xdy=0$ \\
+        \\
+        $M=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{x}}y(1+x)$ and $N=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{x}}2x$ \\
+        \\
+        $
+        \begin{cases}
+          M_y=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{2}}(1+x) \\
+          N_x=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{2}}(1+x) 
+        \end{cases} 
+      $ Hence, now We have an exact differential equation. \\
+      \\
+      \\
+      $
+        \dfrac{\partial F}{\partial y}=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{2}}2x \rightarrow F(x,y)=\bigints \dfrac{e^{\dfrac{x}{2}}}{\sqrt{2}}2xdy+h(x) \\
+        F(x,y)=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{2}}2xy+h(x) \\
+        \dfrac{\partial F}{\partial y}=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{2}}2x=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{2}}2x+h^{\prime}(x) \rightarrow h^{\prime}(x)=0 \Longrightarrow h(x)=\bigints h^{\prime}(x)dx=C_1 \\
+        F(x,y)=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{2}} 2xy+C_1=C \Longrightarrow F(x,y)=\dfrac{e^{\dfrac{x}{2}}}{\sqrt{2}} 2xy=C
+      $
+      }
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $b. ~~~ cos(x-y)y^{\prime}-cos(x-y)-sin(x-y)=0$ \\
+      }
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $c. ~~~ (y+e^x)y^{\prime}+2ye^x+\dfrac{y^2}{2}=0$ \\
+      }
+
+      \textcolor{hwColor}{  
+        \rule{15cm}{0.4pt}  
+      }
+
+      \textcolor{hwColor}{ 
+        $d. ~~~ (y+x)y^{\prime}+\dfrac{y-1}{x}+2+e^{-y}=0$ \\
+      }
   \end{enumerate}
 
 \end{document}
