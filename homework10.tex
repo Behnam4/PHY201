@@ -352,12 +352,41 @@
       $
       }
 
-      \textcolor{hwColor}{  
-        \rule{15cm}{0.4pt}  
-      }
-
       \textcolor{hwColor}{ 
         $b. ~~~ cos(x-y)y^{\prime}-cos(x-y)-sin(x-y)=0$ \\
+        \\
+        Multiple both sides by $dx$ \\
+        $
+          -\left[cos(x-y)+sin(x-y)\right]dx+cos(x-y)dy=0
+        $ \\
+        $M=-\left[cos(x-y)+sin(x-y)\right]$ and $N=cos(x-y)$ \\
+        $
+        \begin{cases}
+          M_y=cos(x-y)-sin(x-y)\\
+          N_x=-sin(x-y)
+        \end{cases} 
+        $ We do not have an exact differential equation. \\
+        $\bigints \dfrac{M_y-N_x}{N}dx=\bigints \dfrac{cos(x-y)-sin(x-y)+sin(x-y)}{cos(x-y)} dx=\bigints dx=x$ \\
+        \\
+        $u=e^{\bigints \dfrac{M_y-N_x}{N}dx}=e^{x}$ Integration factor \\
+        \\
+        $u.\left[-\left[cos(x-y)+sin(x-y)\right]dx+cos(x-y)dy=0\right]$ \\
+        $\rightarrow -e^x\left[cos(x-y)+sin(x-y)\right]dx+e^xcos(x-y)dy=0$ \\
+        \\
+        $
+          \begin{cases}
+            M_y=-e^x\left[cos(x-y)+sin(x-y)\right] \\
+            N_x=e^xcos(x-y)
+          \end{cases}
+        $ \\
+        $
+          \dfrac{\partial F}{\partial y}=e^xcos(x-y) \Rightarrow F(x,y)=\bigints e^xcos(x-y) dy+h(x)=-e^xsin(x-y)+h(x) \\
+          F(x,y)=-e^xsin(x-y)+h(x) \\
+          \\
+          \dfrac{\partial F}{\partial y}=e^xcos(x-y)=e^xcos(x-y)+h^{\prime}(x) \rightarrow h^{\prime}(x)=0 \Longrightarrow h(x)=\bigints h^{\prime}(x)dx=C_1 \\
+          \\
+          F(x,y)=-e^xsin(x-y)+C_1=C \Longrightarrow F(x,y)=-e^xsin(x-y)+C
+        $
       }
 
       \textcolor{hwColor}{  
@@ -366,6 +395,34 @@
 
       \textcolor{hwColor}{ 
         $c. ~~~ (y+e^x)y^{\prime}+2ye^x+\dfrac{y^2}{2}=0$ \\
+        \\
+        Multiple both sides by $dx$ \\
+        $(2ye^x+\dfrac{y^2}{2})dx+(y+e^x)dy=0$ \\
+        $M=(2ye^x+\dfrac{y^2}{2})$ and $N=(y+e^x)$ \\
+        $
+        \begin{cases}
+          M_y=2e^x+y\\
+          N_x=e^x
+        \end{cases} 
+        $ We do not have an exact differential equation. \\
+        $\bigints \dfrac{M_y-N_x}{N}dx=\bigints \dfrac{2e^x+y-e^x}{y+e^x}dx=\bigints dx=x$ \\
+        \\
+        $u=e^{\bigints \dfrac{M_y-N_x}{N}dx}=e^{x}$ Integration factor \\
+        $u.\left[(2ye^x+\dfrac{y^2}{2})dx+(y+e^x)dy=0\right] \rightarrow e^x(2ye^x+\dfrac{y^2}{2})dx+e^x(y+e^x)dy=0$ \\
+        $M=e^x(2ye^x+\dfrac{y^2}{2})$ and $N=e^x(y+e^x)$ \\
+        $
+        \begin{cases}
+          M_y=e^x(2e^x+y) \\
+          N_x=e^xy+2e^{2x}
+        \end{cases}
+      $ Since $M_y=N_x$ then we have an exact differential equation. \\
+      \\
+      $
+        \dfrac{\partial F}{\partial y}=e^x(y+e^x) \rightarrow F(x,y)=\bigints e^x(y+e^x)dy+h(x)=e^x\left[e^xy+\dfrac{y^2}{2}\right]+h(x) \\
+        \dfrac{\partial F}{\partial x}=\dfrac{e^xy^2}{2}+2e^{2x}y+h^{\prime}(x)=e^x(2ye^x+\dfrac{y^2}{2})=M \Longrightarrow h^{\prime}(x)=-e^x \\
+        h(x)=\bigints -e^x dx=-e^x \\
+        F(x,y)=e^x\left[e^xy+\dfrac{y^2}{2}\right]-e^x=e^x\left[\left[e^xy+\dfrac{y^2}{2}\right]-1\right]=C
+      $
       }
 
       \textcolor{hwColor}{  
@@ -374,6 +431,16 @@
 
       \textcolor{hwColor}{ 
         $d. ~~~ (y+x)y^{\prime}+\dfrac{y-1}{x}+2+e^{-y}=0$ \\
+        \\
+        Multiple both sides by $dx$ \\
+        $(\dfrac{y-1}{x}+2+e^{-y})dx+(y+x)dy=0$ \\
+        $M=(\dfrac{y-1}{x}+2+e^{-y})$ and $N=(y+x)$ \\
+        $
+        \begin{cases}
+          M_y=\dfrac{1}{x}-e^{-y}\\
+          N_x=1
+        \end{cases} 
+        $ We do not have an exact differential equation. \\
       }
   \end{enumerate}
 
