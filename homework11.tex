@@ -4,6 +4,7 @@
 \thispagestyle{empty} 
 \usepackage{import} 
 \usepackage{amsmath} 
+\usepackage{bigints} 
 \usepackage{graphicx} 
 \usepackage[english]{babel} 
 \usepackage[utf8x]{inputenc} 
@@ -57,15 +58,33 @@
 
     \item  Derive an expression analogous to eq (14.19) of the textbook for the case of isobaric equations. 
     
+      \textcolor{hwColor}{
+        $
+          \dfrac{dy}{dx}=\dfrac{A(x,y)}{B(x,y)}, ~~~~ y=vx^m \\
+          \\
+          \dfrac{d(vx^m)}{dx}=x^m\dfrac{dv}{dx}+mx^{m-1}v=\dfrac{A(1, vmx^{m-1})}{B(1, vmx^{m-1})} \\
+          \\
+          \Longrightarrow \dfrac{A(1,v)}{B(1,v)}=mv+x\dfrac{dv}{dx}=F(v) \\
+          x\dfrac{dv}{dx}=F(v)-mv \rightarrow \dfrac{dv}{dx}=\dfrac{F(v)-mv}{x} \\
+          \\
+          \\
+          \Longrightarrow \bigints \dfrac{dv}{F(v)-mv}=\bigints \dfrac{dx}{x}
+        $    
+      }
+
     
     \item  Show that the following first order ODEs are homogeneous or isobaric, identify $m$ (see textbook sec. 14.2.6 for the definition of $m$), and solve them:
-    \begin{enumerate}
-    \item $2x dy + (x^2 - 3 y) dx=0$
-    
-    \item $x y^2 (y dx - x dy)-(2y dx + x dy)=0$
-    
-    \item $2x e^{y^2/x} dy - 3y dx=0$ (for this equation, you can leave the final integration step undone, but please simplify as much as possible up to that point)
-    \end{enumerate}
+      \begin{enumerate}
+        \item $2xdy+(x^2-3y)dx=0$
+
+        \textcolor{hwColor}{
+          22
+        }
+
+        \item $x y^2 (y dx - x dy)-(2y dx + x dy)=0$
+        
+        \item $2x e^{y^2/x} dy - 3y dx=0$ (for this equation, you can leave the final integration step undone, but please simplify as much as possible up to that point)
+      \end{enumerate}
     
     
     \item  Consider the following equation (which is called a Bernoulli equation, see textbook for more information): 
