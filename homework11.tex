@@ -1,0 +1,86 @@
+\documentclass[fleqn]{article} 
+\oddsidemargin 0.0in 
+\textwidth 6.0in 
+\thispagestyle{empty} 
+\usepackage{import} 
+\usepackage{amsmath} 
+\usepackage{graphicx} 
+\usepackage[english]{babel} 
+\usepackage[utf8x]{inputenc} 
+\usepackage{float} 
+\usepackage[colorinlistoftodos]{todonotes} 
+\usepackage{mathtools} 
+\usepackage[thinc]{esdiff} 
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+    \center % Center everything on the page
+    
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm] % Name of your university/college
+
+    \textsc{\LARGE Mathematical Methods For Physics I }\\[1.5cm] % Major heading such as course name
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework 11}\\[0.4cm] 
+    \HRule \\[1.5cm]
+    
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Cecilia Lunardini}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill % Fill the rest of the page with whitespace
+
+  \end{titlepage}
+
+  \begin{enumerate}
+
+    \item  Derive an expression analogous to eq (14.19) of the textbook for the case of isobaric equations. 
+    
+    
+    \item  Show that the following first order ODEs are homogeneous or isobaric, identify $m$ (see textbook sec. 14.2.6 for the definition of $m$), and solve them:
+    \begin{enumerate}
+    \item $2x dy + (x^2 - 3 y) dx=0$
+    
+    \item $x y^2 (y dx - x dy)-(2y dx + x dy)=0$
+    
+    \item $2x e^{y^2/x} dy - 3y dx=0$ (for this equation, you can leave the final integration step undone, but please simplify as much as possible up to that point)
+    \end{enumerate}
+    
+    
+    \item  Consider the following equation (which is called a Bernoulli equation, see textbook for more information): 
+    \begin{equation}
+    \diff{y}{x} = x  (y - y^3)~.
+    \nonumber
+    \end{equation}
+    \begin{enumerate}
+    \item under the assumption that $y\neq 0$, make a change of variable: $z(x)=1/y^2(x)$. Rewrite the equation in terms of $x$ and $z(x)$.
+    
+    \item solve the equation for $z(x)$ (using any method of your choice) and recast the solution in terms of $y(x)$ and $x$. 
+    
+    \item {\bf for bonus credit: } do a check of your result by solving the equation by separation of the variables instead. 
+    \end{enumerate}
+    
+    \end{enumerate}
+
+\end{document}
