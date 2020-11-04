@@ -69,7 +69,7 @@
           \\
           \\
           \Longrightarrow \bigints \dfrac{dv}{F(v)-mv}=\bigints \dfrac{dx}{x}
-        $    
+        $     
       }
 
     
@@ -78,12 +78,64 @@
         \item $2xdy+(x^2-3y)dx=0$
 
         \textcolor{hwColor}{
-          22
+          $
+            2xdy+(x^2-3y)dx=0 \\
+            2xdy=3y-x^2 \\
+            \dfrac{dy}{dx}-(\dfrac{3}{2x})y=-\dfrac{x}{2} \rightarrow \begin{cases}
+              P(x)=-\dfrac{3}{2x} \\
+              \\
+              Q(x)=-\dfrac{x}{2}
+            \end{cases} \\
+            \\
+            \\
+            \rho(x)=e^{\bigints P(x)dx}=e^{\bigints -\dfrac{3}{2x}dx}=x^{-\dfrac{3}{2}}
+            \\
+            \\
+            x^{-\dfrac{3}{2}}\dfrac{dy}{dx}-x^{-\dfrac{3}{2}}(\dfrac{3}{2x})y=-(x^{-\dfrac{3}{2}})\dfrac{x}{2} \Rightarrow x^{-\dfrac{3}{2}}\dfrac{dy}{dx}-\dfrac{3x^{-\dfrac{5}{2}}}{2}y=-\dfrac{x^{-\dfrac{1}{2}}}{2} \\
+            \\
+            D_x\left[x^{-\dfrac{3}{2}}.y\right]=-\dfrac{x^{-\dfrac{1}{2}}}{2} \\
+            \\
+            \bigints \left(D_x\left[x^{-\dfrac{3}{2}}.y\right]\right)dx=\bigints \left(-\dfrac{x^{-\dfrac{1}{2}}}{2}\right)dx \\
+            \\
+            x^{-\dfrac{3}{2}}.y=-x^{\dfrac{1}{2}}+C \\
+            \\
+            \Longrightarrow y=-x^2+Cx^{\dfrac{3}{2}}
+          $
         }
 
+        \bigbreak
+
         \item $x y^2 (y dx - x dy)-(2y dx + x dy)=0$
+
+          \textcolor{hwColor}{
+            $
+              xy^3dx-x^2y^2dy-2ydx-xdy=0 \\
+              \\
+              (xy^3-2y)dx=(x^2y^2+x)dy \\
+              \\
+              \dfrac{dy}{dx}=\dfrac{xy^3-2y}{x^2y^2+x}
+            $
+          }
+
+          \bigbreak
         
         \item $2x e^{y^2/x} dy - 3y dx=0$ (for this equation, you can leave the final integration step undone, but please simplify as much as possible up to that point)
+
+          \textcolor{hwColor}{
+            $
+              m+1=-1+2m+1+m \rightarrow m=\dfrac{1}{2}
+              y=vx^{\dfrac{1}{2}} \\
+              \\
+              2xe^{\dfrac{vx^{\dfrac{1}{2}}}{x}}\left(v-\dfrac{1}{2}+x^{\dfrac{1}{2}}\dfrac{dv}{dt}\right)-3vx^{\dfrac{1}{2}}=0 \\
+              2xx^{\dfrac{1}{2}}e^{v^2}\dfrac{dv}{dx}-3vx^{\dfrac{1}{2}}+vx^{\dfrac{1}{2}}e^{v^2}=0 \\
+              2xe^{v^2}\dfrac{dv}{dx}+ve^{v^2}-3v=0 \\
+              \\
+              2e^{v^2}xdv=-ve^{v^2}dx+3vdx=(3v-ve^{v^2})dx \\
+              \\
+              \Longrightarrow \dfrac{1}{2}\bigints \dfrac{dx}{x}=\bigints \dfrac{e^{v^2}}{3v-ve^{v^2}}dv
+            $
+          }
+
       \end{enumerate}
     
     
@@ -93,13 +145,146 @@
     \nonumber
     \end{equation}
     \begin{enumerate}
-    \item under the assumption that $y\neq 0$, make a change of variable: $z(x)=1/y^2(x)$. Rewrite the equation in terms of $x$ and $z(x)$.
+    \item Under the assumption that $y\neq 0$, make a change of variable: $z(x)=1/y^2(x)$. Rewrite the equation in terms of $x$ and $z(x)$.
+
+      \textcolor{hwColor}{
+        $
+          \diff{y}{x}=xy-xy^3 \rightarrow \diff{y}{x}-xy=-xy^3 \\
+          \\
+          v=y^{1-3}=y^{-2} \rightarrow v=\dfrac{1}{y^2} ~~~~ y=\dfrac{1}{\sqrt{v}} \\
+          \Longrightarrow \diff{y}{x}=(-\dfrac{1}{2}v^{-\dfrac{3}{2}})\diff{v}{x} \\
+          \\
+          \\
+          -\dfrac{1}{2}v^{-\dfrac{3}{2}}\diff{v}{x}-xv^{-\dfrac{1}{2}}=-xv^{-\dfrac{1}{2}} \\
+          \\
+          -2v^{\dfrac{3}{2}}\left(-\dfrac{1}{2}v^{-\dfrac{3}{2}}\diff{v}{x}-xv^{-\dfrac{1}{2}}=-xv^{-\dfrac{1}{2}}\right) \\
+          \\
+          \dfrac{dv}{dx}+2xv=2x ~~~~~ \rho(x)=e^{\bigints 2xdx}=e^{x^2} \\
+          \\
+          e^{x^2}\dfrac{dv}{dx}+e^{x^2}2xv=e^{x^2}2x \\
+          \\
+          D_x\left[e^{x^2}.v\right]=e^{x^2}2x \rightarrow \bigints \left(D_x\left[e^{x^2}.v\right]\right)dx=\bigints e^{x^2}2xdx \\
+          \\
+          e^{x^2}.v=e^{x^2}+C \Longrightarrow v=\dfrac{e^{x^2}+C}{e^{x^2}} ~~~~ v=\dfrac{1}{y^2} \\
+          \\
+          \dfrac{1}{y^2}=\dfrac{e^{x^2}+C}{e^{x^2}} \Longrightarrow y^2=\dfrac{e^{x^2}}{e^{x^2}+C} \\
+        $
+      }
+
+      \bigbreak
+
+      \textcolor{hwColor}{
+        $
+          y^2=\dfrac{1}{z(x)}=\dfrac{1}{\dfrac{e^{x^2}+C}{e^{x^2}}}
+        $
+      }
     
-    \item solve the equation for $z(x)$ (using any method of your choice) and recast the solution in terms of $y(x)$ and $x$. 
+    \item Solve the equation for $z(x)$ (using any method of your choice) and recast the solution in terms of $y(x)$ and $x$.
+
+      \textcolor{hwColor}{
+        $
+          z(x)=\dfrac{1}{y^2(x)}=\dfrac{1}{\dfrac{e^{x^2}}{e^{x^2}+C}}=\dfrac{e^{x^2}+C}{e^{x^2}} \\
+        $
+      }
     
-    \item {\bf for bonus credit: } do a check of your result by solving the equation by separation of the variables instead. 
+    \item {\bf for bonus credit: } Do a check of your result by solving the equation by separation of the variables instead. 
     \end{enumerate}
+
+    \item  For each of the following equations: (i) find the general solution; (ii) impose the given initial conditions and find the particular solution that satisfies them. (Here each dot indicates a derivative with respect to t: $\dot y = dy/dt$ , $\ddot y = d^2y/dt^2$ )
+      \begin{enumerate}
+        \item $\ddot y+5\dot y+6y=0; ~~~~~~ y(0)=2, ~~ \dot y(0)=0;$
+
+        \textcolor{hwColor}{
+          $
+            y=c_1e^{2t}+c_2te^{2t} ~~~~~ \dot y=2c_1e^{2t}+2c_2te^{2t}+c_2e^{2t} \\
+            \\
+            a^2+a+2=0 \rightarrow \begin{cases}
+              a=-2 \\
+              a=-3 \\
+            \end{cases} \\
+            \\
+            y(0)=2=c_1+c_2 \\
+            \dot y(0)=0=-2c_1-3c_2 \\
+            \Longrightarrow c_1=\dfrac{6}{5} ~~~~ c_2=\dfrac{4}{5}
+            \\
+            \\
+            y=\dfrac{6}{5}e^{-2t}+\dfrac{4}{5}e^{-3t}
+          $     
+        }
+
+        \item $\ddot y-4\dot y+4y=0; ~~~~~~ y(0)=1, ~~ \dot y(0)=1;$
+
+          \textcolor{hwColor}{
+            $
+              a^2-4a+4=0 \rightarrow (a-2)(a-2)=0 \rightarrow a=2 \\
+              \\
+              y=c_1e^{2t}+c_2te^{2t} ~~~~~ \dot y=2c_1e^{2t}+2c_2te^{2t}+c_2e^{2t} \\
+              \\
+              \\
+              y(0)=1=c_1e^0+0c_2e^0 \Longrightarrow c_1=1 \\
+              \dot y(0)=1=2c_1+2c_2(0)+c_2 \Longrightarrow c_2=-1
+              \\
+              \\
+              y=e^{2t}-te^{2t}
+            $     
+          }
+
+        \item $\ddot y-\dot y=0; ~~~~~~ y(0)=2, ~~ \dot y(0)=-2;$
+
+          \textcolor{hwColor}{
+            $
+              a^2-a=0 \rightarrow a(a-1)=0 \rightarrow \begin{cases}
+                a=0 \\
+                a=1
+              \end{cases}\\
+              \\
+              y(0)=2=c_1e^0+c_2e^0 \Longrightarrow c_1=4 \\
+              \dot y(0)=-2=c_2 \Longrightarrow c_2=-2 \\
+              \\
+              \\
+              y=4e^{2t}-2te^{2t}
+            $     
+          }
+
+        \item $\ddot y-4\dot y=0 ~~~~~~ y(0)=0, ~~ \dot y(0)=1;$
+
+          \textcolor{hwColor}{
+            $
+              y=c_1e^{2t}+c_2te^{2t} ~~~~~ \dot y=2c_1e^{2t}+2c_2te^{2t}+c_2e^{2t} \\
+              \\
+              a^2-4a=0 \rightarrow \begin{cases}
+                a=0 \\
+                a=4 \\
+              \end{cases} \\
+              \\
+              y(0)=0=c_1 \\
+              \dot y(0)=1=2c_1+c_2 \rightarrow c_2=1 \\
+              \\
+              \\
+              y=te^{2t}
+            $     
+          }
+
+        \item $\ddot y+\dot y+2y=0 ~~~~~~ y(0)=2, ~~ \dot y(0)=0;$
+        
+          \textcolor{hwColor}{
+            $
+              y=c_1e^{2t}+c_2te^{2t} ~~~~~ \dot y=2c_1e^{2t}+2c_2te^{2t}+c_2e^{2t} \\
+              \\
+              a^2+a+2=0 \rightarrow \begin{cases}
+                a=-\dfrac{1}{2}+i\dfrac{\sqrt{7}}{2} \\
+                a=-\dfrac{1}{2}-i\dfrac{\sqrt{7}}{2} \\
+              \end{cases} \\
+              \\
+              y(0)=0=c_1 \\
+              \dot y(0)=1=2c_1+c_2 \rightarrow c_2=1 \\
+              \\
+              \\
+            $     
+          }
+
+      \end{enumerate}
     
-    \end{enumerate}
+  \end{enumerate}
 
 \end{document}
