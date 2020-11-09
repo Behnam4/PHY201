@@ -337,7 +337,130 @@
           }
               
         \item $\ddot y+2 \dot y+6y=3tsin(2t) ~~~~~~ y(0)=1, ~ \dot y(0)=2.$
+
+          \textcolor{hwColor}{
+            $
+              \dfrac{d^2 y}{dt^2}+2\dfrac{dy}{dt}+6y=3tsin(2t)\\
+              \\
+              y(t)=y_c(t)+y_p(t) \\
+            $
+          }
+
+          \textcolor{hwColor}{
+            The auxiliary equation: \\
+            \\
+            $
+              \dfrac{d^2 (e^{\lambda t})}{dt^2}+2\dfrac{d(e^{\lambda t})}{dt}+6(e^{\lambda t})=0 \\
+              \\
+              \lambda^2 e^{\lambda t}+2\lambda e^{\lambda t}+6(e^{\lambda t})=0 \rightarrow e^{\lambda t} \left[\lambda^2+2\lambda+6\right]=0 \\
+              \\
+              \lambda^2+2\lambda+6 \Longrightarrow \begin{cases}
+                \lambda_1=-1+i\sqrt{5} \\
+                \lambda_2=-1-i\sqrt{5}
+              \end{cases} \rightarrow \\
+            $
+              This time, the roots of the auxiliary equation are complex so we use equation 15.12: $~~ \alpha=-1$ and $\beta=\sqrt{5}$ \\
+            $ 
+              y_c(t)=e^{\alpha t}\left[c_1 cos(\beta t)+c_2 sin(\beta t)\right]=e^{-t}\left[c_1 cos(\sqrt{5}t)+c_2 sin(\sqrt{5}t)\right] \\
+              \\
+              y_c(t)=e^{-t}\left[c_1 cos(\sqrt{5}t)+c_2 sin(\sqrt{5}t)\right]
+            $
+          }
+
+          \bigbreak
+
+          \textcolor{hwColor}{
+            Let 
+            $
+              y_p(x)=Acos(2t)+Btcos(2t)+Csin(2t)+Dtsin(2t) \\ 
+              \dfrac{dy_p}{dt}=-2Asin(2t)+Bcos(2t)-2Btsin(2t)+2Ccos(2t)+Dsin(2t)+2Dtcos(2t) \\
+              \\ 
+              \dfrac{d^2 y_p}{dt^2}= \\
+              -4Acos(2t)-4Bsin(2t)-4tBcos(2t)-4Csin(2t)+4Dcos(2t)-4Dtsin(2t)
+            $ \\
+            Substitute $\dfrac{dy_p}{dt}$ and $\dfrac{d^2 y_p}{dt^2}$ into the differential equation: \\
+            \\
+            \\
+            $
+              -4Acos(2t)-4Bsin(2t)-4tBcos(2t)-4Csin(2t)+4Dcos(2t)-4Dtsin(2t) \\
+              +2\left[-2Asin(2t)+Bcos(2t)-2Btsin(2t)+2Ccos(2t)+Dsin(2t)+2Dtcos(2t)\right] \\
+              +6\left[Acos(2t)+Btcos(2t)+Csin(2t)+Dtsin(2t)\right]=3tsin(2t) \\
+              \\
+              \\
+              \Longrightarrow \begin{cases}
+                -3A+2B+4C+4D=0 \\
+                -3B+4C=0 \\
+                -4A-4B-3C+2D=0 \\
+                -4B-3D=3 \\
+              \end{cases}\\
+              \begin{pmatrix}
+                -3 & 2 & 4 & 4 \\
+                0 & -3 & 0 & 4 \\
+                -4 & -4 & -3 & 2 \\
+                0 & -4 & 0 & -3 \\
+              \end{pmatrix} \begin{pmatrix}
+                A \\
+                B \\
+                C \\
+                D \\
+              \end{pmatrix}=\begin{pmatrix}
+                0 \\
+                0 \\
+                0 \\
+                3 \\
+              \end{pmatrix} \\
+              \begin{cases}
+                A=-\dfrac{12}{125} \\
+                \\
+                B=-\dfrac{12}{25} \\
+                \\
+                C=\dfrac{66}{125} \\
+                \\
+                D=-\dfrac{9}{25} \\
+              \end{cases} \\
+              \\
+              y_p(x)=-\dfrac{12}{125}cos(2t)-\dfrac{12}{25}tcos(2t)+\dfrac{66}{125}sin(2t)-\dfrac{9}{25}tsin(2t)\\
+              \\
+              y(t)=y_c(t)+y_p(t)= \\
+              e^{-t}\left[c_1 cos(\sqrt{5}t)+c_2 sin(\sqrt{5}t)\right]-\dfrac{12}{125}cos(2t)-\dfrac{12}{25}tcos(2t)+\dfrac{66}{125}sin(2t)-\dfrac{9}{25}tsin(2t) \\
+            $
+          }
+
+          \bigbreak
+
+          \textcolor{hwColor}{
+            $
+              \dfrac{d(y(t))}{dt}=e^{-t}\left[-c_1 cos(\sqrt{5}t)-\sqrt{5}c_1 sin(\sqrt{5}t)-c_2 sin(\sqrt{5}t)+\sqrt{5}c_2 cos(\sqrt{5}t)\right]+\dfrac{24}{125}sin(2t)-\dfrac{12}{25}cos(2t)+\dfrac{24}{25}tsin(2t)+\dfrac{132}{125}cos(2t)-\dfrac{9}{25}sin(2t)-\dfrac{18}{25}tcos(2t) \\
+              \\ 
+              \\ 
+              y(0)=1, ~ \dot y(0)=2 \\
+              \\
+              y(0)=e^{0}\left[c_1 cos(0)+c_2 sin(0)\right]-\dfrac{12}{125}cos(0)-\dfrac{12}{25}(0)cos(0)+\dfrac{66}{125}sin(0)-\dfrac{9}{25}(0)sin(0)=1 \\
+              \\
+              \\
+              \dot y(0)=e^{0}\left[-c_1 cos(0)-\sqrt{5}c_1 sin(0)-c_2 sin(0)+\sqrt{5}c_2 cos(0)\right]+\dfrac{24}{125}sin(0)-\dfrac{12}{25}cos(0)+\dfrac{24}{25}(0)sin(0)+\dfrac{132}{125}cos(0)-\dfrac{9}{25}sin(0)-\dfrac{18}{25}(0)cos(0)=2 \\
+              \\
+              \\
+              \dot y(0)=-c_1+\sqrt{5}c_2+c_1+\sqrt{5}c_2=2
+              \\
+              \\
+              \begin{cases}
+                c_1=\dfrac{12}{125} \\
+                2\sqrt{5}c_2=2 
+              \end{cases} \Longrightarrow \begin{cases}
+                c_1=\dfrac{12}{125} \\
+                \\
+                c_2=\dfrac{1}{\sqrt{5}}
+              \end{cases} \\
+              \\
+              \\
+              \Longrightarrow y(t)= \\
+              e^{-t}\left[\dfrac{12}{125} cos(\sqrt{5}t)+\dfrac{1}{\sqrt{5}} sin(\sqrt{5}t)\right]-\dfrac{12}{125}cos(2t)-\dfrac{12}{25}tcos(2t)+\dfrac{66}{125}sin(2t)-\dfrac{9}{25}tsin(2t) \\
+            $
+          }
+
       \end{enumerate}
+      \vfill
 
     \item Refer to the reading on the driven oscillator posted on Canvas (see Module 22 file recommended\_reading\_driven\_oscillator.pdf), and do the exercises 26, 27 and 28 there. 
 
