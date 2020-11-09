@@ -83,7 +83,7 @@
       \bigbreak
 
       \textcolor{hwColor}{
-        Let $y_p(x)=Ae^{3t}+B ~~~~ \dfrac{dy}{dt}=3Ae^{3t}~, ~~ \dfrac{d^2 y}{dt^2}=9Ae^{3t}$ \\
+        Let $y_p(x)=Ae^{3t}+B ~~~~ \dfrac{dy_p}{dt}=3Ae^{3t}~, ~~ \dfrac{d^2 y_p}{dt^2}=9Ae^{3t}$ \\
         $
           \dfrac{d^2 y}{dt^2}-3\dfrac{dy}{dt}+2y=9Ae^{3t}-3(3Ae^{3t})+2(Ae^{3t}+B)=1+2e^{3t} \\
           \\
@@ -140,7 +140,7 @@
           \bigbreak
 
           \textcolor{hwColor}{
-            Let $y_p(x)=At+B ~~~~ \dfrac{dy}{dt}=A~, ~~ \dfrac{d^2 y}{dt^2}=0$ \\
+            Let $y_p(x)=At+B ~~~~ \dfrac{dy_p}{dt}=A~, ~~ \dfrac{d^2 y_p}{dt^2}=0$ \\
             $
               \dfrac{d^2 y}{dt^2}-4\dfrac{dy}{dt}+3y=0-4(A)+3(At+B)=t \rightarrow \begin{cases}
                 3A=1   \\
@@ -178,7 +178,7 @@
               \end{cases} \\
               \\
               \\
-              \Longrightarrow y(t)=e^t+-\dfrac{4}{9}e^{3t}+\dfrac{1}{3}t+\dfrac{4}{9}
+              \Longrightarrow y(t)=e^t-\dfrac{4}{9}e^{3t}+\dfrac{1}{3}t+\dfrac{4}{9}
             $
           }
 
@@ -186,7 +186,7 @@
 
           \textcolor{hwColor}{
             $
-              \dfrac{d^2 y}{dt^2}-4\dfrac{dy}{dt}=2cos(t) \\
+              \dfrac{d^2 y}{dt^2}-4y=2cos(t) \\
               \\
               y(t)=y_c(t)+y_p(t) \\
             $
@@ -196,21 +196,74 @@
             The auxiliary equation: \\
             \\
             $
-              \dfrac{d^2 (e^{\lambda t})}{dt^2}-4\dfrac{d(e^{\lambda t})}{dt}+3(e^{\lambda t})=0 \\
+              \dfrac{d^2 (e^{\lambda t})}{dt^2}-4e^{\lambda t}=0 \\
               \\
-              \lambda^2 e^{\lambda t}-4\lambda e^{\lambda t}+3e^{\lambda t}=0 \rightarrow e^{\lambda t} \left[\lambda^2-4\lambda+3\right]=0 \\
+              \lambda^2 e^{\lambda t}-4e^{\lambda t}=0 \rightarrow e^{\lambda t} \left[\lambda^2-4\right]=0 \\
               \\
-              \lambda^2-4\lambda+3=0 \Longrightarrow \begin{cases}
-                \lambda_1=1 \\
-                \lambda_2=3
+              \lambda^2-4=0 \Longrightarrow \begin{cases}
+                \lambda_1=-2 \\
+                \lambda_2=+2
               \end{cases} \rightarrow 
-              y_c(t)=c_1e^{\lambda_1 t}+c_2e^{\lambda_2 t}=c_1e^t+c_2e^{3t} \\
+              y_c(t)=c_1e^{\lambda_1 t}+c_2e^{\lambda_2 t}=c_1e^{-2t}+c_2e^{2t} \\
               \\
-              y_c(t)=c_1e^t+c_2e^{3t}
+              y_c(t)=c_1e^{-2t}+c_2e^{2t}
+            $
+          }
+
+          \bigbreak
+
+          \textcolor{hwColor}{
+            Let $y_p(x)=Acos(t)+Bsin(t) ~~~~ \dfrac{dy_p}{dt}=-Asin(t)+Bsin(t), ~~ \dfrac{d^2 y_p}{dt^2}=-\left[Acos(t)+Bsin(t)\right]$ \\
+            $
+              \dfrac{d^2 y}{dt^2}-4(Acos(t)+Bsin(t))=2cos(t) \\
+              \\
+              -Acos(t)-Bsin(t)-4Acos(t)-4Bsin(t)=2cos(t) \\
+              \\
+              -5Acos(t)-5bsin(t)=2cos(t)
+              \rightarrow \begin{cases}
+                -5A=2   \\
+                -5B=0  
+              \end{cases} \Longrightarrow \begin{cases}
+                A=-\dfrac{2}{5} \\
+                B=0
+              \end{cases} \\
+              \\
+              y_p(x)=-\dfrac{2}{5}cos(t) \\
+              \\
+              y(t)=y_c(t)+y_p(t)=c_1e^{-2t}+c_2e^{2t}-\dfrac{2}{5}cos(t) \\
+              \\
+              \\
+              \Longrightarrow y(t)=c_1e^{-2t}+c_2e^{2t}-\dfrac{2}{5}cos(t)
+            $
+          }
+
+          \bigbreak
+
+          \textcolor{hwColor}{
+            $
+              \dfrac{d(y(t))}{dt}=-2c_1e^{-2t}+2c_2e^{2t}+\dfrac{2}{5}sin(t), ~~~~ y(0)=0, ~ \dot y(0)=0 \\ \\
+              \\
+              y(0)=c_1e^{0}+c_2e^{0}-\dfrac{2}{5}cos(0)=0 \rightarrow c_1+c_2=\dfrac{2}{5} \\
+              \\
+              \dot y(0)=-2c_1e^{0}+2c_2e^{0}+\dfrac{2}{5}sin(0)=0 \rightarrow -2c_1+2c_2=0 \\
+              \\
+              \begin{cases}
+                c_1+c_2=\dfrac{2}{5} \\
+                -2c_1+2c_2=0 
+              \end{cases} \Longrightarrow \begin{cases}
+                c_1=\dfrac{1}{5} \\
+                \\
+                c_2=\dfrac{1}{5}
+              \end{cases} \\
+              \\
+              \\
+              \Longrightarrow y(t)=\dfrac{1}{5}e^{-2t}+\dfrac{1}{5}e^{2t}-\dfrac{2}{5}cos(t)
             $
           }
 
         \item $\ddot y+4\dot y+3y=4e^{-t} ~~~~~~ y(0)=0, ~ \dot y(0)=2.$
+
+              
         \item $\ddot y+2 \dot y+6y=3tsin(2t) ~~~~~~ y(0)=1, ~ \dot y(0)=2.$
       \end{enumerate}
 
