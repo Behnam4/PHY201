@@ -462,7 +462,68 @@
       \end{enumerate}
       \vfill
 
-    \item Refer to the reading on the driven oscillator posted on Canvas (see Module 22 file recommended\_reading\_driven\_oscillator.pdf), and do the exercises 26, 27 and 28 there. 
+    \item Refer to the reading on the driven oscillator posted on Canvas (see Module 22 file recommended\_reading\_driven\_oscillator.pdf), and do the exercises 26, 27 and 28 there.
+
+      \begin{enumerate}
+        \item Exercise 26
+
+          \textcolor{hwColor}{
+            $
+              a\ddot y+b\ dot y+cy=0 \\
+              \\
+              a \lambda^2+b \lambda+c=0 \Longrightarrow \begin{cases}
+                \lambda_1=\dfrac{-b+\sqrt{b^2-4ac}}{2a}=-\dfrac{b}{2a}+\dfrac{\sqrt{b^2-4ac}}{2a} \\
+                \\
+                \lambda_2=\dfrac{-b-\sqrt{b^2-4ac}}{2a}=-\dfrac{b}{2a}-\dfrac{\sqrt{b^2-4ac}}{2a}
+              \end{cases} \\
+              \\
+              \\
+              \rightarrow \begin{cases}
+                \lambda_1=-\dfrac{b}{2a}+\sqrt{\dfrac{b^2-4ac}{4a^2}}=-\dfrac{b}{2a}+\sqrt{(\dfrac{b}{2a})^2-\dfrac{c}{a}}=-\dfrac{b}{2a}+i\sqrt{\dfrac{c}{a}-(\dfrac{b}{2a})^2} \\
+                \\
+                \lambda_2=-\dfrac{b}{2a}-\sqrt{\dfrac{b^2-4ac}{4a^2}}=-\dfrac{b}{2a}-\sqrt{(\dfrac{b}{2a})^2-\dfrac{c}{a}}=-\dfrac{b}{2a}-i\sqrt{\dfrac{c}{a}-(\dfrac{b}{2a})^2}
+              \end{cases} \\
+            $
+          }
+
+          \bigbreak
+
+          \textcolor{hwColor}{
+            Assume $\gamma=\dfrac{b}{2a}$ and $\omega_0=\sqrt{\dfrac{c}{a}-(\dfrac{b}{2a})^2}$ then we have: \\
+            $
+              \begin{cases}
+                \lambda_1=-\gamma+i\omega_0 \\
+                \\
+                \lambda_2=-\gamma-i\omega_0
+              \end{cases}
+            $
+          }
+
+          \bigbreak
+
+          \textcolor{hwColor}{
+            $
+              y_c(t)=Ae^{(-\gamma+i\omega_0)t}+Be^{(-\gamma-i\omega_0)t}=e^{-\gamma t}\left[Ae^{i \omega_0 t}+Be^{-i \omega_0 t}\right] \\
+              \\
+              =e^{-\gamma t}\left[Acos(\omega_0 t)+iAsin(\omega_0 t)+Bcos(\omega_0 t)-iBsin(\omega_0 t)\right] \\
+              \\
+              =e^{-\gamma t}\left[(A+B)cos(\omega_0 t)+i(A-B)sin(\omega_0 t)\right] \\
+              \\
+              =L_0 e^{-\gamma t}cos(omega_0 t+\phi) \\
+              \\
+              \Longrightarrow \begin{cases}
+                \omega_0=\sqrt{\dfrac{c}{a}-(\dfrac{b}{2a})^2} \\
+                \\
+                \gamma=\dfrac{b}{2a}
+              \end{cases}
+            $
+          }
+
+        \item Exercise 27
+        
+        \item Exercise 28
+      
+      \end{enumerate}
 
     \item Refer to the reading on the driven oscillator posted on Canvas (see Module 22 file recommended\_reading\_driven\_oscillator.pdf), and do the exercises 29 and 30 there. 
           
