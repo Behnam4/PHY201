@@ -522,11 +522,67 @@
         \item Exercise 27
         
         \item Exercise 28
-      
-      \end{enumerate}
 
-    \item Refer to the reading on the driven oscillator posted on Canvas (see Module 22 file recommended\_reading\_driven\_oscillator.pdf), and do the exercises 29 and 30 there. 
-          
+        \textcolor{hwColor}{
+          $
+              y_0(0)=10 ~~~ \dot y_0(0)=0 \\
+              \\
+              y_c(t)=Ae^{(-\gamma+i\omega_0)t}+Be^{(-\gamma-i\omega_0)t} \\
+              \\
+              \dfrac{dy_c}{dt}=A(-\gamma+i\omega_0)e^{(-\gamma+i\omega_0)t}+B(-\gamma-i\omega_0)e^{(-\gamma-i\omega_0)t} \\
+              \\
+              y_c(0)=Ae^{(-\gamma+i\omega_0)(0)}+Be^{(-\gamma-i\omega_0)(0)}=A+B=10 \\
+              \\
+              \dot y_c(0)=A(-\gamma+i\omega_0)e^{(-\gamma+i\omega_0)(0)}+B(-\gamma-i\omega_0)e^{(-\gamma-i\omega_0)(0))} \\
+              \\
+              =A(-\gamma+i\omega_0)+B(-\gamma-i\omega_0)=0
+          $
+        }
+
+        \bigbreak
+
+        \textcolor{hwColor}{
+          $
+            \begin{cases}
+              A+B=10 \\
+              \\
+              A(-\gamma+i\omega_0)+B(-\gamma-i\omega_0)=0
+            \end{cases}
+            \Longrightarrow \begin{pmatrix}
+              1 & 1 \\
+              (-\gamma+i\omega_0) & (-\gamma-i\omega_0)
+            \end{pmatrix}.\begin{pmatrix}
+              A \\
+              B
+            \end{pmatrix}=\begin{pmatrix}
+              10 \\
+              0
+            \end{pmatrix}
+          $
+        }
+
+        \bigbreak
+
+        \textcolor{hwColor}{
+          $
+            \begin{cases}
+              A=-\dfrac{5(-\gamma-i\omega_0)}{i \omega_0}
+              \\
+              \\
+              B=\dfrac{5(-\gamma+i\omega_0)}{i \omega_0}
+            \end{cases}
+          $
+        }
+
+        \bigbreak
+
+        \textcolor{hwColor}{
+          $
+            \Longrightarrow y_c(t)=\left[-\dfrac{5(-\gamma-i\omega_0)}{i \omega_0}\right]e^{(-\gamma+i\omega_0)t}+\left[\dfrac{5(-\gamma+i\omega_0)}{i \omega_0}\right]e^{(-\gamma-i\omega_0)t}
+          $
+        }
+
+      \end{enumerate}
   \end{enumerate}
 
 \end{document}
