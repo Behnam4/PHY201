@@ -326,10 +326,26 @@
       \begin{enumerate}
       \item $y'' + 4 y' + 3 y =0 $, with $y_1= e^{-x}$
 
-      \item $(1-x^2) y'' - 2 x y' + 2y=0 $, with $y_1= x $
+      \item $(1-x^2) y'' - 2 x y' + 2y=0 $, with $y_1= x$
 
-      \item  $x^2 y'' + x y' + (x^2 - \frac{1}{4})y=0 $, with $y_1=\sin x/\sqrt{x} $
+      \item $x^2 y'' + x y' + (x^2 - \frac{1}{4})y=0 $, with $y_1=\sin x/\sqrt{x}$
       \end{enumerate}
+
+      \textcolor{hwColor}{
+        (a): $y'' + 4 y' + 3 y =0 $, with $y_1=e^{-x}$ \\
+        \\
+        $
+          y_2(x)=y_1(x) \bigints_{}^{x} \dfrac{1}{y_1(u)^2}\left[e^{-\bigints p(v)dv}\right]du \\
+          \\
+          y_2(x)=e^{-x} \bigints_{}^{x} \dfrac{1}{(e^{-u})^2}\left[e^{-\bigints 4dv}\right]du=e^{-x} \bigints_{}^{x} \dfrac{e^{-4u}}{e^{-2u}}du=e^{-x} \bigints_{}^{x} e^{-2u}du=-\dfrac{e^{-x} e^{-2x}}{2} \\
+          \\
+          y_2(x)=-\dfrac{1}{2e^{3x}}
+        $
+      }
+
+      \textcolor{hwColor}{
+        \rule{15cm}{1pt}
+      }
 
 
   \end{enumerate}
