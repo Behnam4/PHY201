@@ -4,6 +4,7 @@
 \thispagestyle{empty}
 \usepackage{import}
 \usepackage{amsmath}
+\usepackage{bigints} 
 \usepackage{graphicx}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -60,6 +61,87 @@
 
       \item $y'' + y = e^{-x} \sin x$ 
       \end{enumerate}
+
+      \textcolor{hwColor}{
+        (a): \\ 
+        $ 
+          y''+y=0 \rightarrow y''+0y'+y=0 \\
+          \\
+          \lambda^2+0\lambda+1=0 \Rightarrow \begin{cases}
+            \lambda_1= 0+i=\alpha+i\beta \\
+            \lambda_2= 0-i=\alpha-i\beta \\
+          \end{cases} \longrightarrow \alpha=0 ~~~~~~ \beta=1 \\
+          \\
+          y_c=e^{\alpha x}\left[c_1 cos(x)+c_2 sin(x)\right]=c_1 cos(x)+c_2 sin(x)=u_1y_1+u_2y_2 \\
+          \\
+          \Longrightarrow \begin{cases}
+            u_1=c_1 \\
+            y_1=cos(x) \\
+            u_2=c_2 \\
+            y_2=sin(x) \\
+          \end{cases} \\
+          \\
+          y_p=u_1y_1+u_2y_2 \\
+          \\
+        $
+        Condition:
+        $
+          u^{\prime}_1y_1+u^{\prime}_2y_2=0 \rightarrow u^{\prime}_1cos(x)+u^{\prime}_2sin(x)=0 \\
+          \\
+          y_p=u_1cos(x)+u_2sin(x) ~~~~~ y^{\prime}_p=u^{\prime}_1cos(x)-u_1sin(x)+u^{\prime}_2sin(x)+u_2cos(x) \\
+          \\
+          y^{\prime}_p=-u_1sin(x)+u_2cos(x) \\
+          \\
+          y''_p=-u^{\prime}_1sin(x)-u_1cos(x)+u^{\prime}_2cos(x)-u_2sin(x) \\
+          \\
+          y''+y=xsin(x) \rightarrow y''_p+y_p=-u^{\prime}_1sin(x)-u_1cos(x)+u^{\prime}_2cos(x)-u_2sin(x)+u_1cos(x)+u_2sin(x) \\
+          \\
+          y''_p+y_p=-u^{\prime}_1sin(x)+u^{\prime}_2cos(x)=xsin(x) \\
+          \\
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+          \begin{cases}
+            u^{\prime}_1cos(x)+u^{\prime}_2sin(x)=0 \\
+            \\
+            -u^{\prime}_1sin(x)+u^{\prime}_2cos(x)=xsin(x) \\
+          \end{cases} \rightarrow \begin{pmatrix}
+            cos(x) & sin(x) \\
+            -sin(x) & cos(x) \\
+          \end{pmatrix}.\begin{pmatrix}
+            u^{\prime}_1 \\
+            u^{\prime}_2
+          \end{pmatrix}=\begin{pmatrix}
+            0 \\
+            xsin(x)
+          \end{pmatrix} \\
+          \\
+          \\
+          u^{\prime}_1=\dfrac{\begin{vmatrix}
+            0 & sin(x) \\
+            xsin(x) & cos(x)
+          \end{vmatrix}}{cos^2(x)+sin^2(x)}=-xsin^2(x) ~~~~~~~ u^{\prime}_2=\dfrac{\begin{vmatrix}
+            cos(x) & 0 \\
+            -sin(x) & xsin(x)
+          \end{vmatrix}}{cos^2(x)+sin^2(x)}=xsin(x)cos(x) \\
+          \\
+          \\
+          u_1=\bigints -xsin^2(x)dx=-\left[-xcos(x)+\bigints cos(x)dx\right]=xcos(x)-sin(x) \\
+          \\
+          u_2=\bigints xsin(x)cos(x) dx=\dfrac{1}{2}\bigints x sin(2x)dx=\dfrac{1}{2}\left[-x\dfrac{1}{2} cos(2x)+\bigints \dfrac{1}{2} cos(2x)dx\right] \\
+          = \dfrac{1}{4}\left[-x cos(2x)+\dfrac{1}{2}sin(2x)\right] \\
+          \\
+          \\
+          y_p=xcos(x)-sin(x)cos(x)+\dfrac{1}{4}\left[-x cos(2x)+\dfrac{1}{2}sin(2x)\right]sin(x) \\
+          \\
+          \\
+          y=y_c+y_p \\
+          \\
+          \Longrightarrow y=c_1 cos(x)+c_2 sin(x)+xcos(x)-sin(x)cos(x)+\dfrac{1}{4}\left[-x cos(2x)+\dfrac{1}{2}sin(2x)\right]sin(x)
+        $
+      }
 
     \item Use the series solution method (method of Frobenius) to solve the equation $y'' - k^2 y =0$ (where $k$ is a real constant).  Illustrate the connection with some known hyperbolic functions. [Hint: this exercise is very similar to the example shown in class; feel free to use that example for inspiration! ]
     
