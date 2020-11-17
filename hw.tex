@@ -347,6 +347,29 @@
         \rule{15cm}{1pt}
       }
 
+      \textcolor{hwColor}{
+        (b): $(1-x^2) y'' - 2 x y' + 2y=0 $, with $y_1= x$ \\
+        \\
+        $
+          (1-x^2)y''- 2xy'+2y=0 \Rightarrow  y''-\dfrac{2x}{(1-x^2)}y'+\dfrac{2}{(1-x^2)}y=0 \rightarrow p(x)=-\dfrac{2x}{(1-x^2)} \\
+          \\
+          y_2(x)=y_1(x) \bigints_{}^{x} \dfrac{1}{y_1(u)^2}\left[e^{-\bigints p(v)dv}\right]du \\
+          \\
+          y_2(x)=x \bigints_{}^{x} \dfrac{1}{u^2}\left[e^{\bigints \dfrac{2v}{(1-v^2)}dv}\right]du=x \bigints_{}^{x} \dfrac{1}{u^2}\left[e^{-ln|1-u^2|}\right]du=-x \bigints_{}^{x}\dfrac{|1-u^2|}{u^2}du \\
+          \\
+        $
+        To ensure that $1-u^2$ term remains positive, we know that for $u<1$ the function is always positive but for $u>1$ the function becomes negative,
+        hence we need to multiple it by $-1$. All this really does is introduce a change of sign to our possible solution $y_2(x)$. and since a change of sign is the same thing as multiplying by −1, our answers for each part of the domain will only differ
+        by a constant multiple. As a result, in this case we’re justified in "ignoring" the absolute value bars, since they don’t change the overall character of our solution. \\
+        \\
+        \\
+        $
+          y_2(x)=-x \bigints_{}^{x}\dfrac{1-u^2}{u^2}du=-x\left[-\dfrac{1}{x}-x\right] \\
+          \\
+          \Longrightarrow y_2(x)=1+x^2
+        $
+      }
+
 
   \end{enumerate}
 
