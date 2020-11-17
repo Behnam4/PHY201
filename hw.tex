@@ -134,16 +134,104 @@
           = \dfrac{1}{4}\left[-x cos(2x)+\dfrac{1}{2}sin(2x)\right] \\
           \\
           \\
-          y_p=xcos(x)-sin(x)cos(x)+\dfrac{1}{4}\left[-x cos(2x)+\dfrac{1}{2}sin(2x)\right]sin(x) \\
+          y_p=(xcos(x)-sin(x))cos(x)+\dfrac{1}{4}\left[-x cos(2x)+\dfrac{1}{2}sin(2x)\right]sin(x) \\
           \\
           \\
           y=y_c+y_p \\
           \\
-          \Longrightarrow y=c_1 cos(x)+c_2 sin(x)+xcos(x)-sin(x)cos(x)+\dfrac{1}{4}\left[-x cos(2x)+\dfrac{1}{2}sin(2x)\right]sin(x)
+          \Longrightarrow y=c_1 cos(x)+c_2 sin(x)+(xcos(x)-sin(x))cos(x)+\dfrac{1}{4}\left[-x cos(2x)+\dfrac{1}{2}sin(2x)\right]sin(x)
         $
       }
 
-    \item Use the series solution method (method of Frobenius) to solve the equation $y'' - k^2 y =0$ (where $k$ is a real constant).  Illustrate the connection with some known hyperbolic functions. [Hint: this exercise is very similar to the example shown in class; feel free to use that example for inspiration! ]
+      \textcolor{hwColor}{
+        \rule{15cm}{1pt}
+      }
+
+      \textcolor{hwColor}{
+        (b): \\ 
+        $ 
+          y''+y=0 \rightarrow y''+0y'+y=0 \\
+          \\
+          \lambda^2+0\lambda+1=0 \Rightarrow \begin{cases}
+            \lambda_1= 0+i=\alpha+i\beta \\
+            \lambda_2= 0-i=\alpha-i\beta \\
+          \end{cases} \longrightarrow \alpha=0 ~~~~~~ \beta=1 \\
+          \\
+          y_c=e^{\alpha x}\left[c_1 cos(x)+c_2 sin(x)\right]=c_1 cos(x)+c_2 sin(x)=u_1y_1+u_2y_2 \\
+          \\
+          \Longrightarrow \begin{cases}
+            u_1=c_1 \\
+            y_1=cos(x) \\
+            u_2=c_2 \\
+            y_2=sin(x) \\
+          \end{cases} \\
+          \\
+          y_p=u_1y_1+u_2y_2 \\
+          \\
+        $
+        Condition:
+        $
+          u^{\prime}_1y_1+u^{\prime}_2y_2=0 \rightarrow u^{\prime}_1cos(x)+u^{\prime}_2sin(x)=0 \\
+          \\
+          y_p=u_1cos(x)+u_2sin(x) ~~~~~ y^{\prime}_p=u^{\prime}_1cos(x)-u_1sin(x)+u^{\prime}_2sin(x)+u_2cos(x) \\
+          \\
+          y^{\prime}_p=-u_1sin(x)+u_2cos(x) \\
+          \\
+          y''_p=-u^{\prime}_1sin(x)-u_1cos(x)+u^{\prime}_2cos(x)-u_2sin(x) \\
+          \\
+          y''+y=xe^{-2x} \rightarrow y''_p+y_p=-u^{\prime}_1sin(x)-u_1cos(x)+u^{\prime}_2cos(x)-u_2sin(x)+u_1cos(x)+u_2sin(x) \\
+          \\
+          y''_p+y_p=-u^{\prime}_1sin(x)+u^{\prime}_2cos(x)=xe^{-2x} \\
+          \\
+        $
+      }
+
+      \textcolor{hwColor}{
+        $
+          \begin{cases}
+            u^{\prime}_1cos(x)+u^{\prime}_2sin(x)=0 \\
+            \\
+            -u^{\prime}_1sin(x)+u^{\prime}_2cos(x)=xe^{-2x} \\
+          \end{cases} \rightarrow \begin{pmatrix}
+            cos(x) & sin(x) \\
+            -sin(x) & cos(x) \\
+          \end{pmatrix}.\begin{pmatrix}
+            u^{\prime}_1 \\
+            u^{\prime}_2
+          \end{pmatrix}=\begin{pmatrix}
+            0 \\
+            xe^{-2x}
+          \end{pmatrix} \\
+          \\
+          \\
+          u^{\prime}_1=\dfrac{\begin{vmatrix}
+            0 & sin(x) \\
+            xe^{-2x} & cos(x)
+          \end{vmatrix}}{cos^2(x)+sin^2(x)}=-xsin(x)e^{-2x} ~~~~~~~ u^{\prime}_2=\dfrac{\begin{vmatrix}
+            cos(x) & 0 \\
+            -sin(x) & xe^{-2x}
+          \end{vmatrix}}{cos^2(x)+sin^2(x)}=xcos(x)e^{-2x} \\
+          \\
+          \\
+          u_1=\bigints -xsin(x)e^{-2x} dx=-x\left[-\dfrac{1}{5}e^{-2x}cos(x)-\dfrac{2}{5}e^{-2x}sin(x)\right]-\dfrac{1}{5}\bigints(-e^{-2x}cos(x)-2e^{-2x}sin(x))dx \\
+          \\
+          =\dfrac{1}{5}xe^{-2x}cos(x)+\dfrac{2}{5}xe^{-2x}sin(x)+\dfrac{3}{25}e^{-2x}sin(x)+\dfrac{4}{25}e^{-2x}cos(x)
+          \\
+          \\
+          \\
+          u_2=\bigints xcos(x)e^{-2x} dx=-x\left[\dfrac{1}{5}e^{-2x}sin(x)-\dfrac{2}{5}e^{-2x}cos(x)\right]-\dfrac{1}{5} \bigints (e^{-2x} sin(x)-2e^{-2x}cos(x))dx \\
+          \\
+          =-\dfrac{1}{5}xe^{-2x}sin(x)+\dfrac{2}{5}xe^{-2x}cos(x)+\dfrac{3}{25}e^{-2x}cos(x)-\dfrac{4}{25}e^{-2x}sin(x) \\
+          \\
+          \\
+          y_p=\left[\dfrac{1}{5}xe^{-2x}cos(x)+\dfrac{2}{5}xe^{-2x}sin(x)+\dfrac{3}{25}e^{-2x}sin(x)+\dfrac{4}{25}e^{-2x}cos(x)\right]cos(x)+ \\
+          \left[-\dfrac{1}{5}xe^{-2x}sin(x)+\dfrac{2}{5}xe^{-2x}cos(x)+\dfrac{3}{25}e^{-2x}cos(x)-\dfrac{4}{25}e^{-2x}sin(x)\right]sin(x) \\
+          \\
+          y_c=c_1 cos(x)+c_2 sin(x) \\
+          \\
+          y=y_c+y_p
+        $
+      }
     
     \item  For each of the ODEs below, one solution is given. Using the method of the Wronskian, find a second, linearly independent, solution and write the general solution of the equation. 
       \begin{enumerate}
@@ -153,15 +241,6 @@
 
       \item  $x^2 y'' + x y' + (x^2 - \frac{1}{4})y=0 $, with $y_1=\sin x/\sqrt{x} $
       \end{enumerate}
-
-
-    \item  Consider the one-dimensional wave equation, as written in the textbook (top of page 677). (i) Prove, by directly substituting  into the equation, that any generic function $f(k)$, where the argument $k$ is $k=x+ct$, is a solution of the equation. (ii) do the same proof for $k=x-ct$. 
-
-
-
-
-
-
 
 
   \end{enumerate}
