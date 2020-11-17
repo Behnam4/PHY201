@@ -1,0 +1,87 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+    \center % Center everything on the page
+
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm] % Name of your university/college
+
+    \textsc{\LARGE Mathematical Methods For Physics I }\\[1.5cm] % Major heading such as course name
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework 13}\\[0.4cm] 
+    \HRule \\[1.5cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Cecilia Lunardini}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill % Fill the rest of the page with whitespace
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item Use the method of the variation of the parameters to find the general solution the following second order linear ODEs (here primes indicate derivatives with respect to $x$): 
+      \begin{enumerate}
+      \item $y'' + y = x \sin x$
+
+      \item $y'' + y = x e^{-2x }$
+
+      \item $y'' + y = e^{-x} \sin x$ 
+      \end{enumerate}
+
+    \item Use the series solution method (method of Frobenius) to solve the equation $y'' - k^2 y =0$ (where $k$ is a real constant).  Illustrate the connection with some known hyperbolic functions. [Hint: this exercise is very similar to the example shown in class; feel free to use that example for inspiration! ]
+    
+    \item  For each of the ODEs below, one solution is given. Using the method of the Wronskian, find a second, linearly independent, solution and write the general solution of the equation. 
+      \begin{enumerate}
+      \item $y'' + 4 y' + 3 y =0 $, with $y_1= e^{-x}$
+
+      \item $(1-x^2) y'' - 2 x y' + 2y=0 $, with $y_1= x $
+
+      \item  $x^2 y'' + x y' + (x^2 - \frac{1}{4})y=0 $, with $y_1=\sin x/\sqrt{x} $
+      \end{enumerate}
+
+
+    \item  Consider the one-dimensional wave equation, as written in the textbook (top of page 677). (i) Prove, by directly substituting  into the equation, that any generic function $f(k)$, where the argument $k$ is $k=x+ct$, is a solution of the equation. (ii) do the same proof for $k=x-ct$. 
+
+
+
+
+
+
+
+
+  \end{enumerate}
+
+\end{document}
