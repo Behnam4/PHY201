@@ -321,6 +321,9 @@
           y=y_c+y_p
         $
       }
+
+    \item  Use the series solution method (method of Frobenius) to solve the equation $y'' - k^2 y =0$ (where $k$ is a real constant).  Illustrate the connection with some known hyperbolic functions. [Hint: this exercise is very similar to the example shown in class; feel free to use that example for inspiration! ]
+    
     
     \item  For each of the ODEs below, one solution is given. Using the method of the Wronskian, find a second, linearly independent, solution and write the general solution of the equation. 
       \begin{enumerate}
@@ -355,36 +358,45 @@
           \\
           y_2(x)=y_1(x) \bigints_{}^{x} \dfrac{1}{y_1(u)^2}\left[e^{-\bigints p(v)dv}\right]du \\
           \\
-          y_2(x)=x \bigints_{}^{x} \dfrac{1}{u^2}\left[e^{\bigints \dfrac{2v}{(1-v^2)}dv}\right]du=x \bigints_{}^{x} \dfrac{1}{u^2}\left[e^{-ln|1-u^2|}\right]du=-x \bigints_{}^{x}\dfrac{|1-u^2|}{u^2}du \\
+          y_2(x)=x \bigints_{}^{x} \dfrac{1}{u^2}\left[e^{\bigints \dfrac{2v}{(1-v^2)}dv}\right]du=x \bigints_{}^{x} \dfrac{1}{u^2}\left[e^{-ln|1-u^2|}\right]du=x \bigints_{}^{x}\dfrac{1}{u^2} \dfrac{1}{|1-u^2|}du \\
           \\
         $
         To ensure that $1-u^2$ term remains positive, we know that for $u<1$ the function is always positive but for $u>1$ the function becomes negative,
         hence we need to multiple it by $-1$. All this really does is introduce a change of sign to our possible solution $y_2(x)$. and since a change of sign is the same thing as multiplying by −1, our answers for each part of the domain will only differ
-        by a constant multiple. As a result, in this case we’re justified in "ignoring" the absolute value bars, since they don’t change the overall character of our solution. \\
+        by a constant multiple. As a result, in this case we’re justified in "ignoring" the absolute value bars, since they don’t change the overall character of our solution. Let's assume $u>0$ then we have: \\
         \\
         \\
         $
-          y_2(x)=-x \bigints_{}^{x}\dfrac{1-u^2}{u^2}du=-x\left[-\dfrac{1}{x}-x\right] \\
+          y_2(x)=x \bigints_{}^{x}\dfrac{1}{u^2-u^4}du=x \bigints_{}^{x} \left(\dfrac{1}{u^2}+\dfrac{1}{2(u+1)}-\dfrac{1}{2(u-1)}\right)du \\
           \\
-          \Longrightarrow y_2(x)=1+x^2
+          y_2(x)=x \left(\dfrac{1}{2}ln|x+1|-\dfrac{1}{2}ln|x-1|-\dfrac{1}{x}\right) \\
+          \\
+          \\
+          \Longrightarrow y_2(x)=\dfrac{x}{2}ln|x+1|-\dfrac{x}{2}ln|x-1|-1
         $
       }
 
       \textcolor{hwColor}{
-        \rule{15cm}{1pt}
-      }
-
-      \textcolor{hwColor}{
-        (c): $x^2 y''+xy'+(x^2-\frac{1}{4})y=0 $, with $y_1=\sin x/\sqrt{x}$ \\
+        (c): $x^2 y''+xy'+(x^2-\frac{1}{4})y=0$, with $y_1=\dfrac{sin(x)}{\sqrt{x}}$ \\
         \\
+        $
+          \dfrac{x^2 y''}{x^2}+\dfrac{xy'}{x^2}+\dfrac{(x^2-\frac{1}{4})y}{x^2}=0 ~~~ \Rightarrow ~~~ y''+\dfrac{1}{x}y'+(1-\dfrac{1}{4x^2})y=0 \rightarrow p(x)=\dfrac{1}{x} \\
+          \\
+        $
         $
           y_2(x)=y_1(x) \bigints_{}^{x} \dfrac{1}{y_1(u)^2}\left[e^{-\bigints p(v)dv}\right]du \\
           \\
-          y_2(x)= \\
+          y_2(x)=\dfrac{sin(x)}{\sqrt{x}} \bigints_{}^{x} \dfrac{1}{(\dfrac{sin(u)}{\sqrt{u}})^2}\left[e^{-\bigints \dfrac{1}{v}dv}\right]du \\
           \\
-          y_2(x)=
+          y_2(x)=\dfrac{sin(x)}{\sqrt{x}} \bigints_{}^{x} \dfrac{u}{sin^2(u)}\left[e^{-ln|v|}\right]du=\dfrac{sin(x)}{\sqrt{x}} \bigints_{}^{x} \dfrac{u}{sin^2(u)}\dfrac{1}{u}du \\
+          \\
+          y_2(x)=\dfrac{sin(x)}{\sqrt{x}} \bigints_{}^{x} \dfrac{1}{sin^2(u)}du=-\dfrac{sin(x)}{\sqrt{x}} cot(x) \\
+          \\
+          y_2(x)=-\dfrac{cos(x)}{\sqrt{x}}
         $
       }
+    
+    \item  Consider the one-dimensional wave equation, as written in the textbook (top of page 677). (i) Prove, by directly substituting  into the equation, that any generic function $f(k)$, where the argument $k$ is $k=x+ct$, is a solution of the equation. (ii) do the same proof for $k=x-ct$. 
 
   \end{enumerate}
 
