@@ -445,6 +445,10 @@
       }
 
       \textcolor{hwColor}{
+        \rule{15cm}{1pt}
+      }
+
+      \textcolor{hwColor}{
         (c): $x^2 y''+xy'+(x^2-\frac{1}{4})y=0$, with $y_1=\dfrac{sin(x)}{\sqrt{x}}$ \\
         \\
         $
@@ -464,7 +468,35 @@
         $
       }
     
-    \item  Consider the one-dimensional wave equation, as written in the textbook (top of page 677). (i) Prove, by directly substituting  into the equation, that any generic function $f(k)$, where the argument $k$ is $k=x+ct$, is a solution of the equation. (ii) do the same proof for $k=x-ct$. 
+    \item Consider the one-dimensional wave equation, as written in the textbook (top of page 677). (i) Prove, by directly substituting  into the equation, that any generic function $f(k)$, where the argument $k$ is $k=x+ct$, is a solution of the equation. (ii) do the same proof for $k=x-ct$.
+
+      \textcolor{hwColor}{
+        The mathematical description of the one-dimensional waves: \\
+        \\
+        $
+          \dfrac{\partial^2 u}{dx^2}=\dfrac{1}{c^2}\dfrac{\partial^2 u}{dt^2} \\
+          \\
+        $
+        Assume $y(x,t)=Acos(kx-\omega t)$ is a wave function:\\
+        \\
+        $
+          \dfrac{\partial u}{\partial x}=-kAsin(kx- \omega t) ~~~~~~~~~ \dfrac{\partial^2 u}{\partial x^2}=-k^2Acos(kx-\omega t)=-k^2u \\
+          \\
+          \\
+          \dfrac{\partial u}{\partial t}=A \omega sin(kx-\omega t) ~~~~~~~~~~~ \dfrac{\partial^2 u}{\partial t^2}=-A\omega^2 cos(kx- \omega t)=-\omega u \\
+          \\
+        $
+        Now plugin the above values to the wave equation: \\
+        \\
+        \\
+        $
+          -k^2u=\dfrac{1}{c^2}(- \omega u) \Rightarrow k^2=\dfrac{1}{c^2}\omega^2 \Rightarrow (\dfrac{2\pi}{\lambda})^2=\dfrac{1}{(f \lambda)^2}(2\pi f)^2 \\
+          \\
+          \dfrac{1}{\lambda^2}=\dfrac{1}{\lambda^2} \\
+          \\
+        $
+        Hence, $kx-\omega t$ is a solution of the wave equation.
+      }
 
   \end{enumerate}
 
