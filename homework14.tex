@@ -1,0 +1,78 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+    \center % Center everything on the page
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm] % Name of your university/college
+
+    \textsc{\LARGE Mathematical Methods For Physics I }\\[1.5cm] % Major heading such as course name
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework 14}\\[0.4cm] 
+    \HRule \\[1.5cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Cecilia Lunardini}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill % Fill the rest of the page with whitespace
+
+  \end{titlepage}
+
+  \begin{enumerate}
+    \item  Solve the problem of the vibrating string of length $L$ (covered in class) with the function
+      $$f(x)=\begin{cases} \frac{4 h x}{L} &\mbox{if } 0 \leq x < L/4 \\ 
+      2 h \left( 1 - \frac{2x}{L}\right) &\mbox{if }  L/4  \leq x \leq L/2 \\ 
+      0 & \mbox{if } x > L/2 \end{cases} $$
+      describing the initial displacement of the string at $t=0$.  Plot $f(x)$.   Assume that initially the string is released from rest. [Note: please do all the steps, including the separation of the variables, even though many of them have been shown in class. ]
+
+
+    \item  
+
+      \begin{enumerate}
+      \item Derive the differential equation for a  vibrating string in presence of gravity. Assume that the string has constant mass per unit length, $\mu$, and that at rest the string lies horizontally (like in a piano); assume small displacements, purely in the transverse direction (like in the case discussed in class).  
+
+      \item check if the new equation can still be solved by separation of the variables (it is not necessary to find the solution).  [ Optional: reflect on your result. Would a musical instrument sound the same on Earth and on a future human colony on the Moon?  ] 
+
+      \end{enumerate}
+
+    \item Generalize the problem of the vibrating string to the case of a vibrating rectangular drum of sides $a$ and $b$. Consider the 2-dimensional wave equation describing the (transverse) displacement, $U(x,y,t)$, of the drum's membrane:
+    $$
+    \frac{\partial^2 U}{\partial x^2} + \frac{\partial^2 U}{\partial y^2}  - \frac{1}{v^2}\frac{\partial^2 U}{\partial t^2}=0
+    $$
+    and start to solve it using the method of the separation of the variables. Proceed until you obtain three separate ordinary differential equations. 
+    
+    \item {\bf Bonus: } continue the previous problem: discuss the signs of the linking constants and show that they must take discrete values if we impose that the edges of the drum are fixed at all times. 
+  \end{enumerate}
+
+\end{document}
