@@ -4,6 +4,7 @@
 \thispagestyle{empty}
 \usepackage{import}
 \usepackage{amsmath}
+\usepackage{bigints}
 \usepackage{graphicx}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -54,8 +55,162 @@
       $$f(x)=\begin{cases} \frac{4 h x}{L} &\mbox{if } 0 \leq x < L/4 \\ 
       2 h \left( 1 - \frac{2x}{L}\right) &\mbox{if }  L/4  \leq x \leq L/2 \\ 
       0 & \mbox{if } x > L/2 \end{cases} $$
-      describing the initial displacement of the string at $t=0$.  Plot $f(x)$.   Assume that initially the string is released from rest. [Note: please do all the steps, including the separation of the variables, even though many of them have been shown in class. ]
+      describing the initial displacement of the string at $t=0$. Plot $f(x)$. Assume that initially the string is released from rest. [Note: please do all the steps, including the separation of the variables, even though many of them have been shown in class. ]
 
+      \textcolor{hwColor}{
+        $
+          \dfrac{\partial^2y}{\partial x^2}-\dfrac{1}{v^2}\dfrac{\partial^y}{\partial t^2}=0
+          \\
+          \\
+          y(x,t)=X(x)T(t) \\
+          \\
+          \dfrac{\partial^2}{\partial x^2}\left(X(x)T(t)\right)-\dfrac{1}{v^2}\dfrac{\partial^2}{\partial t^2}\left(X(x)T(t)\right)=0 \\
+          \\
+          T(t)\dfrac{d^2X}{dx^2}-\dfrac{1}{v^2}X(x)\dfrac{d^2T}{dt^2}=0 \\
+          \\
+        $ 
+        Now divide both sides by $\dfrac{1}{X(x)T(t)}$, so we get:
+        $
+          \dfrac{1}{X(x)}\dfrac{d^2X}{dx^2}-\dfrac{1}{v^2}\dfrac{1}{T(t)}\dfrac{d^2T}{dt^2}=0 \\
+          \\
+          \\
+          \dfrac{1}{X}\dfrac{d^2x}{dx^2}=\dfrac{1}{v^2}\dfrac{1}{T}\dfrac{d^2T}{dt^2} \Rightarrow \begin{cases}
+            X(x)=X \\
+            T(t)=T
+          \end{cases}
+        $ \\
+        \\
+        \\
+        $
+          \begin{cases}
+            \dfrac{d^2X}{dx^2}=-K^2X \\
+            \\
+            \dfrac{d^2T}{dt^2}=-(vK)^2T
+          \end{cases} \Rightarrow \begin{cases}
+            \dfrac{d^2X}{dx^2}+K^2X=0 \\
+            \\
+            \dfrac{d^2T}{dt^2}+(vK)^2T=0
+          \end{cases}
+        $ where K is a real number. \\
+        \\
+      }
+
+      \textcolor{hwColor}{
+        These two objects on each side of the equation have nothing to do with each other because one of them is a function of x only depends on x. And the other part this on this side only depends on T. 
+        How can these two sides be equal? Only when they are constant. \\
+        \\
+        $
+          \begin{cases}
+            X(x)=Acos(Kx)+Bsin(Kx) \\
+            T(t)=Ccos(Kvt)+Dsin(Kvt)
+          \end{cases}
+        $
+        So for our general solution we have: \\
+        \\
+        \\
+        $
+          y(x,t)=\left[Acos(Kx)+Bsin(Kx)\right] \times \left[Ccos(Kvt)+Dsin(Kvt)\right]
+        $
+        \\
+      }
+
+      \textcolor{hwColor}{
+        We assume that the ends of the string are fixed. \\
+        $
+          \begin{cases}
+            y(0,t)=0 \Rightarrow (i) ~~ X(0)=0\\
+            y(L,t)=0 \Rightarrow (ii) ~~ X(L)=0
+          \end{cases}
+          \\
+          \\
+          \\
+          (i) ~~ X(x)=Acos(Kx)+Bsin(Kx) \\
+          x(0)=Acos(0)+Bsin(0) \longrightarrow A=0 \\
+          \\
+          \\
+          (ii) ~~ X(x)=Bsin(Kx) \\
+          X(L)=0 \rightarrow Bsin(KL)=0 \Rightarrow KL=n\pi ~~
+        $ where $n=1,2,3,...$ \\
+      }
+
+      \textcolor{hwColor}{
+        $
+          y(x,t)=\sum\limits_{n=1}^{\infty} sin(\dfrac{n\pi}{L}x) \times \left[C_ncos(K_nvt)+D_nsin(K_nvt)\right]
+        $
+         If $\omega_n=K_nv$ then: \\ 
+        $
+          \\
+          y(x,t)=\sum\limits_{n=1}^{\infty} sin(K_nx)\left[C_ncos(\omega_n t)+D_nsin(\omega_n t)\right]
+        $ Where $K_n=\dfrac{n\pi}{L}$
+      }
+
+      \textcolor{hwColor}{
+        The initial condition is that the string is released from rest which means $y^{'}(x,0)=0$ \\
+        \\
+        $
+          \dfrac{dy}{dt}=\dfrac{d}{dt}\left[\sum\limits_{n=1}^{\infty} sin(K_nx)\left[C_ncos(\omega_n t)+D_nsin(\omega_n t)\right]\right] \\
+          \\
+          \dfrac{dy}{dt}=\sum\limits_{n=1}^{\infty} \omega_n sin(K_nx)\left[-C_n sin(0)+D_n cos(0)\right]=0 \\
+          \\
+          \dfrac{dy}{dt}=\sum\limits_{n=1}^{\infty} D_n \omega_n sin(K_nx)=0 \rightarrow D_n=0 \\
+          \\
+          y(x,t)=\sum\limits_{n=1}^{\infty} C_n sin(K_nx)cos(\omega_n t) \\
+          \\
+          \\
+          y(x,0)=\sum\limits_{n=1}^{\infty} C_n sin(K_nx)cos(0)=f(x) \\
+          \\
+          y(x,0)=\sum\limits_{n=1}^{\infty} C_n sin(\dfrac{n\pi}{L}x)=f(x) \\
+        $
+      }
+
+      \textcolor{hwColor}{
+        We can find the value of $C_n$ by using the equation 12.6 from the textbook: \\
+        $
+          C_n=\dfrac{2}{L} \bigints_{0}^{L} f(x) sin(\dfrac{n \pi x}{L})dx \\
+          \\
+          =\dfrac{2}{L} \left[\bigints_{0}^{\dfrac{L}{4}}\dfrac{4hx}{L}sin(\dfrac{n \pi x}{\dfrac{L}{4}})dx+\bigints_{\dfrac{L}{4}}^{\dfrac{L}{2}}2h(1-\dfrac{2x}{L})sin(\dfrac{n \pi x}{\dfrac{L}{4}})dx+\bigints_{\dfrac{L}{2}}^{L} 0 sin(\dfrac{n \pi x}{\dfrac{L}{4}})dx\right] \\
+          \\
+          =\dfrac{2}{L} \left[\bigints_{0}^{\dfrac{L}{4}}\dfrac{4hx}{L}sin(\dfrac{n \pi x}{\dfrac{L}{4}})dx+\bigints_{\dfrac{L}{4}}^{\dfrac{L}{2}}2h(1-\dfrac{2x}{L})sin(\dfrac{n \pi x}{\dfrac{L}{4}})dx\right] \\
+          \\
+          \\
+          \\
+          \bigints_{0}^{\dfrac{L}{4}}\dfrac{4hx}{L}sin(\dfrac{n \pi x}{\dfrac{L}{4}})dx=\dfrac{4h}{L} \bigints_{0}^{\dfrac{L}{4}}x sin(\dfrac{4\pi nx}{L})dx \\
+          \\
+          =\dfrac{4h}{L} \left[-\dfrac{Lx}{4 \pi n}cos(\dfrac{4 \pi nx}{L})+\bigints \dfrac{L}{4\pi n} cos(\dfrac{4 \pi nx}{L})dx\right] \\
+          \\
+          =\dfrac{4h}{L} \left[-\dfrac{Lx}{4 \pi n} cos(\dfrac{4 \pi n x}{L})+(\dfrac{L}{4 \pi n})^2 sin(\dfrac{4\pi n x}{L})\right]\Biggr|_{0}^{\dfrac{L}{4}} \\
+          \\
+          \\
+          =\dfrac{4h}{L} \left[-\dfrac{L^2}{16 \pi n}cos(\pi n)+(\dfrac{L}{4 \pi n})^2 sin(\pi n)\right]=-\dfrac{Lh}{4 \pi n}(-1)^n \\
+          \\
+          \\
+          \\
+          \bigints_{\dfrac{L}{4}}^{\dfrac{L}{2}}2h(1-\dfrac{2x}{L})sin(\dfrac{n \pi x}{\dfrac{L}{4}})dx=2h\left[\bigints sin(\dfrac{4\pi nx}{L})dx-\bigints \dfrac{2x}{L}sin(\dfrac{4\pi nx}{L})\right]\Biggr|_{\dfrac{L}{4}}^{\dfrac{L}{2}} \\
+          \\
+          =2h \left[-\dfrac{L}{4 \pi n} cos(\dfrac{4 \pi nx}{L})+\dfrac{x}{2\pi n}cos(\dfrac{4 \pi nx}{L})-\dfrac{L}{8(n\pi)^2}sin(\dfrac{4\pi nx}{L})\right]\Biggr|_{\dfrac{L}{4}}^{\dfrac{L}{2}} \\
+          \\
+          =2h \left[-\dfrac{L}{4 \pi n}+\dfrac{L}{4 \pi n}+\dfrac{L}{4 \pi n}(-1)^n-\dfrac{1}{8 \pi n}(-1)^n\right]=2h \left[\dfrac{L}{4 \pi n}(-1)^n-\dfrac{1}{8 \pi n}(-1)^n\right] \\
+          \\
+          =\dfrac{h(-1)^n (2L-1)}{4 \pi n} \\
+          \\
+          \\
+          \\
+          \\
+          C_n=\dfrac{2}{L} \left[-\dfrac{Lh}{4 \pi n}(-1)^n+\dfrac{h(-1)^n (2L-1)}{4 \pi n}\right] \\
+          \\
+          \\
+          \Longrightarrow C_n=\dfrac{h(-1)^n(L-2L^2)}{4 \pi n} \\
+          \\
+          \\
+          \Longrightarrow y(x,0)=\sum\limits_{n=1}^{\infty} \dfrac{h(-1)^n(L-2L^2)}{4 \pi n} sin(\dfrac{n\pi}{L}x)=f(x) \\
+          \\
+          \\
+          \\
+          \\
+          \\
+          \\
+        $
+      }
 
     \item  
 
