@@ -217,7 +217,53 @@
       \begin{enumerate}
       \item Derive the differential equation for a  vibrating string in presence of gravity. Assume that the string has constant mass per unit length, $\mu$, and that at rest the string lies horizontally (like in a piano); assume small displacements, purely in the transverse direction (like in the case discussed in class).  
 
-      \item check if the new equation can still be solved by separation of the variables (it is not necessary to find the solution).  [ Optional: reflect on your result. Would a musical instrument sound the same on Earth and on a future human colony on the Moon?  ] 
+        \textcolor{hwColor}{
+          $\tau :$ Tension ~~~~ $\mu:$ Mass per unit length \\
+          \\
+          $
+            F_y=\tau_2 sin(\theta_2)-\tau_1 sin(\theta_1)-mg=\tau_2 cos(\theta_2) \dfrac{sin(\theta_2)}{cos(\theta_2)}-\tau_1 cos(\theta_1) \dfrac{sin(\theta_1)}{cos(\theta_1)}-mg \\
+            \\
+            F_y=\tau_2 cos(\theta_2) tan(\theta_2)-\tau_1 cos(\theta_1) tan(\theta_1)-mg \\
+            \\
+          $
+          Based on our assumption that all small displacements, purely in the transverse direction we can write the following: \\
+          \\
+          $
+            F_x=\tau_2 cos(\theta_2)-\tau_1 cos(\theta_1)=0 \rightarrow \tau_2 cos(\theta_2)=\tau_1 cos(\theta_1)=\tau \Rightarrow \begin{cases}
+              F_y= \tau \left[tan(\theta_2)-tan(\theta_1)\right]-mg  \\
+              F_x=0
+            \end{cases}
+          $
+        }
+
+        \textcolor{hwColor}{
+          $
+            F_y= \tau \left[\dfrac{\partial y}{\partial x}\Biggr|_{x=x_2}^{}-\dfrac{\partial y}{\partial x}\Biggr|_{x=x_1}^{}\right]-mg \\
+            \\
+            =\dfrac{\tau \left[\dfrac{\partial y}{\partial x}\Biggr|_{x=x_2}^{}-\dfrac{\partial y}{\partial x}\Biggr|_{x=x_1}^{}\right]-mg}{\Delta x}. \Delta x \\
+            \\
+            lim \Delta x \rightarrow 0 \Longrightarrow F_y=\left(\tau \dfrac{\partial^2 y}{\partial x^2}-mg\right).\delta x
+          $
+        }
+
+        \textcolor{hwColor}{
+          $F_y=m\dfrac{\partial^2 y }{\partial t^2}$ ~~~ Newton's second law and the mass of the string is $m= \mu \delta x$ \\
+          \\
+          By equating the two $F_y$ values we have: \\
+          \\
+          $
+            \left(\tau \dfrac{\partial^2 y}{\partial x^2}-mg\right).\delta x=\mu \delta x\dfrac{\partial^2 y }{\partial t^2} \\
+            \\
+            \left(\tau \dfrac{\partial^2 y}{\partial x^2}-mg\right)=\mu \dfrac{\partial^2 y }{\partial t^2} \rightarrow \left(\tau \dfrac{\partial^2 y}{\partial x^2}-mg\right)-\mu \dfrac{\partial^2 y }{\partial t^2}=0 \\
+            \\
+            \\
+            \dfrac{\partial^2 y}{\partial x^2}-\dfrac{\mu}{\tau} \dfrac{\partial^2 y }{\partial t^2}=\dfrac{mg}{\tau} ~~~ v=\sqrt{\dfrac{\tau}{\mu}} \\
+            \\
+            \Longrightarrow \dfrac{\partial^2 y}{\partial x^2}-\dfrac{1}{v^2} \dfrac{\partial^2 y }{\partial t^2}=\dfrac{mg}{\tau}
+          $
+        }
+
+      \item Check if the new equation can still be solved by separation of the variables (it is not necessary to find the solution).  [ Optional: reflect on your result. Would a musical instrument sound the same on Earth and on a future human colony on the Moon?  ] 
 
       \end{enumerate}
 
