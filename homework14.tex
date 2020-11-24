@@ -265,6 +265,10 @@
 
       \item Check if the new equation can still be solved by separation of the variables (it is not necessary to find the solution).  [ Optional: reflect on your result. Would a musical instrument sound the same on Earth and on a future human colony on the Moon?  ] 
 
+      \textcolor{hwColor}{
+        Sound waves vibrates in some medium, like air and water. But the moon has no air. We can play a musical instrument but we would not hear it.
+      }
+
       \end{enumerate}
 
     \item Generalize the problem of the vibrating string to the case of a vibrating rectangular drum of sides $a$ and $b$. Consider the 2-dimensional wave equation describing the (transverse) displacement, $U(x,y,t)$, of the drum's membrane:
@@ -272,8 +276,21 @@
     \frac{\partial^2 U}{\partial x^2} + \frac{\partial^2 U}{\partial y^2}  - \frac{1}{v^2}\frac{\partial^2 U}{\partial t^2}=0
     $$
     and start to solve it using the method of the separation of the variables. Proceed until you obtain three separate ordinary differential equations. 
-    
-    \item {\bf Bonus: } continue the previous problem: discuss the signs of the linking constants and show that they must take discrete values if we impose that the edges of the drum are fixed at all times. 
+  
+    \textcolor{hwColor}{
+      $
+        u=X(x)Y(y)T(t) \\
+        \\
+        \\
+        \dfrac{\partial^2}{\partial x^2}\left[X(x)Y(y)T(t) \right]+\dfrac{\partial^2}{\partial y^2}\left[X(x)Y(y)T(t)\right]-\dfrac{1}{v^2}\dfrac{\partial^2}{\partial t^2}\left[X(x)Y(y)T(t)\right] \\
+        \\
+        \\
+        YT \dfrac{d^2 X}{dx^2}+XT\dfrac{d^2 Y}{dy^2}-\dfrac{XY}{v^2} \dfrac{d^2 T}{dt^2}=0 \\
+        \\
+        \\
+        \Longrightarrow \dfrac{1}{X} \dfrac{d^2 X}{dx^2}+\dfrac{1}{Y} \dfrac{d^2 Y}{dy^2}=\dfrac{1}{v^2 T} \dfrac{d^2 T}{dt^2}
+      $
+    } 
   \end{enumerate}
 
 \end{document}
