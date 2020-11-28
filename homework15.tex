@@ -1,0 +1,83 @@
+\documentclass[fleqn]{article}
+\oddsidemargin 0.0in
+\textwidth 6.0in
+\thispagestyle{empty}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{float}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\definecolor{hwColor}{HTML}{AD53BA}
+
+\begin{document}
+
+  \begin{titlepage}
+
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+    \center % Center everything on the page
+
+
+    \textsc{\LARGE Arizona State University}\\[1.5cm] % Name of your university/college
+
+    \textsc{\LARGE Mathematical Methods For Physics I }\\[1.5cm] % Major heading such as course name
+
+
+    \begin{figure}
+      \includegraphics[width=\linewidth]{asu.png}
+    \end{figure}
+
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Homework 15}\\[0.4cm] 
+    \HRule \\[1.5cm]
+
+    \textbf{Behnam Amiri}
+
+    \bigbreak
+
+    \textbf{Prof: Cecilia Lunardini}
+
+    \bigbreak
+
+
+    \textbf{{\large \today}\\[2cm]}
+
+    \vfill % Fill the rest of the page with whitespace
+
+  \end{titlepage}
+
+  \begin{enumerate}
+  \item  (Note: this part was assigned in homework 14 as a bonus. If you have done it then (fully and completely), you are not required to repeat it. ): 
+
+    \begin{enumerate}
+    \item Set up separation constants, discuss their signs, and write the general solution for the wave equation (Hint: how many \emph{independent} separation constants do we have here?).
+
+    \item Impose that the edges of the drum are fixed at all times and write the updated solution that takes these conditions into account.  
+    \end{enumerate}
+
+
+  \item  Continuing the problem above, now impose that the drumhead is described at time $t=0$ by the following conditions: 
+      $$
+      U(x, y, 0) = \frac{\epsilon}{a^2 b^2} xy(a-x)(b-y)~, 
+      $$
+      $$
+      \frac{\partial U}{\partial t} \bigg|_{t=0}=0
+      $$
+      simplify, and write the final solution. \\
+
+      (NOTE:  If everything was done correctly, after rearranging and simplifying, you should obtain the following expression: 
+      $$
+      U(x,y,t)= \epsilon \left(\frac{2}{\pi} \right)^6 \sum^{\infty}_{m=1} \sum^{\infty}_{n=1} \frac{1}{(2m-1)^3( 2n -1)^3} \\
+      \times \sin\left( \frac{(2m-1) \pi x}{a} \right) \sin \left( \frac{(2n-1) \pi y}{b}  \right)  \cos(\omega_{mn} t)
+      $$~, where
+      $$
+      \omega^2_{mn}= \pi^2 v^2 \left(  \frac{(2m-1)^2 }{a^2} +  \frac{(2n-1)^2}{ b^2}    \right)~~,~~m,n=1,2,3,...  ) 
+      $$
+
+  \end{enumerate}
+
+\end{document}
