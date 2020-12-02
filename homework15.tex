@@ -261,7 +261,28 @@
       }
 
 
-    \item Impose that the edges of the drum are fixed at all times and write the updated solution that takes these conditions into account.  
+    \item Impose that the edges of the drum are fixed at all times and write the updated solution that takes these conditions into account.
+
+      \textcolor{hwColor}{ 
+        We assume that the edges of the drum are fixed. The wave equation for a transverse wave traveling on a 2D-wave is given by: \\
+        \\
+        $
+          \dfrac{\partial^2 z}{\partial t^2}=\dfrac{\delta}{\sigma}\left[\dfrac{\partial^2 z}{\partial x^2}+\dfrac{\partial^2 z}{\partial y^2}\right] \\
+          \\
+          \omega^2=\dfrac{\delta}{\sigma}(k^2_x+k^2_y) \\
+          \\
+          z(x,y,t)=Asin(k_x x)sin(k_y y)e^{-i\omega t} \\
+          \\
+        $
+        The solution is found by taking the boundry condition into account: \\
+        \\
+        $
+          z(0,0,t)=0 \rightarrow A=0 \\
+          \\
+          \Longrightarrow \dfrac{dz}{dt}=A\omega sin(k_x x)sin(k_y y)
+        $
+      }
+    
     \end{enumerate}
 
 
