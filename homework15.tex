@@ -4,6 +4,8 @@
 \thispagestyle{empty}
 \usepackage{import}
 \usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bigints}
 \usepackage{graphicx}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -264,29 +266,163 @@
     \item Impose that the edges of the drum are fixed at all times and write the updated solution that takes these conditions into account.
 
       \textcolor{hwColor}{ 
-        We assume that the edges of the drum are fixed. The wave equation for a transverse wave traveling on a 2D-wave is given by: \\
+         We can now apply our boundary conditions to solve further we are told that the edges of the drum are \underline{fixed}
+         in space for all time. Expressed mathematically we have: \\
+         $
+          \begin{cases}
+            u(0,y,t)=0 \\
+            u(x,0,t)=0 \\
+            u(a,y,t)=0 \\
+            u(x,b,t)=0
+          \end{cases} \\
+         $
+         We will apply each to our equation $u(x,y,t)$ to explore solutions. \\
+         Now, since we observe $u(0,y,t)=u(a,y,t)=0$ and $u(x,0,t)=u(x,b,t)=0$, we can observe that our functions $X(x)$ and $Y(y)$
+         must be periodic in $x$ and $y$ respectively. Thus, $\gamma <0$ and $\sigma <0$. \\
+         \\
+         Thus, we assert, \\
+         \\
+         $
+          \begin{cases}
+            X(x)=C cos(\alpha x)+D sin(\alpha x) \\
+            Y(y)=G cos(\beta y)+H sin(\beta y)
+          \end{cases} \\
+         $
+         Our first boundary condition tells us $\rightarrow u(0,y,t)=X(0)Y(y)T(t)=0$. \\
+         \\
+         For the non-trivial case we assume $Y(y)\neq 0$ and $T(t) \neq 0$. Thus, \\
+         $
+          X(0)=C cos(0)+D sin(0)=c=0 \\
+         $
+         So now we know $c=0$, therefore, $X(x)=D sin(\alpha x)$
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{16cm}{1pt} 
+      }
+
+      \textcolor{hwColor}{ 
+        Next we have $u(x,0,t)=0$, thus $Y(0)=G cos(0)+H sin(0)=G=0$ \\
+        So we know $G=0$, therefore $Y(y)=Hsin(\beta y)$
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{16cm}{1pt} 
+      }
+
+      \textcolor{hwColor}{ 
+        Our third boundary condition tells us, $u(a,y,t)=0$ so, $X(a)=Bsin(\alpha a)=0 \rightarrow sin(\alpha a)=0$ \\
         \\
-        $
-          \dfrac{\partial^2 z}{\partial t^2}=\dfrac{\delta}{\sigma}\left[\dfrac{\partial^2 z}{\partial x^2}+\dfrac{\partial^2 z}{\partial y^2}\right] \\
-          \\
-          \omega^2=\dfrac{\delta}{\sigma}(k^2_x+k^2_y) \\
-          \\
-          z(x,y,t)=Asin(k_x x)sin(k_y y)e^{-i\omega t} \\
-          \\
-        $
-        The solution is found by taking the boundry condition into account: \\
+        This is true for all $\alpha=\dfrac{n \pi}{a}, ~~~ \forall ~~ n\in \mathbb{N}$ \\
         \\
+        So we have $X_n(x)=B_n(\alpha_n x)$ with $\alpha_n=\dfrac{n \pi}{a}$
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{16cm}{1pt} 
+      }
+
+      \textcolor{hwColor}{ 
+        Our final boundary condition gives, $u(x,b,t)=0$ \\
+        So, $Y(b)=Hsin(\beta b)=0 \Longrightarrow sin(\beta b)=0$. \\
+        This is true for all $\beta_m=H_m sin(\beta_m y)$ with $\beta_m=\dfrac{n \pi}{b}$ \\
+        So we have: \\
         $
-          z(0,0,t)=0 \rightarrow A=0 \\
+          \begin{cases}
+            X_n(x)=B_n sin(\alpha_n x) \\
+            Y_m(y)=H_m sin(\beta_m y)
+          \end{cases} \\
           \\
-          \Longrightarrow \dfrac{dz}{dt}=A\omega sin(k_x x)sin(k_y y)
+        $
+        \underline{Note}:Plugging this back into (4) shows that $B_n=-\alpha_n^2$ and $H_m=-\beta_m^2$. Thus, \\
+        $
+          \begin{cases}
+            X_n(x)=-\alpha_n^2 sin(\alpha_n x) \\
+            Y_m(y)=-\beta_m^2 sin(\beta_m y)
+          \end{cases}
         $
       }
+
+      \textcolor{hwColor}{ 
+        \rule{16cm}{1pt} 
+      }
+
+      \textcolor{hwColor}{ 
+        Examining $T(t)$ we have: \\
+        $T^{''}-\mu v^2 T=0$ where we defined: $\mu=\sigma+\gamma=-(\alpha_n^2+\beta_m^2)<0$ \\
+        \\
+        Thus, we know a general solution for $T(t)$ is the following. \\
+        $T_{nm}(t)=Q_{nm} cos(\lambda_{nm}t)+P_{nm} sin(\lambda_{nm}t)$ \\
+        \\
+        For $Q_{nm}, ~~ P_{nm}$ constants and, $\lambda_{nm}=c\sqrt{\alpha_n^2+\beta_n^2}=c\pi \sqrt{(\dfrac{n}{a})^2+(\dfrac{m}{b})^2}$ \\
+        \\
+        So we have modes: \\
+        \\
+        $
+          u_{nm}(x,y,t)=sin(\alpha_n x) sin(\beta_m y)\left[Q_{nm} cos(\lambda_{nm}t)+P_{nm} sin(\lambda_{nm}t)\right] \\
+        $\\
+        With $\alpha_n, ~~ \beta_m, ~~ \lambda_{nm}$ defined earlier. \\
+        \\
+        Our general solution is then obtained by summing over all possible modes. \\
+        \\
+        $
+          u(x,y,t)=\sum\limits_{n}^{\infty} \sum\limits_{m}^{\infty} sin(\alpha_n x) sin(\beta_n y)\left[Q_{nm} cos(\lambda_{nm}t)+P_{nm} sin(\lambda_{nm}t)\right] \\
+          \\
+        $
+        This is the best we can do without further conditions on $u(x,y,t)$.
+      }
+
+      \textcolor{hwColor}{ 
+        \rule{16cm}{1pt} 
+      }
+
+      \textcolor{hwColor}{ 
+        Now suppose we insist further on the conditions. \\
+        $
+          u(x,y,0)=\dfrac{\epsilon}{(ab)^2}xy(a-x)(b-y) ~~~~~ \dfrac{\partial u}{\partial t}\Biggr|_{t=0}^{}=0 \\
+        $
+        Using the first of the above we have: \\
+        \\
+        $
+          \sum\limits_{n}^{\infty} \sum\limits_{m}^{\infty} Q_{nm} sin(\alpha_n x)sin(\beta_m y)=\dfrac{\epsilon}{(ab)^2} xy(a-x)(b-y) \\
+        $
+        \\
+        And we the second: \\
+        \\
+        $
+          \sum\limits_{n}^{\infty} \sum\limits_{m}^{\infty} \lambda_{nm} P_{nm} sin(\alpha_n x) sin(\beta_n y)=0 \\
+        $
+        \\
+        Orthogonality of Fourier series tells us: $
+          \bigints_{0}^{L} sin(nx) sin(mx) dx=\begin{cases}
+            \dfrac{L}{2}, ~~~~ m=n \\
+            0, ~~~~~ m\neq n
+          \end{cases}
+        $
+        \\
+        Applying this to our problem gives. \\
+        \\
+        $
+          Q_{nm}=\dfrac{\bigints_{0}^{a} \bigints_{0}^{b} \dfrac{\epsilon}{(ab)^2}xy(a-x)(b-y) sin(\dfrac{n \pi x}{a}) sin(\dfrac{m \pi y}{b}) dx dy}{\bigints_{0}^{a} \bigints_{0}^{b} sin^2(\dfrac{n \pi x}{a})sin^2(\dfrac{m \pi y}{b}) dx dy} \\
+          \\
+          \\
+          Q_{nm}=\dfrac{4}{ab}\bigints_{0}^{a} \bigints_{0}^{b} \dfrac{\epsilon}{(ab)^2}xy(a-x)(b-y) sin(\dfrac{n \pi x}{a}) sin(\dfrac{m \pi y}{b}) dx dy \\
+          \\
+          Similarly, \\
+          \\
+          P_{nm}=\dfrac{4}{ab \lambda_{nm}}\bigints_{0}^{a} \bigints_{0}^{b} (0)sin(\dfrac{n \pi x}{a}) sin(\dfrac{m \pi y}{b}) dx dy \\
+          \\
+          \Longrightarrow P_{nm}=0 \\
+        $
+        \\
+        $Q_{nm}$ can be evaluated through the integral above!
+      }
+
     
     \end{enumerate}
 
 
-  \item  Continuing the problem above, now impose that the drumhead is described at time $t=0$ by the following conditions: 
+  \item Continuing the problem above, now impose that the drumhead is described at time $t=0$ by the following conditions: 
       $$
       U(x, y, 0) = \frac{\epsilon}{a^2 b^2} xy(a-x)(b-y)~, 
       $$
